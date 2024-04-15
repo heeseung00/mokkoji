@@ -17,12 +17,10 @@ img {
   border: 0;
   vertical-align: middle;
 }
-
 html {
   font-size: 10px;
   scroll-behavior: smooth;
 }
-
 body {
   /* font-family: "GmarketSansMedium", sans-serif; */
   color: #191919;
@@ -30,25 +28,100 @@ body {
   font-size: 10px;
   position: relative;
 }
-
 /* 공톹요소 */
 .wrap {
   width: 100%;
   position: relative;
 }
-
 .inner {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
-
 .title {
   font-size: 3rem;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  margin-top: 170px;
+  margin-top: 150px;
   padding-top: 30px;
   margin-bottom: 50px;
 }
+/* 헤더 */
+.header > .container > .inner {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: antiquewhite; */
+}
+/* 로고 */
+.hd-logo {
+  width: 150px;
+  height: 100%;
+}
+.hd-logo > a > img {
+  width: 100%;
+  height: 100%;
+}
+/* 메뉴 */
+.nav {
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+.nav > .menu-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.nav > .menu-list > li {
+  display: flex;
+  align-items: center;
+}
+.nav > .menu-list > li a {
+  font-size: 2rem;
+}
+/* 마이페이지 */
+.hd-right {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 100%;
+}
+.hd-right > .my-list {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hd-right > .my-list > li {
+  display: flex;
+  align-items: center;
+}
+.hd-right > .my-list > li a {
+  font-size: 2rem;
+}
+.hd-right > .my-list > li a img {
+  width: 30px;
+  height: 30px;
+}
+.hd-right > .my-list > li:nth-child(1)::after {
+  content: "";
+  width: 1.3px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  transform: translateY(-50%);
+  background-color: #333;
+}
+/* 메인 배너 */
+.banner{
+  width: 100%;
+  height: 500px;
+  background-color: lightgoldenrodyellow;
+}
+/* 시장 소개 */
+/* 맛집1 */
