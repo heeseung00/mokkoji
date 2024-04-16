@@ -18,7 +18,6 @@
     <meta name="naver-site-verification" content="589ae093140a0342a73e0dc4c3a5e3a1c84c0610" />
     <meta name="naver-site-verification" content="6957718e5c1b719b6c8c7d137c1e1b828896a6b6" />
     <title>모꼬지</title>
-
     <!-- font aswesom -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- link Swiper's CSS -->
@@ -45,14 +44,39 @@
     <script src="js/lee.js"></script>
     <script src="js/jquery.cookie.js"></script>
   </head>
-
   <body>
     <!-- A안 -->
     <div class="wrap">
       <!-- 헤더 -->
       <header class="header">
         <div class="container">
-          <div class="inner"></div>
+          <div class="inner">
+            <!-- 로고 -->
+            <div class="hd-logo">
+              <a href="#"><img src="img/1header/hd-logo.png" alt="로고" /></a>
+            </div>
+            <!-- 네비게이션 -->
+            <nav class="nav">
+              <ul class="menu-list">
+                <li><a href="#">지역별</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">시장</a></li>
+                <li><a href="#">장날</a></li>
+                <li><a href="#">방문후기</a></li>
+                <li><a href="#">게시판</a></li>
+              </ul>
+            </nav>
+            <!-- 마이페이지 -->
+            <div class="hd-right">
+              <ul class="my-list">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li>
+                  <a href="#"><img src="img/1header/mypage-icon.png" alt="마이페이지" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </header>
       <!-- 배너 -->
@@ -61,14 +85,30 @@
       <section class="market-info">
         <div class="container">
           <div class="inner">
-            <h2 class="title"></h2>
+            <h2 class="title">전국 시장 소개</h2>
           </div>
         </div>
       </section>
       <!-- 맛집1 -->
       <section class="bestrest1">
         <div class="container">
-          <div class="inner"></div>
+          <div class="inner">
+            <div class="bestrest1Top">
+              <h2 class="title">베스트 후기 시장 맛집</h2>
+              <div class="bestrest1topright">
+                <ul class="besttopbt">
+                  <li><button>베스트 후기</button></li>
+                  <li><button>유명인 방문</button></li>
+                </ul>
+                <div class="plusBt">
+                  <a href="#"><img src="img/4bestrest/plus-icon.png" alt="더보기 버튼" /></a>
+                </div>
+              </div>
+            </div>
+            <div class="bestrest1Bottom">
+              <!-- 스와이퍼 -->
+            </div>
+          </div>
         </div>
       </section>
       <!-- 맛집2 -->
@@ -77,7 +117,7 @@
           <div class="inner"></div>
         </div>
       </section>
-      <!-- 중간배너 -->
+     <!-- 중간배너 -->
       <section class="banner-m">
         <img src="images/hee/중간 배너.png" alt="중간 배너, 게시판" />
       </section>
