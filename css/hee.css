@@ -17,7 +17,6 @@
 /* 장날 안내 */
 .market-day {
   width: 100%;
-  height: 450px;
   position: relative;
 }
 
@@ -41,14 +40,14 @@
   font-weight: 700;
 }
 
-.market-day .market-day-btn {
+.btn-select {
   display: flex;
   margin-top: 170px;
   gap: 20px;
   /* padding-top: 30px; */
 }
 
-.market-day .market-day-btn > button {
+.btn-select button {
   width: 115px;
   height: 35px;
   border: 1px solid #bababa;
@@ -59,32 +58,32 @@
   cursor: pointer;
 }
 
-.market-day .market-day-btn > button.on {
+.btn-select .on {
   background-color: #fe6b38;
   color: #fff;
   border: 1px solid #fe6b38;
+  transition: all 0.2s ease-in-out;
 }
 
-.market-day .more {
+.btn-select .more {
   cursor: pointer;
 }
 
 .market-day-content {
-  position: absolute;
-  top: 80%;
-  left: 0;
-  display: flex;
+  display: none;
   align-items: center;
   /* justify-content: space-between; */
   width: 100%;
   padding: 30px 0;
-  /* overflow: hidden; */
 }
 
-.market-day .day5 {
+.market-day-content.active {
+  display: flex;
+  opacity: 1;
 }
 
-.market-day-content > li {
+.market-day-content li {
+  flex: 1;
   border-radius: 5px;
   /* overflow: hidden; */
   background-color: #fff;
@@ -180,14 +179,13 @@
   font-weight: 300;
 }
 
-.review .market-day-btn {
+.review .review-btn {
   display: flex;
   margin-top: 170px;
   gap: 20px;
-  /* padding-top: 30px; */
 }
 
-.review .market-day-btn > button {
+.review .review-btn > button {
   width: 115px;
   height: 35px;
   border: 1px solid #bababa;
@@ -198,15 +196,10 @@
   cursor: pointer;
 }
 
-.review .market-day-btn > button.on {
+.review .review-btn > button.on {
   background-color: #fe6b38;
   color: #fff;
   border: 1px solid #fe6b38;
-}
-
-.review .more {
-  width: 100%;
-  cursor: pointer;
 }
 
 /* 스와이퍼 */
@@ -228,6 +221,10 @@
   display: block;
   object-fit: cover;
 }
+
+/* .review .review-pageBox {
+  width: 800px;
+} */
 
 .review .swiper-pagination {
   position: relative;
