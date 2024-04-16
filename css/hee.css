@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+@import url("main.css");
+@import url("font.css");
+
+/* 희승 영역 */
+/* 중간배너 */
+.banner-m {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.banner-m img {
+  width: 100%;
+}
+/* 장날 안내 */
+.market-day {
+  width: 100%;
+  height: 450px;
+  position: relative;
+}
+
+.market-day .container {
+  width: 100%;
+  background-color: #fff8f2;
+}
+
+.market-day .inner {
+  width: 100%;
+  position: relative;
+}
+
+.market-day .title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.market-day .title {
+  font-weight: 700;
+}
+
+.market-day .market-day-btn {
+  display: flex;
+  margin-top: 170px;
+  gap: 20px;
+  /* padding-top: 30px; */
+}
+
+.market-day .market-day-btn > button {
+  width: 115px;
+  height: 35px;
+  border: 1px solid #bababa;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  color: #bababa;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.market-day .market-day-btn > button.on {
+  background-color: #fe6b38;
+  color: #fff;
+  border: 1px solid #fe6b38;
+}
+
+.market-day .more {
+  cursor: pointer;
+}
+
+.market-day-content {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  width: 100%;
+  padding: 30px 0;
+  /* overflow: hidden; */
+}
+
+.market-day .day5 {
+}
+
+.market-day-content > li {
+  border-radius: 5px;
+  /* overflow: hidden; */
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  margin-left: 3%;
+  /* margin-left: 53px; */
+}
+
+.market-day-content > li:first-child {
+  margin-left: 0;
+}
+
+.market-day-content > li > a {
+  width: 100%;
+  height: 100%;
+}
+
+.market-day-content > li > a > img {
+  width: 100%;
+  height: auto;
+  transition: all 0.2s;
+}
+
+/* 이미지 호버시 이미지 크기 커짐 */
+/* .market-day-content > li > a > img:hover {
+  transform: scale(1.1);
+} */
+
+.market-day-content-txt {
+  padding: 15px 5px;
+}
+
+.market-day-content-txt h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.market-day-content-txt p {
+  font-size: 14px;
+  color: #777777;
+  padding-bottom: 5px;
+}
+
+.market-day-content-txt p:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+/* 마켓 클릭 */
+.all_days {
+}
+
+/* ================================================================== */
+/* 시장 방문 후기 */
+.review {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.review .container {
+  width: 100%;
+  background-color: #ffff;
+}
+
+.review .inner {
+  position: relative;
+}
+
+.review .title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review .title-wrap > .title-wrap-all {
+  text-align: center;
+}
+
+.review .title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.review .sub-title {
+  font-size: 13px;
+  color: #969696;
+  font-weight: 300;
+}
+
+.review .market-day-btn {
+  display: flex;
+  margin-top: 170px;
+  gap: 20px;
+  /* padding-top: 30px; */
+}
+
+.review .market-day-btn > button {
+  width: 115px;
+  height: 35px;
+  border: 1px solid #bababa;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  color: #bababa;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.review .market-day-btn > button.on {
+  background-color: #fe6b38;
+  color: #fff;
+  border: 1px solid #fe6b38;
+}
+
+.review .more {
+  cursor: pointer;
+}
+
+/* 스와이퍼 */
+.review .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.review .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review .swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+
+.review .swiper-pagination {
+  position: relative;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+/* 진행 막대 스타일 */
+.custom-progressbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: #007bff;
+  transition: 0.3s ease;
+}
+/* ================================================================== */
+/* 푸터 */
+.footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #d9d9d9;
+  font-size: 14px;
+  color: #999999;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 57px;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+
+.ft-top {
+  width: 100%;
+  display: flex;
+  align-items: left;
+  gap: 25px;
+  margin: 22px 0 22px;
+  /* border-bottom: 1px solid #d9d9d9; */
+}
+
+.ft-bt {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.ft-bt-left {
+  margin: 46px 0;
+  /* border-right: 1px solid #d9d9d9; */
+  position: relative;
+}
+
+.ft-bt-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 120%;
+  background-color: #d9d9d9;
+  height: 100%;
+  width: 1px;
+}
+
+.ft-bt-left > * {
+  margin-bottom: 8px;
+}
+
+.ft-bt-right {
+  margin: 46px 0;
+}
+
+.ft-bt-right h2 {
+  font-size: 25px;
+  margin-bottom: 14px;
+  color: #5e5e5e;
+  font-weight: 700;
+}
+
+.ft-bt-right p {
+  margin-bottom: 8px;
+}
