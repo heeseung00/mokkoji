@@ -139,6 +139,24 @@ body {
   transform: translateY(-50%);
   background-color: #333;
 }
+.menu-list li a {
+  position: relative;
+}
+.menu-list li a::after {
+  content: "";
+  display: none;
+  width: 5px;
+  height: 5px;
+  background: #000;
+  border-radius: 100%;
+  position: absolute;
+  right: -11px;
+  top: 0px;
+}
+.menu-list li a:hover::after,
+.menu-list li a:focus::after {
+  display: inline-block;
+}
 /* 검색창 */
 .header > .search {
   width: 100%;
@@ -262,6 +280,277 @@ input::placeholder {
   background-color: lightgoldenrodyellow;
 }
 /* 시장 소개 */
+.market-info {
+  position: relative;
+  display: block;
+}
+.market-info-contents {
+  display: flex;
+}
+/* 왼쪽 */
+.market-info-left {
+  width: 40%;
+  background-color: #d8d2f8;
+}
+.map-bg {
+  width: 100%;
+}
+.market-info .market-info-left .map-bg {
+  background-image: url("../images/3marketinfo/main_map_daegu.png");
+  width: 395px;
+  height: 570px;
+  position: relative;
+  z-index: 10;
+  transition: all 0.3s;
+}
+.market-info .market-info-left .map-bg .map-pin-cont i {
+  display: block;
+  width: 34px;
+  height: 44px;
+  background: no-repeat center;
+  background-image: url("../images/3marketinfo/map_pin_off_02.png");
+  position: relative;
+  cursor: pointer;
+}
+.market-info .market-info-left .map-bg .map-pin-cont span {
+  display: none;
+}
+.market-info .market-info-left .map-bg .map-pin-cont:hover span {
+  padding: 14px 16px;
+  display: block;
+  background: #f88222;
+  border-radius: 15px;
+  position: absolute;
+  top: -64px;
+  left: 50%;
+  font-size: 1.3rem;
+  transform: translateX(-50%);
+  color: #fff;
+  z-index: 11;
+}
+.market-info .market-info-left .map-bg .map-pin-cont span::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 7px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: no-repeat center;
+  background-image: url("../images/3marketinfo/map_after.png");
+}
+.market-info .market-info-left .map-bg .map-pin-cont:hover i {
+  display: block;
+  width: 34px;
+  height: 44px;
+  background: no-repeat center;
+  background-image: url("../images/3marketinfo/map_pin_on.png");
+  position: relative;
+}
+/* 클릭한 후에 요소가 화면에 계속 유지되는 스타일 */
+.market-info .market-info-left .map-bg .map-pin-cont.active span {
+  padding: 14px 16px;
+  display: block;
+  background: #f88222;
+  border-radius: 15px;
+  position: absolute;
+  top: -64px;
+  left: 50%;
+  font-size: 1.3rem;
+  transform: translateX(-50%);
+  color: #fff;
+  z-index: 11;
+}
+.market-info .market-info-left .map-bg .map-pin-cont.active i {
+  display: block;
+  width: 34px;
+  height: 44px;
+  background: no-repeat center;
+  background-image: url("../images/3marketinfo/map_pin_on.png");
+  position: relative;
+}
+.market-info .market-info-left .map-bg .map-pin-cont.active span::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 7px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: no-repeat center;
+  background-image: url("../images/3marketinfo/map_after.png");
+}
+/* 대구 */
+.market-info .market-info-left .map-bg .daegu {
+  position: absolute;
+  top: 290px;
+  left: 230px;
+}
+/* 부산 */
+.market-info .market-info-left .map-bg .busan {
+  position: absolute;
+  top: 367px;
+  left: 275px;
+}
+/* 충북 */
+.market-info .market-info-left .map-bg .chungbuk {
+  position: absolute;
+  top: 172px;
+  left: 148px;
+}
+/* 충남 */
+.market-info .market-info-left .map-bg .chungnam {
+  position: absolute;
+  top: 215px;
+  left: 60px;
+}
+/* 대전 */
+.market-info .market-info-left .map-bg .daejeon {
+  position: absolute;
+  top: 235px;
+  left: 121px;
+}
+/* 강원 */
+.market-info .market-info-left .map-bg .gangwon {
+  position: absolute;
+  top: 76px;
+  left: 210px;
+}
+/* 광주 */
+.market-info .market-info-left .map-bg .gwangju {
+  position: absolute;
+  top: 375px;
+  left: 60px;
+}
+/* 경북 */
+.market-info .market-info-left .map-bg .gyeongbuk {
+  position: absolute;
+  top: 230px;
+  left: 250px;
+}
+/* 경기 */
+.market-info .market-info-left .map-bg .gyeonggi {
+  position: absolute;
+  top: 120px;
+  left: 116px;
+}
+/* 경남 */
+.market-info .market-info-left .map-bg .gyeongnam {
+  position: absolute;
+  top: 360px;
+  left: 180px;
+}
+/* 인천 */
+.market-info .market-info-left .map-bg .incheon {
+  position: absolute;
+  top: 100px;
+  left: 45px;
+}
+/* 제주 */
+.market-info .market-info-left .map-bg .jeju {
+  position: absolute;
+  top: 510px;
+  left: 105px;
+}
+/* 전북 */
+.market-info .market-info-left .map-bg .jeonbuk {
+  position: absolute;
+  top: 310px;
+  left: 90px;
+}
+/* 전남 */
+.market-info .market-info-left .map-bg .jeonnam {
+  position: absolute;
+  top: 400px;
+  left: 105px;
+}
+/* 세종 */
+.market-info .market-info-left .map-bg .sejong {
+  position: absolute;
+  top: 195px;
+  left: 100px;
+}
+/* 서울 */
+.market-info .market-info-left .map-bg .seoul {
+  position: absolute;
+  top: 85px;
+  left: 80px;
+}
+/* 울산 */
+.market-info .market-info-left .map-bg .ulsan {
+  position: absolute;
+  top: 320px;
+  left: 296px;
+}
+/* 오른쪽 */
+.market-info-right {
+  width: 60%;
+  background-color: #d8d2f8;
+}
+.market-info-right .market-contents {
+  padding: 50px;
+}
+.market-info-right .market-contents .market-content1,
+.market-info-right .market-contents .market-content2 {
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 30px 20px;
+}
+.market-info-right .market-contents .market-content1 a,
+.market-info-right .market-contents .market-content2 a {
+  display: flex;
+  gap: 20px;
+}
+.market-content-right,
+.market-content-left {
+  width: 50%;
+}
+.market-content-left img {
+  width: 100%;
+}
+.market-content-right .market-content-right-top {
+  display: flex;
+  gap: 10px;
+}
+.market-content-right .market-content-right-top p {
+  font-size: 1.6rem;
+}
+.market-content-right .market-content-right-top span {
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 5px;
+  color: #fff;
+  background-color: #5e5e5e;
+}
+.market-adr {
+  display: block;
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+.market-content-info {
+  display: block;
+  font-size: 1.5rem;
+}
+.market-info-right .market-contents .market-content2 {
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+/* 더보기 버튼 */
+.market-contents button {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 20px;
+  background-color: #f88222;
+}
+.market-contents button a {
+  display: block;
+  font-size: 1.6rem;
+  padding: 5px 10px;
+  color: #fff;
+}
 /* 맛집1 */
 .bestrestTop {
   position: relative;
@@ -315,7 +604,7 @@ input::placeholder {
   font-size: 16rem;
   position: absolute;
   font-weight: bold;
-  left: -7px;
+  left: 0px;
   top: 10%;
   /* transform: translateY(-50%); */
   color: #fff;
@@ -421,13 +710,13 @@ input::placeholder {
   font-weight: bold;
 }
 .sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .name2 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 .sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .coment {
   position: absolute;
   bottom: 30px;
   right: 0;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 /* 특색 있는 */
 .sw-unique {
@@ -492,11 +781,11 @@ input::placeholder {
   font-weight: bold;
 }
 .sw-night > .swiper-wrapper > .swiper-slide > .night-content > a > .name2 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 .sw-night > .swiper-wrapper > .swiper-slide > .night-content > a > .coment {
   position: absolute;
   bottom: 30px;
   right: 0;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }

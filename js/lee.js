@@ -20,6 +20,135 @@ window.addEventListener("load", function () {
     search.style.display = "none";
     searchInput.value = ""; // input 내용 리셋
   });
+  // nav 메뉴 클릭 시 이름 옆에 점 생기기
+  
+  // ===============================================================
+  // 대구 아이콘에 active 클래스 추가
+  var daeguPinCont = document.querySelector(".map-pin-cont.daegu");
+  daeguPinCont.classList.add("active");
+  // 지역 아이콘 클릭 시 해당 지역 이름이 뜨고 핀 색 변경
+  var pins = document.querySelectorAll(".map-pin-cont");
+  pins.forEach(function (pin) {
+    pin.addEventListener("click", function () {
+      var isActive = this.classList.contains("active");
+      pins.forEach(function (otherPin) {
+        otherPin.classList.remove("active");
+      });
+      if (!isActive) {
+        this.classList.add("active");
+      }
+    });
+    pin.addEventListener("mouseleave", function () {
+      var isActive = this.classList.contains("active");
+      if (!isActive) {
+        this.classList.remove("active");
+      }
+    });
+  });
+  // ==================================================================
+  // 대구 핀 클릭 시 부산 배경 나오게 하기
+  const mapPinDaegu = document.querySelector(".daegu");
+  mapPinDaegu.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_daegu.png")';
+  });
+  // 부산 핀 클릭 시 부산 배경 나오게 하기
+  const mapPinBusan = document.querySelector(".busan");
+  mapPinBusan.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_busan.png")';
+  });
+  // 충북 핀 클릭 시 충북 배경 나오게 하기
+  const mapPinChungbuk = document.querySelector(".chungbuk");
+  mapPinChungbuk.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_chungbuk.png")';
+  });
+  // 충남 핀 클릭 시 충님 배경 나오게 하기
+  const mapPinChungnam = document.querySelector(".chungnam");
+  mapPinChungnam.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_chungnam.png")';
+  });
+  // 대전 핀 클릭 시 대전 배경 나오게 하기
+  const mapPinDaejeon = document.querySelector(".daejeon");
+  mapPinDaejeon.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_daejeon.png")';
+  });
+  // 강원 핀 클릭 시 강원 배경 나오게 하기
+  const mapPinGangwon = document.querySelector(".gangwon");
+  mapPinGangwon.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_gangwon.png")';
+  });
+  // 광주 핀 클릭 시 광주 배경 나오게 하기
+  const mapPinGwangju = document.querySelector(".gwangju");
+  mapPinGwangju.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_gwangju.png")';
+  });
+  // 경북 핀 클릭 시 경북 배경 나오게 하기
+  const mapPinGyeongbuk = document.querySelector(".gyeongbuk");
+  mapPinGyeongbuk.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_gyeongbuk.png")';
+  });
+  // 경기 핀 클릭 시 경기 배경 나오게 하기
+  const mapPinGyeonggi = document.querySelector(".gyeonggi");
+  mapPinGyeonggi.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_gyeonggi.png")';
+  });
+  // 경남 핀 클릭 시 경남 배경 나오게 하기
+  const mapPinGyeongnam = document.querySelector(".gyeongnam");
+  mapPinGyeongnam.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_gyeongnam.png")';
+  });
+  // 인천 핀 클릭 시 인천 배경 나오게 하기
+  const mapPinIncheon = document.querySelector(".incheon");
+  mapPinIncheon.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_incheon.png")';
+  });
+  // 제주 핀 클릭 시 제주 배경 나오게 하기
+  const mapPinJeju = document.querySelector(".jeju");
+  mapPinJeju.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_jeju.png")';
+  });
+  // 전북 핀 클릭 시 전북 배경 나오게 하기
+  const mapPinJeonbuk = document.querySelector(".jeonbuk");
+  mapPinJeonbuk.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_jeonbuk.png")';
+  });
+  // 전남 핀 클릭 시 전남 배경 나오게 하기
+  const mapPinJeonnam = document.querySelector(".jeonnam");
+  mapPinJeonnam.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_jeonnam.png")';
+  });
+  // 세종 핀 클릭 시 세종 배경 나오게 하기
+  const mapPinSejong = document.querySelector(".sejong");
+  mapPinSejong.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_sejong.png")';
+  });
+  // 서울 핀 클릭 시 서울 배경 나오게 하기
+  const mapPinSeoul = document.querySelector(".seoul");
+  mapPinSeoul.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_seoul.png")';
+  });
+  // 울산 핀 클릭 시 울산 배경 나오게 하기
+  const mapPinUlsan = document.querySelector(".ulsan");
+  mapPinUlsan.addEventListener("click", function () {
+    const mapBg = document.querySelector(".map-bg");
+    mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_ulsan.png")';
+  });
+  // =====================================================================
   // 맛집 클릭 이벤트
   const bestBtn = document.getElementById("bestBtn");
   const famousBtn = document.getElementById("famousBtn");
