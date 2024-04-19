@@ -107,26 +107,26 @@ window.addEventListener("load", function () {
   });
 
   //=====================
-  //중간 배너 이미지 변경
-  // 이미지 변경을 담당할 함수
-  function changeBannerImage() {
-    const screenWidth = window.innerWidth; // 현재 브라우저의 가로 너비
+  // //중간 배너 이미지 변경
+  // // 이미지 변경을 담당할 함수
+  // function changeBannerImage() {
+  //   const screenWidth = window.innerWidth; // 현재 브라우저의 가로 너비
 
-    // 768px 이하의 화면 너비인 경우
-    if (screenWidth <= 768) {
-      document.querySelector(".banner-img").src = "images/hee/banner-m-768px.png";
-    } else {
-      // 768px 초과인 경우
-      document.querySelector(".banner-img").src = "images/hee/banner-m.png";
-    }
-  }
+  //   // 768px 이하의 화면 너비인 경우
+  //   if (screenWidth <= 768) {
+  //     document.querySelector(".banner-img").src = "images/hee/banner-m-768px.png";
+  //   } else {
+  //     // 768px 초과인 경우
+  //     document.querySelector(".banner-img").src = "images/hee/banner-m.png";
+  //   }
+  // }
 
-  // 화면 크기 변경 시 이미지 변경
-  window.addEventListener("resize", changeBannerImage);
+  // // 화면 크기 변경 시 이미지 변경
+  // window.addEventListener("resize", changeBannerImage);
 
-  // 페이지 로드 시 이미지 변경 함수 호출
-  changeBannerImage();
-
+  // // 페이지 로드 시 이미지 변경 함수 호출
+  // changeBannerImage();
+  // ====================================================
   // pagination: {
   //   el: ".swiper-pagination2",
   //   type: "fraction",

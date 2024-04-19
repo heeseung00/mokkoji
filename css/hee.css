@@ -47,6 +47,7 @@
   font-weight: 700;
 }
 
+/* 전체 버튼 */
 .btn-select {
   display: flex;
   margin-top: 170px;
@@ -57,9 +58,11 @@
 .btn-select button {
   width: 115px;
   height: 35px;
+  /* padding: 5px 10px; */
   border: 1px solid #bababa;
-  border-radius: 30px;
+  border-radius: 5px;
   font-size: 1.6rem;
+  font-weight: bold;
   color: #bababa;
   background-color: #fff;
   cursor: pointer;
@@ -233,7 +236,7 @@
   width: 115px;
   height: 35px;
   border: 1px solid #bababa;
-  border-radius: 30px;
+  border-radius: 5px;
   font-size: 1.6rem;
   color: #bababa;
   background-color: #fff;
