@@ -7,9 +7,9 @@ window.addEventListener("load", function () {
     pagination: {
       el: ".swiper-pagination-review1",
       clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + "</span>";
-      },
+      // renderBullet: function (index, className) {
+      //   return '<span class="' + className + '">' + (index + 1) + "</span>";
+      // },
     },
     navigation: {
       nextEl: ".swiper-button-next-review1",
@@ -24,10 +24,10 @@ window.addEventListener("load", function () {
         slidesPerView: 3,
         spaceBetween: 10,
       },
-      600: {
-        slidesPerView: 3,
-        spaceBetween: 10,
-      },
+      // 600: {
+      //   slidesPerView: 3,
+      //   spaceBetween: 10,
+      // },
       0: {
         slidesPerView: 1,
         spaceBetween: 0,
@@ -43,9 +43,9 @@ window.addEventListener("load", function () {
     pagination: {
       el: ".swiper-pagination-review2",
       clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + "</span>";
-      },
+      // renderBullet: function (index, className) {
+      //   return '<span class="' + className + '">' + (index + 1) + "</span>";
+      // },
     },
     navigation: {
       nextEl: ".swiper-button-next-review2",
