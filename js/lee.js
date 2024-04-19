@@ -20,8 +20,6 @@ window.addEventListener("load", function () {
     search.style.display = "none";
     searchInput.value = ""; // input 내용 리셋
   });
-  // nav 메뉴 클릭 시 이름 옆에 점 생기기
-  
   // ===============================================================
   // 대구 아이콘에 active 클래스 추가
   var daeguPinCont = document.querySelector(".map-pin-cont.daegu");
@@ -46,17 +44,42 @@ window.addEventListener("load", function () {
     });
   });
   // ==================================================================
-  // 대구 핀 클릭 시 부산 배경 나오게 하기
+  // 각 지역 핀 클릭 시 해당 지역 컨텐츠만 보이도록 설정
+  var pins = document.querySelectorAll(".map-pin-cont");
+  pins.forEach(function (pin) {
+    pin.addEventListener("click", function () {
+      // 현재 클릭한 지역의 이름을 가져옴
+      var region = this.classList[1]; // 예: "daegu"
+      // 모든 지역 컨텐츠를 숨김
+      var allContents = document.querySelectorAll(".market-contents");
+      allContents.forEach(function (content) {
+        content.style.display = "none";
+      });
+      // 현재 클릭한 지역의 컨텐츠를 보이도록 함
+      var targetContent = document.getElementById(region);
+      targetContent.style.display = "block";
+      // 현재 클릭한 지역 핀에만 active 클래스 추가
+      pins.forEach(function (otherPin) {
+        otherPin.classList.remove("active");
+      });
+      this.classList.add("active");
+    });
+  });
+  // ==================================================================
+  // 대구 핀 클릭 시 대구 배경 나오게 하기
   const mapPinDaegu = document.querySelector(".daegu");
+  const daeguContent = document.getElementById("daegu");
   mapPinDaegu.addEventListener("click", function () {
     const mapBg = document.querySelector(".map-bg");
     mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_daegu.png")';
   });
   // 부산 핀 클릭 시 부산 배경 나오게 하기
   const mapPinBusan = document.querySelector(".busan");
+  const busanContent = document.getElementById("busan");
   mapPinBusan.addEventListener("click", function () {
     const mapBg = document.querySelector(".map-bg");
     mapBg.style.backgroundImage = 'url("../images/3marketinfo/main_map_busan.png")';
+    busanContent.style.display = "block";
   });
   // 충북 핀 클릭 시 충북 배경 나오게 하기
   const mapPinChungbuk = document.querySelector(".chungbuk");
