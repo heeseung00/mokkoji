@@ -293,6 +293,15 @@
 }
 
 .review .swiper-slide a {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.review .swiper-slide a img {
+  width: 100%;
 }
 
 /* 이미지 커질 때: 텍스트 */
@@ -315,7 +324,7 @@
 } */
 .review .swiper-slide p {
   position: absolute;
-  top: 65%;
+  bottom: 10%;
   color: #fff;
   font-size: 1.5rem;
   font-weight: 600;
@@ -323,12 +332,6 @@
   width: 100%;
 }
 
-.review .swiper-slide a {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  border-radius: 5px;
-}
 /* ARROWS */
 .review .swiper-button-prev,
 .review .swiper-button-next {
@@ -344,7 +347,7 @@
   font-size: 1.2rem;
   color: #000;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
 
   &.swiper-pagination-bullet-active {
     color: #fff;
@@ -526,6 +529,31 @@
 /* ==================================================================== */
 /* 반응형 */
 
+@media screen and (max-width: 1200px) {
+  /* 리뷰 */
+  .review .review-slider-eat {
+    position: relative;
+    height: 600px;
+  }
+
+  .review .swiper {
+    height: 100%;
+  }
+
+  .review .swiper-slide p {
+    /* font-size: 2.2rem; */
+    font-size: 1.8333vw;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .review .swiper-slide p {
+    font-size: 1.4rem;
+    line-height: 21px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .title-wrap {
     display: flex;
@@ -583,11 +611,16 @@
   }
 
   .review .swiper-slide a {
+    width: 50%;
     /* width: 100%; */
     /* width: 75%; */
   }
 
-  .review .swiper-slide p {
+  .review .swiper-slide a img {
+    width: 100%;
+  }
+
+  .review .swiper-slide a p {
     font-size: 1.4rem;
   }
   /* 공통 */
@@ -620,6 +653,12 @@
     position: relative;
 
     opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  &.swiper-slide-active {
+    transform: scale(1);
   }
 }
 
