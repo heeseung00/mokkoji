@@ -70,8 +70,10 @@ body {
 }
 /* 로고 */
 .hd-logo {
-  width: 150px;
-  height: 100%;
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 80px;
 }
 .hd-logo > a > img {
   width: 100%;
@@ -172,14 +174,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .header > .search > .container > .inner {
-  width: 100%;
-  height: 100%;
-}
-.hd-logo {
-  width: 150px;
-  height: 100px;
-}
-.hd-logo > a > img {
   width: 100%;
   height: 100%;
 }
@@ -518,13 +512,14 @@ input::placeholder {
 }
 .market-content-right .market-content-right-top p {
   font-size: 1.6rem;
+  font-weight: bold;
 }
 .market-content-right .market-content-right-top span {
-  font-size: 1.2rem;
-  border-radius: 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
   padding: 5px 10px 5px 10px;
   color: #191919;
-  background-color: #fcd2a1;
+  background-color: #fcf6f2;
 }
 .market-adr {
   display: block;
@@ -546,7 +541,7 @@ input::placeholder {
   display: block;
   margin: 0 auto;
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: #f88222;
 }
 .market-contents button a {
@@ -581,7 +576,7 @@ input::placeholder {
 .sectionTopbt button {
   width: 115px;
   height: 35px;
-  border-radius: 25px;
+  border-radius: 5px;
   border: 1px solid #bababa;
   background-color: #fff;
   color: #bababa;
