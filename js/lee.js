@@ -20,6 +20,61 @@ window.addEventListener("load", function () {
     search.style.display = "none";
     searchInput.value = ""; // input 내용 리셋
   });
+  // nav 클릭 시 해당 section으로 가기
+  var menuItems = document.querySelectorAll(".menu-list a");
+  menuItems.forEach(function(item) {
+    item.addEventListener("click", function(event) {
+      // href 속성 값 가져오기
+      var href = this.getAttribute("href");
+      // 만약 href 속성 값이 "#"로 시작하면, 스크롤 효과 적용
+      if (href.startsWith("#")) {
+        event.preventDefault(); // 기본 동작 방지
+        // 대상 섹션의 id 가져오기
+        var targetSectionId = href.substring(1);
+        // 대상 섹션 요소 가져오기
+        var targetSection = document.getElementById(targetSectionId);
+        // 대상 섹션의 페이지 맨 위에서의 거리 계산
+        var offsetTop = targetSection.offsetTop;
+        // 부드러운 스크롤링 효과 적용
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+// =================================================================
+    // 모바일 스크롤 다운 시 헤더 그림자 효과
+    var mbheader = document.querySelector(".mb-header");
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 0) {
+        mbheader.classList.add("scrolled"); // 스크롤 내릴 때 scrolled 클래스 추가
+      } else {
+        mbheader.classList.remove("scrolled"); // 스크롤 올릴 때 scrolled 클래스 제거
+      }
+    });
+    // 모바일 햄버거 메뉴 열고 닫기
+    const mbMenuOpen = document.getElementById("mb-menuBt")
+    const mbMenuContents = document.getElementById("mbMenuContents")
+    const mbMenuClose = document.getElementById("mb-menu-xBt")
+    mbMenuOpen.addEventListener("click", function(){
+      mbMenuContents.style.display = "block";
+    })
+    mbMenuClose.addEventListener("click", function(){
+      mbMenuContents.style.display = "none";
+    })
+  // 모바일 헤더 검색창 열고 닫기
+  const mbSearchOpen = document.getElementById("mb-search-open");
+  const mbSearch = document.getElementById("mb-search");
+  const mbSearchClose = document.getElementById("mb-closeBt");
+  const mbSearchInput = document.getElementById("mbSearchInput");
+  mbSearchOpen.addEventListener("click", function () {
+    mbSearch.style.display = "block";
+  });
+  mbSearchClose.addEventListener("click", function () {
+    mbSearch.style.display = "none";
+    mbSearchInput.value = ""; // input 내용 리셋
+  });
   // ===============================================================
   // 대구 아이콘에 active 클래스 추가
   var daeguPinCont = document.querySelector(".map-pin-cont.daegu");
@@ -177,8 +232,8 @@ window.addEventListener("load", function () {
   const famousBtn = document.getElementById("famousBtn");
   const bestContent = document.getElementById("bestContent");
   const famousContent = document.getElementById("famousContent");
-  const swBest = document.querySelector(".sw-best");
-  const swFamous = document.querySelector(".sw-famous");
+  const swBestContent = document.querySelector(".sw-best");
+  const swFamousContent = document.querySelector(".sw-famous");
   const bestTitle = document.querySelector(".best-food");
   const famousTitle = document.querySelector(".famous-food");
   // 초기에는 첫 번째 컨텐츠가 보이도록 설정
@@ -196,7 +251,8 @@ window.addEventListener("load", function () {
     famousBtn.style.border = "1px solid #bababa";
     famousBtn.style.backgroundColor = "#fff";
     famousBtn.style.color = "#bababa";
-    swBest.swiper.slideTo(0);
+    swBestContent.swiper.slideTo(0);
+    swbest.update(); // 스와이퍼 업데이트
   });
   // 유명인 방문 버튼 클릭 시
   // famousBtn 클릭 시
@@ -211,7 +267,8 @@ window.addEventListener("load", function () {
     bestBtn.style.border = "1px solid #bababa";
     bestBtn.style.backgroundColor = "#fff";
     bestBtn.style.color = "#bababa";
-    swFamous.swiper.slideTo(0);
+    swFamousContent.swiper.slideTo(0);
+    swfamous.update(); // 스와이퍼 업데이트
   });
   // 시장 클릭 이벤트
   const oldBtn = document.getElementById("oldBtn");
@@ -247,7 +304,8 @@ window.addEventListener("load", function () {
     nightBtn.style.border = "1px solid #bababa";
     nightBtn.style.backgroundColor = "#fff";
     nightBtn.style.color = "#bababa";
-    swBest.swiper.slideTo(0);
+    swOld.swiper.slideTo(0);
+    swold.update(); // 스와이퍼 업데이트
   });
   // 특색있는 시장 버튼 클릭 시
   uniqueBtn.addEventListener("click", function () {
@@ -266,7 +324,8 @@ window.addEventListener("load", function () {
     nightBtn.style.border = "1px solid #bababa";
     nightBtn.style.backgroundColor = "#fff";
     nightBtn.style.color = "#bababa";
-    swFamous.swiper.slideTo(0);
+    swUnique.swiper.slideTo(0);
+    swunique.update(); // 스와이퍼 업데이트
   });
   // 야시장 버튼 클릭 시
   nightBtn.addEventListener("click", function () {
@@ -285,74 +344,206 @@ window.addEventListener("load", function () {
     oldBtn.style.border = "1px solid #bababa";
     oldBtn.style.backgroundColor = "#fff";
     oldBtn.style.color = "#bababa";
-    swFamous.swiper.slideTo(0);
+    swNight.swiper.slideTo(0);
+    swnight.update(); // 스와이퍼 업데이트
   });
-
   // ===================== 스와이프
-  // 베스트 맛집 스와이프
-  var swbest = new Swiper(".sw-best", {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
+// 베스트 맛집 스와이프
+var swbest = new Swiper(".sw-best", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".next-best",
+    prevEl: ".prev-best",
+  },
+  scrollbar: {
+    el: '.scrollbar-best',
+  },
+  on: {
+    init: function () {
+      updateButtonPosition(this);
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    slideChange: function () {
+      updateButtonPosition(this);
     },
-  });
-  // 유명인 맛집 스와이프
-  var swfamous = new Swiper(".sw-famous", {
-    slidesPerView: 4,
-    spaceBetween: 25,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
+    reachEnd: function () {
+      // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+      var nextBestButton = document.querySelector(".next-best");
+      nextBestButton.style.backgroundPosition = "0 -108px";
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    reachBeginning: function () {
+      // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
+      var nextBestButton = document.querySelector(".next-best");
+      nextBestButton.style.backgroundPosition = "0 -72px";
+    }
+  }
+});
+// 유명인 맛집 스와이프
+var swfamous = new Swiper(".sw-famous", {
+  slidesPerView: 4, // 슬라이드 개수 설정
+  spaceBetween: 25,
+  navigation: {
+    nextEl: ".next-famous",
+    prevEl: ".prev-famous",
+  },
+  scrollbar: {
+    el: '.scrollbar-famous',
+  },
+  on: {
+    init: function () {
+      updateButtonPosition(this);
     },
-  });
+    slideChange: function () {
+      updateButtonPosition(this);
+    },
+    reachEnd: function () {
+      // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+      var nextFamousButton = document.querySelector(".next-famous");
+      nextFamousButton.style.backgroundPosition = "0 -108px";
+    },
+    reachBeginning: function () {
+      // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
+      var nextFamousButton = document.querySelector(".next-famous");
+      nextFamousButton.style.backgroundPosition = "0 -72px";
+    }
+  }
+});
   // 옛날 감성 스와이프
-  var swfamous = new Swiper(".sw-old", {
+  var swold = new Swiper(".sw-old", {
     slidesPerView: 4,
     spaceBetween: 25,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".next-old",
+      prevEl: ".prev-old",
     },
+    scrollbar: {
+      el: '.scrollbar-old',
+    },
+    on: {
+      init: function () {
+        updateButtonPosition(this);
+      },
+      slideChange: function () {
+        updateButtonPosition(this);
+      },
+      reachEnd: function () {
+        // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+        var nextOldButton = document.querySelector(".next-old");
+        nextOldButton.style.backgroundPosition = "0 -108px";
+      },
+      reachBeginning: function () {
+        // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
+        var nextOldButton = document.querySelector(".next-old");
+        nextOldButton.style.backgroundPosition = "0 -72px";
+      }
+    }
   });
   // 특색 있는 스와이프
-  var swfamous = new Swiper(".sw-unique", {
+  var swunique = new Swiper(".sw-unique", {
     slidesPerView: 4,
     spaceBetween: 25,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".next-unique",
+      prevEl: ".prev-unique",
     },
+    scrollbar: {
+      el: '.scrollbar-unique',
+    },
+    on: {
+      init: function () {
+        updateButtonPosition(this);
+      },
+      slideChange: function () {
+        updateButtonPosition(this);
+      },
+      reachEnd: function () {
+        // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+        var nexUniqueButton = document.querySelector(".next-unique");
+        nexUniqueButton.style.backgroundPosition = "0 -108px";
+      },
+      reachBeginning: function () {
+        // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
+        var nexUniqueButton = document.querySelector(".next-unique");
+        nexUniqueButton.style.backgroundPosition = "0 -72px";
+      }
+    }
   });
   // 야시장 스와이프
-  var swfamous = new Swiper(".sw-night", {
+  var swnight = new Swiper(".sw-night", {
     slidesPerView: 4,
     spaceBetween: 25,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".next-night",
+      prevEl: ".prev-night",
     },
+    scrollbar: {
+      el: '.scrollbar-night',
+    },
+    on: {
+      init: function () {
+        updateButtonPosition(this);
+      },
+      slideChange: function () {
+        updateButtonPosition(this);
+      },
+      reachEnd: function () {
+        // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+        var nextNightButton = document.querySelector(".next-night");
+        nextNightButton.style.backgroundPosition = "0 -108px";
+      },
+      reachBeginning: function () {
+        // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
+        var nextNightButton = document.querySelector(".next-night");
+        nextNightButton.style.backgroundPosition = "0 -72px";
+      }
+    }
   });
+  // =====================================================
+  // 이전, 다음 버튼 클릭
+  function updateButtonPosition(swiper) {
+    var activeIndex = swiper.activeIndex;
+    var prevButton = document.querySelector(".swiper-button-prev");
+    var nextButton = document.querySelector(".swiper-button-next");
+  
+    if (swiper.el.classList.contains('sw-best')) {
+      if (activeIndex === 0) {
+        prevButton.style.backgroundPosition = "0 -36px";
+      } else {
+        prevButton.style.backgroundPosition = "0 0";
+      }
+    } else if (swiper.el.classList.contains('sw-famous')) {
+      if (activeIndex === 0) {
+        var prevFamousButton = document.querySelector(".prev-famous");
+        prevFamousButton.style.backgroundPosition = "0 -36px";
+      } else {
+        var prevFamousButton = document.querySelector(".prev-famous");
+        prevFamousButton.style.backgroundPosition = "0 0";
+      }
+    } else if (swiper.el.classList.contains('sw-old')) {
+      if (activeIndex === 0) {
+        var prevOldButton = document.querySelector(".prev-old");
+        prevOldButton.style.backgroundPosition = "0 -36px";
+      } else {
+        var prevOldButton = document.querySelector(".prev-old");
+        prevOldButton.style.backgroundPosition = "0 0";
+      }
+    } else if (swiper.el.classList.contains('sw-unique')) {
+      if (activeIndex === 0) {
+        var prevUniqueButton = document.querySelector(".prev-unique");
+        prevUniqueButton.style.backgroundPosition = "0 -36px";
+      } else {
+        var prevUniqueButton = document.querySelector(".prev-unique");
+        prevUniqueButton.style.backgroundPosition = "0 0";
+      }
+    } else if (swiper.el.classList.contains('sw-night')) {
+      if (activeIndex === 0) {
+        var prevNightButton = document.querySelector(".prev-night");
+        prevNightButton.style.backgroundPosition = "0 -36px";
+      } else {
+        var prevNightButton = document.querySelector(".prev-night");
+        prevNightButton.style.backgroundPosition = "0 0";
+      }
+    }
+  }
   // =====================================================
 });
