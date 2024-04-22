@@ -11,9 +11,13 @@ window.addEventListener("load", function () {
       //   return '<span class="' + className + '">' + (index + 1) + "</span>";
       // },
     },
+    // navigation: {
+    //   nextEl: ".review .swiper-button-next",
+    //   prevEl: ".review .swiper-button-prev",
+    // },
     navigation: {
-      nextEl: ".swiper-button-next-review1",
-      prevEl: ".swiper-button-prev-review1",
+      nextEl: ".review .swiper-button-next-review1",
+      prevEl: ".review .swiper-button-prev-review1",
     },
     breakpoints: {
       1200: {
@@ -204,7 +208,8 @@ $(function () {
 
   $(".market-btn-color:nth-child(2)").click(function () {
     $(".day5").hide();
-    $(".allDays").show().css("opacity", 1); // "opacity"를 올바르게 작성하고, css() 메소드를 사용하여 스타일을 설정합니다.
+    $(".allDays").show().css("opacity", 1).css("display", "flex");
+  
   });
 
   // 방문 후기: 버튼 클릭 이벤트
