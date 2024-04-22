@@ -47,7 +47,11 @@ body {
   margin-top: 150px;
   padding-top: 30px;
   margin-bottom: 50px;
+  font-weight: 700;
 }
+/* section{
+  margin-bottom: 180px;
+} */
 /* 헤더 */
 .header {
   position: fixed;
@@ -133,9 +137,17 @@ body {
 .hd-right > .my-list > li a {
   font-size: 2rem;
 }
-.hd-right > .my-list > li a img {
-  width: 30px;
-  height: 30px;
+.hd-right > .my-list > li:nth-child(1) button:hover {
+  color: #f88222;
+}
+.hd-right > .my-list > li:nth-child(2) a:hover {
+  color: #f88222;
+}
+.hd-right > .my-list > li:nth-child(3) a:hover {
+  color: #f88222;
+}
+.hd-right > .my-list > li > a > i {
+  font-size: 2.5rem;
 }
 .hd-right > .my-list > li:nth-child(1)::after {
   content: "";
@@ -155,14 +167,17 @@ body {
   display: none;
   width: 5px;
   height: 5px;
-  background: #000;
+  background: #f88222;
   border-radius: 100%;
   position: absolute;
   right: -11px;
   top: 0px;
 }
-.menu-list li a:hover::after,
-.menu-list li a:focus::after {
+.menu-list li a:hover::after
+/* .menu-list li a:focus::after  */ {
+  display: inline-block;
+}
+.menu-list li.active a::after {
   display: inline-block;
 }
 /* 검색창 */
@@ -178,13 +193,18 @@ body {
   top: -100px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 .header > .search > .container > .inner {
   width: 100%;
   height: 100%;
 }
+.header > .search > .container > .inner > .hd-logo {
+  margin-top: 20px;
+}
 .header .search .container .inner .search-contents {
-  padding: 50px 200px 0px 200px;
+  padding: 50px 0px 0px 0px;
+  /* margin: 0 auto; */
 }
 .header .search .search-close-bt {
   position: relative;
@@ -206,7 +226,8 @@ body {
 }
 .header .search .search-contents .search-content-top input {
   height: 30px;
-  width: 800px;
+  /* width: 800px; */
+  width: 100%;
   border-width: 0 0 2px;
   outline: none;
   font-size: 2rem;
@@ -264,38 +285,17 @@ input::placeholder {
   font-size: 1.6rem;
   line-height: 1.9;
 }
-.header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-left
-  li
-  a
-  span {
+.header .search .search-content-bot .search-hot .search-hot-list-left li a span {
   margin-right: 20px;
 }
 .header .search .search-content-bot .search-hot .search-hot-list-right {
   font-size: 1.6rem;
   line-height: 1.9;
 }
-.header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-right
-  li
-  a
-  span {
+.header .search .search-content-bot .search-hot .search-hot-list-right li a span {
   margin-right: 20px;
 }
-.header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-right
-  li:nth-child(5)
-  a
-  span {
+.header .search .search-content-bot .search-hot .search-hot-list-right li:nth-child(5) a span {
   margin-right: 11px;
 }
 /* 모바일 헤더 */
@@ -330,13 +330,16 @@ input::placeholder {
   background: none;
   cursor: pointer;
 }
+.mb-header > .inner > .container > .mb-menu > button > i {
+  font-size: 2.8rem;
+}
 .mb-header > .inner > .container > .logo {
   position: relative;
   display: block;
 }
-.mb-header > .inner > .container > .logo > img {
-  width: 200px;
-  height: auto;
+.mb-header > .inner > .container > .logo > a > img {
+  width: 70px;
+  height: 70px;
 }
 .mb-header > .inner > .container > .mb-search > button {
   border: none;
@@ -397,18 +400,28 @@ input::placeholder {
 }
 .mb-header > .search > .container {
   width: 100%;
-  height: 560px;
+  height: 530px;
   position: absolute;
   top: -80px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 .mb-header > .search > .container > .inner {
   width: 100%;
   height: 100%;
 }
+.mb-header > .search > .container > .inner > .hd-logo > a {
+  display: block;
+  width: 70px;
+}
+.mb-header > .search > .container > .inner > .hd-logo > a > img {
+  width: 70px;
+  height: 70px;
+}
 .mb-header .search .container .inner .search-contents {
-  padding: 0 200px;
+  padding: 50px 0px 0px 0px;
+  /* padding: 0 200px; */
 }
 .mb-header .search .search-close-bt {
   position: relative;
@@ -437,7 +450,7 @@ input::placeholder {
 }
 .mb-header .search .search-contents .search-content-top input::placeholder {
   color: #5e5e5e;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .mb-header .search .search-contents .search-content-top i {
   font-size: 2rem;
@@ -446,7 +459,7 @@ input::placeholder {
 }
 /* 검색 중간 */
 .mb-header .search .search-content-mid {
-  margin: 35px 0px;
+  margin: 30px 0px;
 }
 .mb-header .search .search-content-mid p {
   font-size: 2rem;
@@ -454,7 +467,7 @@ input::placeholder {
 .mb-header .search .search-content-mid .search-s {
   font-size: 1.3rem;
   text-align: center;
-  padding: 40px 0;
+  padding: 30px 0;
 }
 /* 검색 하단 */
 .mb-header .search .search-content-bot {
@@ -487,29 +500,18 @@ input::placeholder {
   font-size: 1.6rem;
   line-height: 1.9;
 }
-.mb-header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-left
-  li
-  a
-  span {
+.mb-header .search .search-content-bot .search-hot .search-hot-list-left li a span {
   margin-right: 20px;
 }
 .mb-header .search .search-content-bot .search-hot .search-hot-list-right {
   font-size: 1.6rem;
   line-height: 1.9;
 }
-.mb-header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-right
-  li
-  a
-  span {
+.mb-header .search .search-content-bot .search-hot .search-hot-list-right li a span {
   margin-right: 20px;
+}
+.mb-header .search .search-content-bot .search-hot .search-hot-list-right li:nth-child(5) a span {
+  margin-right: 11px;
 }
 /* 메인 배너 */
 .banner {
@@ -608,7 +610,6 @@ input::placeholder {
   display: block;
   width: 34px;
   height: 44px;
-  background: no-repeat center;
   background-image: url("../images/3marketinfo/map_pin_on.png");
   position: relative;
 }
@@ -726,6 +727,51 @@ input::placeholder {
   top: 320px;
   left: 296px;
 }
+/* 1045일 때 왼쪽 */
+.market-info-1045 {
+  display: none;
+}
+.market-info-contents2 .market-contents2 {
+  position: relative;
+  display: none;
+  margin-top: 50px;
+}
+.local-cont > .local-bt-name {
+  width: 60px;
+  border-radius: 5px;
+  background-color: #f88222;
+  display: block;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 5px 0;
+  text-align: center;
+}
+.sw-local-container {
+  display: block;
+  position: relative;
+  padding: 10px;
+  overflow: hidden;
+  margin: 0 50px;
+}
+.sw-local-name {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.market-info-1045 .market-content-right-top {
+  margin: 10px 0;
+}
+.market-contents2 {
+  border: 1px solid #5e5e5e;
+}
+.market-contents2 button {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  background-color: #f88222;
+}
 /* 오른쪽 */
 .market-info-right {
   width: 60%;
@@ -747,6 +793,7 @@ input::placeholder {
 }
 .market-content-right,
 .market-content-left {
+  margin: auto;
   width: 50%;
 }
 .market-content-left img {
@@ -783,6 +830,9 @@ input::placeholder {
   margin-top: 30px;
   margin-bottom: 35px;
 }
+.market-info-right .market-contents {
+  display: none;
+}
 /* 더보기 버튼 */
 .market-contents button {
   display: block;
@@ -797,7 +847,7 @@ input::placeholder {
   padding: 5px 10px;
   color: #fff;
 }
-.market-info-right .market-contents {
+.market-info > .market-info-contents > .market-contents {
   display: none;
 }
 #daegu {
@@ -935,8 +985,7 @@ input::placeholder {
   top: 10%;
   /* transform: translateY(-50%); */
   color: #fff;
-  text-shadow: -1px 0px #a6a6a6, 0px 1px #a6a6a6, 1px 0px #a6a6a6,
-    0px -1px #a6a6a6;
+  text-shadow: -1px 0px #a6a6a6, 0px 1px #a6a6a6, 1px 0px #a6a6a6, 0px -1px #a6a6a6;
 }
 .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
   position: absolute;
@@ -986,41 +1035,18 @@ input::placeholder {
   justify-content: space-between;
   padding: 30px 0 20px 0;
 }
-.sw-famous
-  > .swiper-wrapper
-  > .swiper-slide
-  > .famous-content
-  > a
-  > .names
-  > .name1 {
+.sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .names > .name1 {
   font-size: 1.6rem;
   font-weight: bold;
 }
-.sw-famous
-  > .swiper-wrapper
-  > .swiper-slide
-  > .famous-content
-  > a
-  > .names
-  > .name2 {
+.sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .names > .name2 {
   font-size: 1.5rem;
 }
-.sw-famous
-  > .swiper-wrapper
-  > .swiper-slide
-  > .famous-content
-  > a
-  > .famous-tag-list {
+.sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .famous-tag-list {
   display: flex;
   gap: 10px;
 }
-.sw-famous
-  > .swiper-wrapper
-  > .swiper-slide
-  > .famous-content
-  > a
-  > .famous-tag-list
-  > .famous-tag {
+.sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .famous-tag-list > .famous-tag {
   border-radius: 5px;
   padding: 5px 8px;
   font-size: 1.3rem;
@@ -1185,22 +1211,11 @@ input::placeholder {
   font-size: 1.5rem;
   padding-bottom: 15px;
 }
-.sw-unique
-  > .swiper-wrapper
-  > .swiper-slide
-  > .unique-content
-  > a
-  > .unique-tag-list {
+.sw-unique > .swiper-wrapper > .swiper-slide > .unique-content > a > .unique-tag-list {
   display: flex;
   gap: 10px;
 }
-.sw-unique
-  > .swiper-wrapper
-  > .swiper-slide
-  > .unique-content
-  > a
-  > .unique-tag-list
-  > .unique-tag {
+.sw-unique > .swiper-wrapper > .swiper-slide > .unique-content > a > .unique-tag-list > .unique-tag {
   border-radius: 30px;
   padding: 5px;
   font-size: 1.3rem;

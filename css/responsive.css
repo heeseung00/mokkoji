@@ -2,12 +2,11 @@
   .container {
     padding: 0px 20px;
   }
-  /* 헤더 검색 */
-  .header .search .container .inner .search-contents {
-    padding: 50px 100px 40px 200px;
+  .sw-best > .swiper-wrapper > .swiper-slide > span {
+    font-size: 14rem;
   }
-  .header .search .search-contents .search-content-top input {
-    width: 900px;
+  .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
+    left: 50px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -28,21 +27,10 @@
   }
 }
 @media screen and (max-width: 1150px) {
-  .sw-famous
-    > .swiper-wrapper
-    > .swiper-slide
-    > .famous-content
-    > a
-    > .famous-tag-list {
+  .sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .famous-tag-list {
     gap: 5px;
   }
-  .sw-famous
-    > .swiper-wrapper
-    > .swiper-slide
-    > .famous-content
-    > a
-    > .famous-tag-list
-    > .famous-tag {
+  .sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .famous-tag-list > .famous-tag {
     font-size: 1.2rem;
   }
 }
@@ -50,6 +38,14 @@
   /* 시장 소개 오른쪽 */
   .market-info-right .market-contents {
     padding: 50px 20px 10px 20px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .sw-best > .swiper-wrapper > .swiper-slide > span {
+    font-size: 16rem;
+  }
+  .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
+    left: 60px;
   }
 }
 @media screen and (max-width: 1080px) {
@@ -72,19 +68,26 @@
   }
 }
 @media screen and (max-width: 1050px) {
-  .sw-famous
-    > .swiper-wrapper
-    > .swiper-slide
-    > .famous-content
-    > a
-    > .famous-tag-list
-    > .famous-tag {
+  .sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .famous-tag-list > .famous-tag {
     font-size: 1.1rem;
   }
 }
-/* @media screen and (max-width: 1045px) {
-    시장 소개 섹션 변경하기
-} */
+@media screen and (max-width: 1045px) {
+  /* 시장 소개 왼쪽 변경 */
+  .market-info-contents {
+    display: none;
+  }
+  .market-info-1045 {
+    display: block;
+  }
+  .market-info-right {
+    width: 65%;
+    background-color: #e0e7fb;
+  }
+  .market-info-left2 {
+    width: 35%;
+  }
+}
 @media screen and (max-width: 1000px) {
   .wrap {
     margin-top: 80px;
@@ -112,10 +115,6 @@
   .hd-right > .my-list > li a {
     font-size: 1.8rem;
   }
-  .hd-right > .my-list > li a img {
-    width: 25px;
-    height: 25px;
-  }
   .hd-right > .my-list > li:nth-child(1)::after {
     height: 18px;
     position: absolute;
@@ -124,50 +123,33 @@
   .header > .search > .container {
     top: -80px;
   }
-  /* 헤더 검색 */
-  .header .search .container .inner .search-contents {
-    padding: 50px 50px 0 50px;
+  .hd-right > .my-list > li > a > i {
+    font-size: 2.3rem;
   }
-  .sw-famous
-    > .swiper-wrapper
-    > .swiper-slide
-    > .famous-content
-    > a
-    > .famous-tag-list
-    > .famous-tag {
+  .sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .famous-tag-list > .famous-tag {
     font-size: 1rem;
   }
 }
 @media screen and (max-width: 950px) {
-  .sw-famous
-    .swiper-slide:nth-child(3)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(3) .famous-tag-list .famous-tag:last-child {
     display: none;
   }
-  .sw-famous
-    .swiper-slide:nth-child(4)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(4) .famous-tag-list .famous-tag:last-child {
     display: none;
   }
-  .sw-famous
-    > .swiper-wrapper
-    > .swiper-slide
-    > .famous-content
-    > a
-    > .names
-    > .name1 {
+  .sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .names > .name1 {
     font-size: 1.4rem;
   }
-  .sw-famous
-    > .swiper-wrapper
-    > .swiper-slide
-    > .famous-content
-    > a
-    > .names
-    > .name2 {
+  .sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .names > .name2 {
     font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 920px) {
+  .sw-best > .swiper-wrapper > .swiper-slide > span {
+    font-size: 14rem;
+  }
+  .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
+    left: 50px;
   }
 }
 @media screen and (max-width: 880px) {
@@ -201,14 +183,24 @@
     top: 52%;
     left: 38%;
   }
-  /* 헤더 검색 */
-  .header .search .container .inner .search-contents {
-    padding: 30px 50px 0 50px;
+  .hd-right > .my-list > li > a > i {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .sw-best > .swiper-wrapper > .swiper-slide > span {
+    top: 5%;
+  }
+  .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
+    left: 50px;
   }
 }
 @media screen and (max-width: 840px) {
   /* 검색 하단 */
   .header .search .search-content-bot .search-hot {
+    gap: 25%;
+  }
+  .mb-header .search .search-content-bot .search-hot {
     gap: 25%;
   }
 }
@@ -220,90 +212,121 @@
   }
 }
 @media screen and (max-width: 800px) {
-  .sw-famous
-    .swiper-slide:nth-child(7)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(7) .famous-tag-list .famous-tag:last-child {
     display: none;
   }
-  .sw-famous
-    .swiper-slide:nth-child(4)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(4) .famous-tag-list .famous-tag:last-child {
     display: none;
   }
 }
-/* @media screen and (max-width: 790px) {
-} */
+@media screen and (max-width: 790px) {
+  .header {
+    display: none;
+  }
+  .mb-header {
+    display: block;
+  }
+  .mb-header .search .container .inner .search-contents {
+    padding: 20px 0px 0 00px;
+  }
+  /* 시장 소개 왼쪽 변경 */
+  .market-info-right {
+    width: 70%;
+    background-color: #e0e7fb;
+  }
+  .market-info-left2 {
+    width: 30%;
+  }
+  .local-bt {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+    padding: 30px 15px 30px 30px;
+  }
+  .sw-best > .swiper-wrapper > .swiper-slide > span {
+    font-size: 16rem;
+    top: 10%;
+  }
+  .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
+    left: 60px;
+  }
+}
 @media screen and (max-width: 570px) {
   /* 헤더 검색 */
-  .header .search .container .inner .search-contents {
+  .mb-header .search .container .inner .search-contents {
     padding: 30px 0px 0 0px;
   }
+  .mb-header > .search > .container {
+    height: 510px;
+  }
   /* 검색 상단 */
-  .header .search .search-contents .search-content-top input {
+  .mb-header .search .search-contents .search-content-top input {
     font-size: 1.6rem;
   }
   input::placeholder {
     font-size: 1.6rem;
   }
-  .header .search .search-contents .search-content-top i {
+  .mb-header .search .search-contents .search-content-top i {
     font-size: 1.6rem;
   }
   /* 검색 중간 */
-  .header .search .search-content-mid p {
+  .mb-header .search .search-content-mid p {
     font-size: 1.6rem;
   }
-  .header .search .search-content-mid .search-s {
+  .mb-header .search .search-content-mid .search-s {
     font-size: 1.2rem;
   }
   /* 검색 하단 */
-  .header .search .search-content-bot-top p {
+  .mb-header .search .search-content-bot-top p {
     font-size: 1.6rem;
   }
-  .header .search .search-content-bot-top .search-s {
+  .mb-header .search .search-content-bot-top .search-s {
     font-size: 1.2rem;
   }
-  .header .search .search-content-bot .search-hot .search-hot-list-left {
+  .mb-header .search .search-content-bot .search-hot .search-hot-list-left {
     font-size: 1.4rem;
   }
-  .header .search .search-content-bot .search-hot .search-hot-list-right {
+  .mb-header .search .search-content-bot .search-hot .search-hot-list-right {
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 380px) {
-  .header .search .search-content-bot .search-hot {
+  .mb-header .search .search-content-bot .search-hot {
     padding: 15px 18px;
   }
+  .mb-header > .search > .container {
+    height: 495px;
+  }
   /* 검색 상단 */
-  .header .search .search-contents .search-content-top input {
+  .mb-header .search .search-contents .search-content-top input {
     font-size: 1.5rem;
   }
   input::placeholder {
     font-size: 1.5rem;
   }
-  .header .search .search-contents .search-content-top i {
+  .mb-header .search .search-contents .search-content-top i {
     font-size: 1.5rem;
   }
   /* 검색 중간 */
-  .header .search .search-content-mid p {
+  .mb-header .search .search-content-mid p {
     font-size: 1.5rem;
   }
   /* 검색 하단 */
-  .header .search .search-content-bot-top p {
+  .mb-header .search .search-content-bot-top p {
     font-size: 1.5rem;
   }
-  .header .search .search-content-bot-top .search-s {
+  .mb-header .search .search-content-bot-top .search-s {
     font-size: 1rem;
   }
-  .header .search .search-content-bot .search-hot .search-hot-list-left {
+  .mb-header .search .search-content-bot .search-hot .search-hot-list-left {
     font-size: 1.3rem;
   }
-  .header .search .search-content-bot .search-hot .search-hot-list-right {
+  .mb-header .search .search-content-bot .search-hot .search-hot-list-right {
     font-size: 1.3rem;
   }
   /* 검색 하단 */
-  .header .search .search-content-bot .search-hot {
+  .mb-header .search .search-content-bot .search-hot {
     gap: 20%;
   }
 }
