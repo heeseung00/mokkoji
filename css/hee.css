@@ -7,9 +7,10 @@
 /* 중간배너 */
 .banner-m {
   width: 100%;
+  height: 100%;
   position: relative;
   cursor: pointer;
-  background-color: #FCEFA9;
+  background-color: #fcefa9;
 }
 
 .banner-m img {
@@ -18,18 +19,18 @@
 
 /* ================================================================== */
 /* 랭킹 */
-.ranking{
+.ranking {
   position: relative;
   width: 100%;
   height: 100%;
-  margin-bottom: 150px;
+  /* margin-bottom: 150px; */
 }
 
-.ranking > .container > .inner{
-display: flex;
+.ranking > .container > .inner {
+  display: flex;
 }
 
-.ranking-wrap{
+.ranking-wrap {
   position: relative;
   width: 50%;
   height: 100%;
@@ -38,38 +39,38 @@ display: flex;
   overflow: hidden;
 }
 
-.ranking-banner{
+.ranking-banner {
   position: relative;
   width: 50%;
   height: 100%;
+  background-color: #ffecdd;
 }
 
-.ranking-banner > img{
+.ranking-banner > img {
   width: 100%;
   height: 100%;
   margin-top: 150px;
 }
 
-.ranking-title{
+.ranking-title {
   width: 100%;
   height: auto;
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-
   margin-top: 150px;
 }
 
-.ranking-title h2{
+.ranking-title h2 {
   width: 100%;
   height: 100%;
   color: #fff;
-padding: 3% 0;
-border-radius: 5px 5px 0 0;
-background-color: #333;
+  padding: 3% 0;
+  border-radius: 5px 5px 0 0;
+  background-color: #fe6b38;
 }
 
-.ranking-topRank{
+.ranking-topRank {
   position: relative;
   display: flex;
   justify-content: center;
@@ -79,7 +80,7 @@ background-color: #333;
   margin: 3% 0;
 }
 
-.ranking-topRank > ul{
+.ranking-topRank > ul {
   width: 65%;
   height: 100%;
   display: flex;
@@ -88,7 +89,7 @@ background-color: #333;
   text-align: center;
 }
 
-.ranking-topRank > ul > li{
+.ranking-topRank > ul > li {
   width: 50%;
   height: 100%;
   display: flex;
@@ -96,72 +97,70 @@ background-color: #333;
   align-items: center;
 }
 
-
-
-.ranking-topRank > ul > li:nth-child(2){
+.ranking-topRank > ul > li:nth-child(2) {
   width: 60%;
 }
 
-.ranking-topRank > ul > li:nth-child(2) > .ranking-number{
+.ranking-topRank > ul > li:nth-child(2) > .ranking-number {
   /* font-size: 3.5rem; */
   margin-bottom: 30px;
-  color: #FDC900 !important;
+  color: #fdc900 !important;
 }
 
-.ranking-topRank > ul > li:nth-child(3) > .ranking-number{
-  color: #B18966 !important;
+.ranking-topRank > ul > li:nth-child(3) > .ranking-number {
+  color: #b18966 !important;
 }
 
-.ranking-topRank .ranking-img{
+.ranking-topRank .ranking-img {
   width: 40%;
   text-align: center;
- 
 }
 
-.ranking-topRank .ranking-img:nth-child(2){
+.ranking-topRank .ranking-img:nth-child(2) {
   position: relative;
 }
 
-.ranking-topRank .ranking-crown-img{
+.ranking-topRank .ranking-crown-img {
   width: 50%;
   height: auto;
   position: absolute;
   top: -5px;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
 }
 
-.ranking-topRank img{
+.ranking-topRank img {
   width: 100%;
   height: 100%;
 }
 
-.ranking-topRank > ul > li > .ranking-number{
+.ranking-topRank > ul > li > .ranking-number {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-
-.ranking-topRank > ul > li > .ranking-number:nth-child(1){
-  color: #89919C;
+.ranking-topRank > ul > li > .ranking-number:nth-child(1) {
+  color: #89919c;
 }
 
-.ranking-topRank > ul > li > .ranking-name, .ranking-collect{
+.ranking-topRank > ul > li > .ranking-name,
+.ranking-collect {
   font-size: 1.6rem;
 }
 
-.ranking-topRank .ranking-name, .ranking-topRank .ranking-collect{
+.ranking-topRank .ranking-name,
+.ranking-topRank .ranking-collect {
   margin-top: 10px;
 }
 
-.ranking .ranking-table{
+.ranking .ranking-table {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.ranking .ranking-table > ul{
+.ranking .ranking-table > ul {
   width: 100%;
   height: 100%;
   overflow: scroll;
@@ -169,108 +168,115 @@ background-color: #333;
   scrollbar-width: none;
 }
 
-.ranking .ranking-table > ul > li{
+.ranking .ranking-table > ul > li {
   width: 100%;
   /* height: 100%; */
   display: flex;
   align-items: center;
   border-top: 1px solid #333;
-  padding: 10px 0 10px 10px
+  padding: 10px 0 10px 10px;
 }
 
-.ranking .ranking-table > ul > li > *{
+.ranking .ranking-table > ul > li > * {
   margin-right: 8px;
 }
 
-.ranking .ranking-table > ul > li:nth-child(1){
+.ranking .ranking-table > ul > li:nth-child(1) {
   border-top: 1px solid #333;
 }
 
-.ranking .ranking-table > ul > li > .ranking-img{
+.ranking .ranking-table > ul > li > .ranking-img {
   width: 7%;
 }
-.ranking .ranking-table > ul > li > .ranking-img > img{
+.ranking .ranking-table > ul > li > .ranking-img > img {
   width: 100%;
 }
 
-.ranking .ranking-table .ranking-table-txt{
+.ranking .ranking-table .ranking-table-txt {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
 }
 
- .ranking .ranking-number{
+.ranking .ranking-number {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.ranking-table-txt > .ranking-name{
+.ranking-table-txt > .ranking-name {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.ranking-table-txt > .ranking-collect{
+.ranking-table-txt > .ranking-collect {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.ranking .ranking-me{
+.ranking .ranking-me {
   display: flex;
   align-items: center;
   width: 100%;
   height: 100%;
   padding: 10px 0 10px 10px;
-  background-color: #ffecdd;
+  background-color: #fe6b38;
+  /* background-color: #ffecdd; */
 }
 
-.ranking-me > *{
+.ranking-me > * {
   margin-right: 8px;
 }
 
-.ranking-me .ranking-table-txt{
+/* .ranking .ranking-me .ranking-me-notlogin{
+  width: ;
+  background-color: ;
+} */
+
+.ranking-me .ranking-table-txt {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.ranking-me .ranking-img{
+.ranking-me .ranking-img {
   width: 7%;
   height: 100%;
 }
 
-.ranking-me .ranking-img > img{
+.ranking-me .ranking-img > img {
   width: 100%;
   height: 100%;
 }
 
-.ranking-banner{
+.ranking-banner {
   width: 50%;
   height: 100%;
- 
   margin-top: 150px;
   padding: 15px;
   border-radius: 5px;
-  background-color: #5e5e5e;
+  /* background-color: #5e5e5e; */
+  background-color: #ffecdd;
   color: #191919;
 }
 
-.ranking-banner > ul{
+.ranking-banner > ul {
   width: 100%;
   height: 100%;
 }
 
-.ranking-banner > ul > li{
+.ranking-banner > ul > li {
   width: 100%;
   height: 100%;
   display: flex;
   padding: 15px;
-  background-color: #D9D9D9;
+  /* background-color: #d9d9d9; */
+  background-color: #fff;
   border-radius: 5px;
   margin: 15px 0;
 }
 
-.ranking-banner .ranking-banner-img{
+.ranking-banner .ranking-banner-img {
   width: 40%;
   /* width: 110px; */
   background-color: #fff;
@@ -282,42 +288,49 @@ background-color: #333;
   padding: 15px 25px;
 }
 
-.ranking-banner .ranking-banner-img > img{
+.ranking-banner .ranking-banner-img > img {
   width: 100%;
   /* width: 60%; */
 }
 
-.ranking-banner-txt{
+.ranking-banner-txt {
   width: 100%;
   height: 100%;
 }
 
-.ranking-banner-txt > .ranking-banner-title{
+.ranking-banner-txt > .ranking-banner-title {
   width: 100%;
   height: 100%;
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 15px;
+  line-height: 20px;
 }
 
-.ranking-banner-txt > .ranking-banner-description{
+.ranking-banner-txt > .ranking-banner-description {
   width: 100%;
   height: 100%;
   font-size: 1.4rem;
   font-weight: 300;
- line-height: 15px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
-.ranking-banner-title > .ranking-banner-description > p{
+.ranking-banner-title > .ranking-banner-description > p {
   color: #d9d9d9;
 }
 
-.ranking-warning{
+.ranking-warning {
   display: flex;
   justify-content: end;
   font-weight: 300;
   font-size: 1.4rem;
-  color: #fff;
+  /* color: #fff; */
+  color: #191919;
   opacity: 80%;
 }
 
@@ -327,7 +340,7 @@ background-color: #333;
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: #fff9f4;
+  /* background-color: #fff9f4;*/
 }
 
 .market-day .container {
@@ -352,11 +365,12 @@ background-color: #333;
 
 .market-day .title {
   font-weight: 700;
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 
-.market-day-btn{
-  margin: 10px 0 0 0 !important;
+.market-day-btn {
+  /* margin: 10px 0 0 0 !important; */
+  margin-top: 150px;
 }
 
 /* 전체 버튼 */
@@ -586,7 +600,9 @@ background-color: #333;
 }
 .review .review-slider-eat {
   position: relative;
-  height: 500px;
+  height: 380px;
+  /* height: 500px; */
+  margin-bottom: 150px;
 }
 
 .review .swiper-slide {
@@ -618,6 +634,7 @@ background-color: #333;
   height: auto;
   overflow: hidden;
   border-radius: 5px;
+  margin-bottom: 40px;
 }
 
 .review .swiper-slide a img {
@@ -664,10 +681,10 @@ background-color: #333;
 
 /* PAGINATION */
 .review .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   text-align: center;
-  line-height: 20px;
+  line-height: 21px;
   font-size: 1.2rem;
   color: #000;
   opacity: 1;
@@ -809,20 +826,23 @@ background-color: #333;
 }
 
 .ft-bt-left {
+  width: 60%;
+  height: 100%;
   margin: 46px 0;
   /* border-right: 1px solid #d9d9d9; */
   position: relative;
 }
 
-/* .ft-bt-left::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 120%;
-  background-color: #d9d9d9;
+.ft-logo {
+  /* width: 20%; */
+  width: 160px;
   height: 100%;
-  width: 1px;
-} */
+}
+
+.ft-logo > img {
+  width: 100%;
+  height: 100%;
+}
 
 .ft-bt-left > * {
   margin-bottom: 8px;
@@ -830,14 +850,17 @@ background-color: #333;
 
 .ft-middle-line {
   width: 1px;
-  height: 115px;
+  /* height: 115px; */
+  height: 160px;
   background-color: #999;
   position: relative;
   opacity: 0.5;
 }
 
 .ft-bt-right {
-  margin: 46px 0;
+  width: 40%;
+  height: 100%;
+  margin: 46px 2%;
 }
 
 .ft-bt-right h2 {
@@ -849,6 +872,7 @@ background-color: #333;
 
 .ft-bt-right p {
   margin-bottom: 8px;
+  line-height: 20px;
 }
 
 /* ==================================================================== */
@@ -856,21 +880,21 @@ background-color: #333;
 
 @media screen and (max-width: 1250px) {
   /* 중간 배너 */
-  .banner-m{
+  .banner-m {
     padding: 0 20px;
   }
   /* 장날 안내 */
-  .market-day{
+  /* .market-day {
     padding: 0 20px;
-  }
+  } */
 
   /* 리뷰 */
-  .review{
+  .review {
     padding: 0 20px;
   }
   .review .review-slider-eat {
     position: relative;
-    height: 51vw;
+    height: 31vw;
     /* height: 600px; */
   }
 
@@ -879,14 +903,33 @@ background-color: #333;
   }
 
   .review .swiper-slide p {
-    /* font-size: 2.2rem; */
-    font-size: 1.8333vw;
+    /* font-size: 1.65rem; */
+    font-size: 1.32vw;
     line-height: 26px;
   }
 
   /* 랭킹 */
-  .ranking{
-    padding: 0 20px;
+  /* .ranking {
+
+  } */
+}
+
+@media screen and (max-width: 1200px) {
+  .review .review-slider-eat {
+    position: relative;
+    height: 51vw;
+    /* height: 600px; */
+  }
+
+  .review .swiper-slide p {
+    font-size: 1.7rem !important;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ranking-title {
+    font-size: 2rem;
   }
 }
 
@@ -899,14 +942,15 @@ background-color: #333;
 
 @media screen and (max-width: 768px) {
   /* 랭킹 */
-  .ranking > .container > .inner{
-      display: flex;
-      flex-direction: column;
-      width: 100%
-  };
-
-  .ranking{
+  .ranking > .container > .inner {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+  }
+
+  .ranking {
+    width: 100%;
+    margin-bottom: 25px;
   }
 
   .ranking-wrap {
@@ -915,14 +959,14 @@ background-color: #333;
     height: 100%;
     margin-right: 0px;
   }
-  
+
   .ranking-banner {
     position: relative;
     width: 100%;
     height: 100%;
   }
 
-  .ranking-banner > img{
+  .ranking-banner > img {
     margin-top: 50px;
   }
 
@@ -948,7 +992,7 @@ background-color: #333;
 
   .btn-select {
     margin-top: 0;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 
   .market-day-content {
@@ -962,8 +1006,8 @@ background-color: #333;
     margin: 0 20px 20px 0; /* 오른쪽과 아래쪽에만 간격을 주도록 설정 */
   }
 
-  
-  .market-day-content li:nth-child(2), .market-day-content li:nth-child(4){
+  .market-day-content li:nth-child(2),
+  .market-day-content li:nth-child(4) {
     margin-right: 0;
   }
   /* 리뷰 */
@@ -985,10 +1029,11 @@ background-color: #333;
     margin-top: 0px;
   }
 
-
   .review .review-slider-eat {
     position: relative;
-    height: 85vw;
+    height: 75vw;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
   }
 
   .review .swiper-slide a {
@@ -1035,6 +1080,22 @@ background-color: #333;
 
     opacity: 0.5;
   }
+
+  .ft-bt-right {
+    width: 40%;
+    height: 100%;
+    margin: 46px 0;
+  }
+
+  /* 랭킹 */
+  .ranking-title {
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+
+  .ranking-banner {
+    margin-top: 50px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1043,27 +1104,60 @@ background-color: #333;
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
   .review .review-slider-eat {
     position: relative;
-    height: 110vw;
-}
-
+    height: 97vw;
+  }
 
   .review .swiper-slide a {
     width: 70%;
-}
+  }
 
+  .ranking-title {
+    font-size: 1.8rem;
+  }
+
+  .review .swiper-pagination-bullet {
+    width: 17px;
+    height: 17px;
+  }
+
+  /* 랭킹 */
+  .ranking-banner .ranking-banner-img {
+    width: 45%;
+    /* width: 110px; */
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    padding: 10px 15px;
+  }
+
+  .ranking-banner-txt > .ranking-banner-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
 }
 
 @media screen and (max-width: 360px) {
   /* 리뷰 */
   .review .review-slider-eat {
     position: relative;
-    height: 120vw;
+    height: 108vw;
   }
 
   .review .swiper-slide a {
     width: 77%;
+  }
+
+  /* 랭킹 */
+  .ranking-banner .ranking-banner-img {
+    width: 55%;
   }
 }

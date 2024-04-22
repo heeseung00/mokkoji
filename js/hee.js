@@ -183,6 +183,15 @@ window.addEventListener("load", function () {
   // =========================================================
 });
 
+// window.addEventListener("resize", function () {
+//   var bannerImage = document.getElementById("bannerImage");
+//   if (window.innerWidth <= 500) {
+//     bannerImage.src = "images/6banner-m/banner-m-768px.png";
+//   } else {
+//     bannerImage.src = "images/6banner-m/banner-m-1200.png";
+//   }
+// });
+
 // ===========================================================
 // 제이쿼리
 $(function () {
@@ -209,7 +218,6 @@ $(function () {
   $(".market-btn-color:nth-child(2)").click(function () {
     $(".day5").hide();
     $(".allDays").show().css("opacity", 1).css("display", "flex");
-  
   });
 
   // 방문 후기: 버튼 클릭 이벤트
