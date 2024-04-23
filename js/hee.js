@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
         slidesPerView: 5,
         spaceBetween: 10,
       },
-      768: {
+      769: {
         slidesPerView: 3,
         spaceBetween: 10,
       },
@@ -60,7 +60,7 @@ window.addEventListener("load", function () {
         slidesPerView: 5,
         spaceBetween: 10,
       },
-      768: {
+      769: {
         slidesPerView: 3,
         spaceBetween: 10,
       },
