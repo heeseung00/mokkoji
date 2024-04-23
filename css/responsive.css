@@ -27,13 +27,7 @@
   }
 }
 @media screen and (max-width: 1150px) {
-  .sw-famous
-    > .swiper-wrapper
-    > .swiper-slide
-    > .famous-content
-    > a
-    > .famous-tag-list
-    > .famous-tag {
+  .sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .famous-tag-list > .famous-tag {
     font-size: 1.2rem;
   }
 }
@@ -50,13 +44,7 @@
   .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
     left: 60px;
   }
-  .sw-famous
-    > .swiper-wrapper
-    > .swiper-slide
-    > .famous-content
-    > a
-    > .famous-tag-list
-    > .famous-tag {
+  .sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .famous-tag-list > .famous-tag {
     font-size: 1.3rem;
   }
 }
@@ -93,6 +81,22 @@
   }
   .market-info-left2 {
     width: 35%;
+  }
+  .market-contents2 .market-content-right-top {
+    margin: 15px 0;
+  }
+  .market-contents2 .market-content-right .market-content-right-top p {
+    font-size: 1.6rem;
+  }
+  .market-contents2 .market-adr {
+    font-size: 1.5rem;
+  }
+  .market-contents2 .market-adr {
+    margin: 20px 0;
+  }
+  .market-contents2 .market-content-info {
+    font-size: 1.4rem;
+    line-height: 1.5;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -149,6 +153,11 @@
     left: 50px;
   }
 }
+@media screen and (max-width: 920px) {
+  .market-contents2 {
+    width: 70%;
+  }
+}
 @media screen and (max-width: 880px) {
   /* 로고 */
   .hd-logo {
@@ -193,25 +202,13 @@
   }
 }
 @media screen and (max-width: 862px) {
-  .sw-famous
-    > .swiper-wrapper
-    > .swiper-slide
-    > .famous-content
-    > a
-    > .famous-tag-list
-    > .famous-tag {
+  .sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .famous-tag-list > .famous-tag {
     font-size: 1.2rem;
   }
-  .sw-famous
-    .swiper-slide:nth-child(3)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(3) .famous-tag-list .famous-tag:last-child {
     display: none;
   }
-  .sw-famous
-    .swiper-slide:nth-child(4)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(4) .famous-tag-list .famous-tag:last-child {
     display: none;
   }
   /* 옛날 감성 시장 */
@@ -222,22 +219,11 @@
     font-size: 1.3rem;
   }
   /*  특색 시장 */
-  .sw-unique
-    > .swiper-wrapper
-    > .swiper-slide
-    > .unique-content
-    > a
-    > .unique-tag-list {
+  .sw-unique > .swiper-wrapper > .swiper-slide > .unique-content > a > .unique-tag-list {
     display: flex;
     gap: 5px;
   }
-  .sw-unique
-    > .swiper-wrapper
-    > .swiper-slide
-    > .unique-content
-    > a
-    > .unique-tag-list
-    > .unique-tag {
+  .sw-unique > .swiper-wrapper > .swiper-slide > .unique-content > a > .unique-tag-list > .unique-tag {
     width: 75px;
     font-size: 1.2rem;
   }
@@ -251,19 +237,13 @@
     gap: 25%;
   }
 }
-@media screen and (max-width: 800px) {
-  /* .sw-famous
-    .swiper-slide:nth-child(7)
-    .famous-tag-list
-    .famous-tag:last-child {
-    display: none;
+@media screen and (max-width: 830px) {
+  .market-info-contents2 .market-contents2 {
+    margin-top: 30px;
   }
-  .sw-famous
-    .swiper-slide:nth-child(4)
-    .famous-tag-list
-    .famous-tag:last-child {
-    display: none;
-  } */
+  .market-contents2 {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 790px) {
   .header {
@@ -297,16 +277,10 @@
   .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
     left: 60px;
   }
-  .sw-famous
-    .swiper-slide:nth-child(3)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(3) .famous-tag-list .famous-tag:last-child {
     display: block;
   }
-  .sw-famous
-    .swiper-slide:nth-child(4)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(4) .famous-tag-list .famous-tag:last-child {
     display: block;
   }
   /* 옛날 감성 시장 */
@@ -335,12 +309,31 @@
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 670px) {
+  .sw-local-container {
+    margin: 0 10px;
+  }
+  .prev-local-name {
+    left: -10px;
+  }
+}
 @media screen and (max-width: 640px) {
   .sw-best > .swiper-wrapper > .swiper-slide > span {
     font-size: 14rem;
   }
   .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
     left: 50px;
+  }
+  .market-contents2 {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mb-header > .mb-menu-contents {
+    width: 350px;
+  }
+  .mb-header > .mb-menu-contents > .mb-menu-xBt {
+    font-size: 3.6rem;
   }
 }
 @media screen and (max-width: 590px) {
@@ -393,16 +386,10 @@
   .sw-best > .swiper-wrapper > .swiper-slide > span {
     top: 5%;
   }
-  .sw-famous
-    .swiper-slide:nth-child(3)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(3) .famous-tag-list .famous-tag:last-child {
     display: none;
   }
-  .sw-famous
-    .swiper-slide:nth-child(4)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(4) .famous-tag-list .famous-tag:last-child {
     display: none;
   }
 }
@@ -427,16 +414,10 @@
   .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
     margin: 0 8%;
   }
-  .sw-famous
-    .swiper-slide:nth-child(3)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(3) .famous-tag-list .famous-tag:last-child {
     display: block;
   }
-  .sw-famous
-    .swiper-slide:nth-child(4)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(4) .famous-tag-list .famous-tag:last-child {
     display: block;
   }
   /* 옛날 감성 시장 */
@@ -445,6 +426,10 @@
   }
   .sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .name2 {
     font-size: 1.5rem;
+  }
+  /* 특색 */
+  .sw-unique .swiper-slide {
+    width: 100%;
   }
   /* 더보기 버튼 */
   .moreBt {
@@ -475,8 +460,17 @@
     width: auto !important;
   }
   .unique-content {
-    width: 80%;
+    /* width: 80%; */
     margin: auto;
+  }
+  .sw-old {
+    height: 500px;
+  }
+  .sw-unique {
+    height: 500px;
+  }
+  .sw-night {
+    height: 500px;
   }
   .famous-content {
     width: 80%;
@@ -514,6 +508,53 @@
     width: auto !important;
   }
 }
+@media screen and (max-width: 520px) {
+  .mb-header > .mb-menu-contents {
+    width: 300px;
+  }
+  .mb-header > .mb-menu-contents > .mb-my-list img {
+    width: 40px;
+  }
+  .mb-header > .mb-menu-contents > .mb-my-list > a > span {
+    margin: 0 5px 0 15px;
+    font-size: 1.8rem;
+  }
+  .mb-header > .mb-menu-contents > .mb-my-list > a i {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+  .mb-header > .mb-menu-contents > .mb-menu-list > li > a {
+    font-size: 1.8rem;
+  }
+  .go-join a span {
+    left: 55px;
+  }
+  .mb-header > .mb-menu-contents > .mb-menu-xBt {
+    font-size: 3.4rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sw-old {
+    height: 480px;
+  }
+  .sw-unique {
+    height: 480px;
+  }
+  .sw-night {
+    height: 480px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .sw-old {
+    height: 460px;
+  }
+  .sw-unique {
+    height: 460px;
+  }
+  .sw-night {
+    height: 460px;
+  }
+}
 @media screen and (max-width: 450px) {
   .sw-famous {
     height: 400px;
@@ -523,6 +564,62 @@
   .marketoldtopbt button {
     width: 90px;
     font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .sw-old {
+    height: 430px;
+  }
+  .sw-unique {
+    height: 430px;
+  }
+  .sw-night {
+    height: 430px;
+  }
+  .mb-header > .mb-menu-contents {
+    width: 250px;
+    padding-left: 30px;
+  }
+  .mb-header > .mb-menu-contents > .mb-my-list img {
+    width: 35px;
+  }
+  .mb-header > .mb-menu-contents > .mb-my-list > a > span {
+    margin: 0 5px 0 15px;
+    font-size: 1.6rem;
+  }
+  .mb-header > .mb-menu-contents > .mb-my-list > a i {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+  .go-join a span {
+    left: 50px;
+  }
+  .mb-header > .mb-menu-contents > .mb-menu-xBt {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .market-content-right .market-content-right-top {
+    gap: 5px;
+  }
+  .market-content-right .market-content-right-top span {
+    font-size: 1rem;
+    padding: 5px 7px 5px 7px;
+  }
+  .market-contents2 {
+    width: 90%;
+  }
+  .market-contents2 .market-content-right-top {
+    margin: 10px 0;
+  }
+  .market-contents2 .market-content-right .market-content-right-top p {
+    font-size: 1.4rem;
+  }
+  .market-contents2 .market-adr {
+    font-size: 1.3rem;
+  }
+  .market-contents2 .market-adr {
+    margin: 10px 0;
   }
 }
 @media screen and (max-width: 380px) {
@@ -574,6 +671,15 @@
   .sw-old {
     height: 400px;
   }
+  .sw-old {
+    height: 410px;
+  }
+  .sw-unique {
+    height: 410px;
+  }
+  .sw-night {
+    height: 410px;
+  }
 }
 @media screen and (max-width: 370px) {
   .bestrestTop .title {
@@ -597,17 +703,34 @@
     width: 80px;
     font-size: 1.3rem;
   }
-  .sw-famous
-    .swiper-slide:nth-child(3)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(3) .famous-tag-list .famous-tag:last-child {
     display: none;
   }
-  .sw-famous
-    .swiper-slide:nth-child(4)
-    .famous-tag-list
-    .famous-tag:last-child {
+  .sw-famous .swiper-slide:nth-child(4) .famous-tag-list .famous-tag:last-child {
     display: none;
+  }
+}
+@media screen and (max-width: 360px) {
+  .mb-header > .mb-menu-contents {
+    width: 220px;
+    padding-left: 30px;
+  }
+  .mb-header > .mb-menu-contents > .mb-my-list img {
+    width: 35px;
+  }
+  .mb-header > .mb-menu-contents > .mb-my-list > a > span {
+    margin: 0 5px 0 15px;
+    font-size: 1.6rem;
+  }
+  .mb-header > .mb-menu-contents > .mb-my-list > a i {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+  .go-join a span {
+    left: 50px;
+  }
+  .mb-header > .mb-menu-contents > .mb-menu-xBt {
+    font-size: 3.0rem;
   }
 }
 @media screen and (max-width: 350px) {

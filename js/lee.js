@@ -103,7 +103,8 @@ window.addEventListener("load", function () {
   // 모바일 햄버거 메뉴 열고 닫기
   const mbMenuOpen = document.getElementById("mb-menuBt");
   const mbMenuContents = document.getElementById("mbMenuContents");
-  const mbMenuClose = document.getElementById("mb-menu-xBt");
+  // const mbMenuClose = document.getElementById("mb-menu-xBt");
+  const mbMenuClose = document.querySelector(".mb-menu-xBt");
   mbMenuOpen.addEventListener("click", function () {
     mbMenuContents.style.display = "block";
   });
@@ -276,8 +277,53 @@ window.addEventListener("load", function () {
   // =====================================================================
   // 전국 시장 소개 스와이프
   var swLocalName = new Swiper(".sw-local-name", {
-    slidesPerView: 12,
+    slidesPerView: 2,
     spaceBetween: 10,
+    // responsive 옵션을 사용하여 너비에 따라 슬라이드 수 조정
+    breakpoints: {
+      // 1000px 이하일 때
+      940: {
+        slidesPerView: 12,
+        spaceBetween: 10,
+      },
+      870: {
+        slidesPerView: 11,
+        spaceBetween: 10,
+      },
+      // 530px 이하일 때
+      810: {
+        slidesPerView: 10,
+        spaceBetween: 10,
+      },
+      745: {
+        slidesPerView: 9,
+        spaceBetween: 10,
+      },
+      670: {
+        slidesPerView: 8,
+        spaceBetween: 10,
+      },
+      590: {
+        slidesPerView: 7,
+        spaceBetween: 10,
+      },
+      520: {
+        slidesPerView: 6,
+        spaceBetween: 10,
+      },
+      450: {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+      370: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      300: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+    },
     navigation: {
       nextEl: ".next-local-name",
       prevEl: ".prev-local-name",
@@ -555,11 +601,11 @@ window.addEventListener("load", function () {
         slidesPerView: 3,
         spaceBetween: 20,
       },
-                // 530px 이하일 때
-    531: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
+      // 530px 이하일 때
+      531: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
     },
     navigation: {
       nextEl: ".next-best",
@@ -602,10 +648,10 @@ window.addEventListener("load", function () {
         spaceBetween: 20,
       },
       // 530px 이하일 때
-    531: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
+      531: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
     },
     navigation: {
       nextEl: ".next-famous",
@@ -648,10 +694,10 @@ window.addEventListener("load", function () {
         spaceBetween: 20,
       },
       // 530px 이하일 때
-    531: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
+      531: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
     },
     navigation: {
       nextEl: ".next-old",
@@ -694,10 +740,10 @@ window.addEventListener("load", function () {
         spaceBetween: 20,
       },
       // 530px 이하일 때
-    531: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
+      531: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
     },
     navigation: {
       nextEl: ".next-unique",
@@ -740,10 +786,10 @@ window.addEventListener("load", function () {
         spaceBetween: 20,
       },
       // 530px 이하일 때
-    531: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
+      531: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
     },
     navigation: {
       nextEl: ".next-night",
@@ -782,7 +828,7 @@ window.addEventListener("load", function () {
         prevButton.style.backgroundPosition = "0 -36px";
       } else {
         prevButton.style.backgroundPosition = "0 0";
-        console.log(prevButton)
+        console.log(prevButton);
       }
     } else if (swiper.el.classList.contains("sw-famous")) {
       if (activeIndex === 0) {
