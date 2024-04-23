@@ -542,7 +542,7 @@ window.addEventListener("load", function () {
   // ===================== 스와이프
   // 베스트 맛집 스와이프
   var swbest = new Swiper(".sw-best", {
-    slidesPerView: "2",
+    slidesPerView: 1,
     spaceBetween: 20,
     // responsive 옵션을 사용하여 너비에 따라 슬라이드 수 조정
     breakpoints: {
@@ -551,10 +551,15 @@ window.addEventListener("load", function () {
         slidesPerView: 4,
         spaceBetween: 20,
       },
-      790: {
+      791: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
+                // 530px 이하일 때
+    531: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
     },
     navigation: {
       nextEl: ".next-best",
@@ -584,8 +589,24 @@ window.addEventListener("load", function () {
   });
   // 유명인 맛집 스와이프
   var swfamous = new Swiper(".sw-famous", {
-    slidesPerView: 4, // 슬라이드 개수 설정
+    slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 25,
+    breakpoints: {
+      // 1121px 이하일 때
+      1121: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      791: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      // 530px 이하일 때
+    531: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    },
     navigation: {
       nextEl: ".next-famous",
       prevEl: ".prev-famous",
@@ -614,8 +635,24 @@ window.addEventListener("load", function () {
   });
   // 옛날 감성 스와이프
   var swold = new Swiper(".sw-old", {
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 25,
+    breakpoints: {
+      // 1121px 이하일 때
+      1121: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      791: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      // 530px 이하일 때
+    531: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    },
     navigation: {
       nextEl: ".next-old",
       prevEl: ".prev-old",
@@ -644,8 +681,24 @@ window.addEventListener("load", function () {
   });
   // 특색 있는 스와이프
   var swunique = new Swiper(".sw-unique", {
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 25,
+    breakpoints: {
+      // 1121px 이하일 때
+      1121: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      791: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      // 530px 이하일 때
+    531: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    },
     navigation: {
       nextEl: ".next-unique",
       prevEl: ".prev-unique",
@@ -674,8 +727,24 @@ window.addEventListener("load", function () {
   });
   // 야시장 스와이프
   var swnight = new Swiper(".sw-night", {
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 25,
+    breakpoints: {
+      // 1121px 이하일 때
+      1121: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      791: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      // 530px 이하일 때
+    531: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    },
     navigation: {
       nextEl: ".next-night",
       prevEl: ".prev-night",
@@ -706,14 +775,14 @@ window.addEventListener("load", function () {
   // 이전, 다음 버튼 클릭
   function updateButtonPosition(swiper) {
     var activeIndex = swiper.activeIndex;
-    var prevButton = document.querySelector(".swiper-button-prev");
+    var prevButton = document.querySelector(".prev-best");
     var nextButton = document.querySelector(".swiper-button-next");
-
     if (swiper.el.classList.contains("sw-best")) {
       if (activeIndex === 0) {
         prevButton.style.backgroundPosition = "0 -36px";
       } else {
         prevButton.style.backgroundPosition = "0 0";
+        console.log(prevButton)
       }
     } else if (swiper.el.classList.contains("sw-famous")) {
       if (activeIndex === 0) {
