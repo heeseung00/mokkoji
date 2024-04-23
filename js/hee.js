@@ -4,6 +4,10 @@ window.addEventListener("load", function () {
     centeredSlides: true,
     loop: true,
     spaceBetween: 10,
+    autoplay: {
+      delay: 2500, // 자동 재생 간격 설정 (5초)
+    },
+    speed: 700, // 부드러운 넘김 효과를 위한 속도 조정
     pagination: {
       el: ".swiper-pagination-review1",
       clickable: true,
@@ -28,10 +32,6 @@ window.addEventListener("load", function () {
         slidesPerView: 3,
         spaceBetween: 10,
       },
-      // 600: {
-      //   slidesPerView: 3,
-      //   spaceBetween: 10,
-      // },
       0: {
         slidesPerView: 1,
         spaceBetween: 0,
@@ -44,6 +44,10 @@ window.addEventListener("load", function () {
     centeredSlides: true,
     loop: true,
     spaceBetween: 10,
+    autoplay: {
+      delay: 2500, // 자동 재생 간격 설정 (5초)
+    },
+    speed: 700, // 부드러운 넘김 효과를 위한 속도 조정
     pagination: {
       el: ".swiper-pagination-review2",
       clickable: true,
