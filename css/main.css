@@ -1010,7 +1010,7 @@ input::placeholder {
   bottom: 0;
   background: url(../images/4bestrest/btn_cockcock_slide.png) center no-repeat;
   background-size: cover;
-  opacity: 1 !important;
+  opacity: 0.6 !important;
 }
 .prev-best {
   background-position: 0 -36px;
@@ -1025,6 +1025,7 @@ input::placeholder {
   right: 220px !important;
   width: auto !important;
   bottom: 17px !important;
+  opacity: 0.3 !important;
 }
 /* 유명인 스와이퍼 */
 .prev-famous,
@@ -1039,7 +1040,7 @@ input::placeholder {
   margin: 0;
   bottom: 0;
   background: url(../images/4bestrest/btn_cockcock_slide.png);
-  opacity: 1 !important;
+  opacity: 0.6 !important;
 }
 .prev-famous {
   background-position: 0 -36px;
@@ -1054,6 +1055,7 @@ input::placeholder {
   right: 220px !important;
   width: auto !important;
   bottom: 17px !important;
+  opacity: 0.3 !important;
 }
 /* 맛집1 */
 .sw-best {
@@ -1160,7 +1162,7 @@ input::placeholder {
   margin: 0;
   bottom: 0;
   background: url(../images/4bestrest/btn_cockcock_slide.png);
-  opacity: 1 !important;
+  opacity: 0.6 !important;
 }
 .prev-old {
   background-position: 0 -36px;
@@ -1175,6 +1177,7 @@ input::placeholder {
   right: 220px !important;
   width: auto !important;
   bottom: 17px !important;
+  opacity: 0.3 !important;
 }
 /* 특색 스와이퍼 */
 .prev-unique,
@@ -1189,7 +1192,7 @@ input::placeholder {
   margin: 0;
   bottom: 0;
   background: url(../images/4bestrest/btn_cockcock_slide.png);
-  opacity: 1 !important;
+  opacity: 0.6 !important;
 }
 .prev-unique {
   background-position: 0 -36px;
@@ -1204,6 +1207,7 @@ input::placeholder {
   right: 220px !important;
   width: auto !important;
   bottom: 17px !important;
+  opacity: 0.3 !important;
 }
 /* 야시장 스와이퍼 */
 .prev-night,
@@ -1218,7 +1222,7 @@ input::placeholder {
   margin: 0;
   bottom: 0;
   background: url(../images/4bestrest/btn_cockcock_slide.png);
-  opacity: 1 !important;
+  opacity: 0.6 !important;
 }
 .prev-night {
   background-position: 0 -36px;
@@ -1233,6 +1237,7 @@ input::placeholder {
   right: 220px !important;
   width: auto !important;
   bottom: 17px !important;
+  opacity: 0.3 !important;
 }
 /* 옛날감성 시장 */
 .marketOldTop {
