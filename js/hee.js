@@ -1,4 +1,38 @@
 window.addEventListener("load", function () {
+  // 메인 배너 스와이퍼
+  var bannerSwiper = new Swiper(".bannerSwiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".banner-button-next",
+      prevEl: ".banner-button-prev",
+    },
+    autoplay: {
+      delay: 2500, // 자동 재생 간격 설정 (5초)
+    },
+    speed: 700, // 부드러운 넘김 효과를 위한 속도 조정
+    // on: {
+    //   slideChange: function () {
+    //     var currentIndex = this.realIndex;
+    //     var backgroundColors = ["#FFFBF4", "#FFEB86"]; // 각 슬라이드에 대한 배경색 예시
+    //     var bannerElement = document.querySelector(".banner");
+
+    //     if (currentIndex === 0) {
+    //       // 첫 번째 슬라이드일 때 배경 이미지 적용
+    //       bannerElement.style.backgroundImage = "url('images/2banner/banner-background-1.png')";
+    //       bannerElement.style.backgroundRepeat = "no-repeat";
+    //       bannerElement.style.backgroundPosition = "center";
+    //       bannerElement.style.backgroundSize = "cover";
+    //     } else {
+    //       // 나머지 슬라이드일 때 배경색 적용
+    //       bannerElement.style.backgroundImage = "none"; // 배경 이미지 제거
+    //       bannerElement.style.backgroundColor = backgroundColors[currentIndex - 1];
+    //     }
+    //   },
+    // },
+  });
+
+  // ======================================
+  // 리뷰 스와이퍼
   var reviewSwiper = new Swiper(".reviewSwiper", {
     slidesPerView: 5,
     centeredSlides: true,
@@ -75,44 +109,44 @@ window.addEventListener("load", function () {
     },
   });
 
-  // 텍스트 다르게
-  const items = document.querySelectorAll(".market-day-content li a");
-  const texts = ["포항", "정선", "보성", "동해"]; // 각 이미지에 대한 텍스트 데이터
+  // // 텍스트 다르게
+  // const items = document.querySelectorAll(".market-day-content li a");
+  // const texts = ["포항", "정선", "보성", "동해"]; // 각 이미지에 대한 텍스트 데이터
 
-  items.forEach((item, index) => {
-    const text = texts[index]; // 해당 이미지에 대한 텍스트
-    const circle = document.createElement("div");
-    circle.textContent = text;
-    circle.className = "circle";
+  // items.forEach((item, index) => {
+  //   const text = texts[index]; // 해당 이미지에 대한 텍스트
+  //   const circle = document.createElement("div");
+  //   circle.textContent = text;
+  //   circle.className = "circle";
 
-    // .market-day-content li::after에 파란색 원 추가
-    const afterElement = document.createElement("div");
-    afterElement.className = "circle-after";
-    item.appendChild(afterElement);
+  //   // .market-day-content li::after에 파란색 원 추가
+  //   const afterElement = document.createElement("div");
+  //   afterElement.className = "circle-after";
+  //   item.appendChild(afterElement);
 
-    // .market-day-content li::after에 텍스트 추가
-    afterElement.appendChild(circle);
-  });
+  //   // .market-day-content li::after에 텍스트 추가
+  //   afterElement.appendChild(circle);
+  // });
 
-  // .allDays에도 똑같이 적용
-  const allDaysItems = document.querySelectorAll(".allDays li a");
-  const texts2 = ["광주", "대구", "서울", "포항"];
-  allDaysItems.forEach((item, index) => {
-    const text = texts2[index]; // 해당 이미지에 대한 텍스트
+  // // .allDays에도 똑같이 적용
+  // const allDaysItems = document.querySelectorAll(".allDays li a");
+  // const texts2 = ["광주", "대구", "서울", "포항"];
+  // allDaysItems.forEach((item, index) => {
+  //   const text = texts2[index]; // 해당 이미지에 대한 텍스트
 
-    // 파란색 원 추가
-    const circle = document.createElement("div");
-    circle.textContent = text;
-    circle.className = "circle";
+  //   // 파란색 원 추가
+  //   const circle = document.createElement("div");
+  //   circle.textContent = text;
+  //   circle.className = "circle";
 
-    // .market-day-content li::after에 파란색 원 추가
-    const afterElement = document.createElement("div");
-    afterElement.className = "circle-after";
-    item.appendChild(afterElement);
+  //   // .market-day-content li::after에 파란색 원 추가
+  //   const afterElement = document.createElement("div");
+  //   afterElement.className = "circle-after";
+  //   item.appendChild(afterElement);
 
-    // .market-day-content li::after에 텍스트 추가
-    afterElement.appendChild(circle);
-  });
+  //   // .market-day-content li::after에 텍스트 추가
+  //   afterElement.appendChild(circle);
+  // });
 
   //=====================
   // //중간 배너 이미지 변경
