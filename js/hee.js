@@ -10,25 +10,47 @@ window.addEventListener("load", function () {
       delay: 2500, // 자동 재생 간격 설정 (5초)
     },
     speed: 700, // 부드러운 넘김 효과를 위한 속도 조정
-    // on: {
-    //   slideChange: function () {
-    //     var currentIndex = this.realIndex;
-    //     var backgroundColors = ["#FFFBF4", "#FFEB86"]; // 각 슬라이드에 대한 배경색 예시
-    //     var bannerElement = document.querySelector(".banner");
-
-    //     if (currentIndex === 0) {
-    //       // 첫 번째 슬라이드일 때 배경 이미지 적용
-    //       bannerElement.style.backgroundImage = "url('images/2banner/banner-background-1.png')";
-    //       bannerElement.style.backgroundRepeat = "no-repeat";
-    //       bannerElement.style.backgroundPosition = "center";
-    //       bannerElement.style.backgroundSize = "cover";
-    //     } else {
-    //       // 나머지 슬라이드일 때 배경색 적용
-    //       bannerElement.style.backgroundImage = "none"; // 배경 이미지 제거
-    //       bannerElement.style.backgroundColor = backgroundColors[currentIndex - 1];
-    //     }
-    //   },
-    // },
+    slidesPerView: 1, // 한 번에 표시할 슬라이드 수
+    // slidesPerGroup: 1,
+  });
+  var bannerSwiper2 = new Swiper(".bannerSwiper-1200", {
+    loop: true,
+    navigation: {
+      nextEl: ".banner-button-next",
+      prevEl: ".banner-button-prev",
+    },
+    autoplay: {
+      delay: 2500, // 자동 재생 간격 설정 (5초)
+    },
+    speed: 700, // 부드러운 넘김 효과를 위한 속도 조정
+    slidesPerView: 1, // 한 번에 표시할 슬라이드 수
+    // slidesPerGroup: 1,
+  });
+  var bannerSwiper3 = new Swiper(".bannerSwiper-790", {
+    loop: true,
+    navigation: {
+      nextEl: ".banner-button-next",
+      prevEl: ".banner-button-prev",
+    },
+    autoplay: {
+      delay: 2500, // 자동 재생 간격 설정 (5초)
+    },
+    speed: 700, // 부드러운 넘김 효과를 위한 속도 조정
+    slidesPerView: 1, // 한 번에 표시할 슬라이드 수
+    // slidesPerGroup: 1,
+  });
+  var bannerSwiper4 = new Swiper(".bannerSwiper-450", {
+    loop: true,
+    navigation: {
+      nextEl: ".banner-button-next",
+      prevEl: ".banner-button-prev",
+    },
+    autoplay: {
+      delay: 2500, // 자동 재생 간격 설정 (5초)
+    },
+    speed: 700, // 부드러운 넘김 효과를 위한 속도 조정
+    slidesPerView: 1, // 한 번에 표시할 슬라이드 수
+    // slidesPerGroup: 1,
   });
 
   // ======================================
@@ -45,14 +67,7 @@ window.addEventListener("load", function () {
     pagination: {
       el: ".swiper-pagination-review1",
       clickable: true,
-      // renderBullet: function (index, className) {
-      //   return '<span class="' + className + '">' + (index + 1) + "</span>";
-      // },
     },
-    // navigation: {
-    //   nextEl: ".review .swiper-button-next",
-    //   prevEl: ".review .swiper-button-prev",
-    // },
     navigation: {
       nextEl: ".review .swiper-button-next-review1",
       prevEl: ".review .swiper-button-prev-review1",
@@ -85,9 +100,6 @@ window.addEventListener("load", function () {
     pagination: {
       el: ".swiper-pagination-review2",
       clickable: true,
-      // renderBullet: function (index, className) {
-      //   return '<span class="' + className + '">' + (index + 1) + "</span>";
-      // },
     },
     navigation: {
       nextEl: ".swiper-button-next-review2",
@@ -162,34 +174,6 @@ window.addEventListener("load", function () {
   //     document.querySelector(".banner-img").src = "images/hee/banner-m.png";
   //   }
   // }
-
-  // // 화면 크기 변경 시 이미지 변경
-  // window.addEventListener("resize", changeBannerImage);
-
-  // // 페이지 로드 시 이미지 변경 함수 호출
-  // changeBannerImage();
-  // ====================================================
-  // pagination: {
-  //   el: ".swiper-pagination2",
-  //   type: "fraction",
-  // },
-  // navigation: {
-  //   nextEl: ".swiper-button-next",
-  //   prevEl: ".swiper-button-prev",
-  // },
-
-  // var reviewPagingSwiper = new Swiper(".reviewSwiper", {
-  //   slidesPerView: 5,
-  //   spaceBetween: 25,
-
-  //   loop: true,
-  //   pagination: {
-  //     el: ".swiper-pagination",
-  //     type: "progressbar",
-  //   },
-  // });
-
-  // reviewSwiper.controller.control = reviewPagingSwiper;
 
   // ============================================================================================
   // 장날 안내 버튼

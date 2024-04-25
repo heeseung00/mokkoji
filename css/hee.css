@@ -1,10 +1,15 @@
 @charset "utf-8";
 
 @import url("main.css");
-@import url("font.css");
+/* @import url("font.css"); */
 
 /* 희승 영역 */
 /* 메인 배너 */
+.banner {
+  max-height: 700px;
+  width: 100%;
+}
+
 .banner .container {
   height: 100%;
 }
@@ -23,6 +28,49 @@
   justify-content: center;
   align-items: center;
 }
+
+.banner .bannerSwiper {
+  display: flex;
+}
+
+.banner .bannerSwiper-1200,
+.banner .bannerSwiper-790,
+.banner .bannerSwiper-450 {
+  display: none;
+}
+
+/* 배너 슬라이드 1 이미지 */
+/* .swiper-slide.bannerSlide1-1920 {
+  display: block !important;
+}
+
+.swiper-slide.bannerSlide1-1200,
+.swiper-slide.bannerSlide1-790,
+.swiper-slide.bannerSlide1-450 {
+  display: none !important;
+} */
+
+/* 배너 슬라이드 3 이미지 */
+/* .swiper-slide.bannerSlide3-1920 {
+  display: block !important;
+}
+
+.swiper-slide.bannerSlide3-1200,
+.swiper-slide.bannerSlide3-790,
+.swiper-slide.bannerSlide3-450 {
+  display: none !important;
+} */
+
+/* 배너 슬라이드 4 이미지 */
+/* .swiper-slide.bannerSlide4-1920 {
+  display: block !important;
+}
+
+.swiper-slide.bannerSlide4-1200,
+.swiper-slide.bannerSlide4-790,
+.swiper-slide.bannerSlide4-450 {
+  display: none !important;
+} */
 
 .banner .swiper-slide a {
   width: 100%;
@@ -1055,6 +1103,10 @@
 /* ======================================================= */
 /* 반응형: 메인*/
 @media screen and (max-width: 1250px) {
+  /* 메인 배너 */
+  .banner .container {
+    padding: 0 !important;
+  }
   /* 중간 배너 */
   .banner-m {
     padding: 0 20px;
@@ -1091,6 +1143,87 @@
 }
 
 @media screen and (max-width: 1200px) {
+  /* 배너 */
+  .banner {
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+  }
+  .banner .container {
+    height: 100%;
+    overflow: hidden; /* 가로로 넘치는 부분 가리기 */
+  }
+  .banner .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* 부모 요소 높이를 상속하여 높이 설정 */
+  }
+
+  .banner .swiper-slide a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner .swiper-slide a img {
+    width: 100%; /* 이미지 너비를 부모인 <a> 태그에 맞춤 */
+    height: auto; /* 이미지 높이를 비율에 맞춰 자동 조정 */
+  }
+
+  .banner .bannerSwiper-1200 {
+    display: flex;
+  }
+
+  .banner .bannerSwiper,
+  .banner .bannerSwiper-790,
+  .banner .bannerSwiper-450 {
+    display: none;
+  }
+
+  /* .swiper-slide.bannerSlide1-1200 {
+    display: block !important;
+  }
+
+  .swiper-slide.bannerSlide1-1920,
+  .swiper-slide.bannerSlide1-790,
+  .swiper-slide.bannerSlide1-450 {
+    display: none !important;
+  } */
+
+  /* 배너 슬라이드 3 이미지 */
+  /* .swiper-slide.bannerSlide3-1200 {
+    display: block !important;
+  }
+
+  .swiper-slide.bannerSlide3-1920,
+  .swiper-slide.bannerSlide3-790,
+  .swiper-slide.bannerSlide3-450 {
+    display: none !important;
+  } */
+
+  /* 배너 슬라이드 4 이미지 */
+  /* .swiper-slide.bannerSlide4-1200 {
+    display: block !important;
+  }
+
+  .swiper-slide.bannerSlide4-1920,
+  .swiper-slide.bannerSlide4-790,
+  .swiper-slide.bannerSlide4-450 {
+    display: none !important;
+  } */
+
   /* 랭킹 */
   .ranking-banner .ranking-banner-img {
     width: 40.5%;
@@ -1121,6 +1254,62 @@
   .review .swiper-slide p {
     font-size: 1.4rem;
     line-height: 21px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .banner {
+    max-height: 700px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner .bannerSwiper-790 {
+    display: flex;
+  }
+
+  .banner .bannerSwiper,
+  .banner .bannerSwiper-1200,
+  .banner .bannerSwiper-450 {
+    display: none;
+  }
+
+  /* .swiper-slide.bannerSlide1-790 {
+    display: block !important;
+  }
+
+  .swiper-slide.bannerSlide1-1920,
+  .swiper-slide.bannerSlide1-1200,
+  .swiper-slide.bannerSlide1-450 {
+    display: none !important;
+  }*/
+
+  /* 배너 슬라이드3 이미지 */
+  /* .swiper-slide.bannerSlide3-790 {
+    display: block !important;
+  }
+
+  .swiper-slide.bannerSlide3-1920,
+  .swiper-slide.bannerSlide3-1200,
+  .swiper-slide.bannerSlide3-450 {
+    display: none !important;
+  }  */
+
+  /* 배너 슬라이드 4 이미지 */
+  /* .swiper-slide.bannerSlide4-790 {
+    display: block !important;
+  }
+
+  .swiper-slide.bannerSlide4-1920,
+  .swiper-slide.bannerSlide4-1200,
+  .swiper-slide.bannerSlide4-450 {
+    display: none !important;
+  } */
+
+  /* 페이지네이션 */
+  .banner-button-next,
+  .banner-button-prev {
+    display: none;
   }
 }
 
@@ -1364,6 +1553,56 @@
 }
 
 @media screen and (max-width: 450px) {
+  /* 메인 배너 */
+  .banner {
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner .bannerSwiper-450 {
+    display: flex;
+  }
+
+  .banner .bannerSwiper,
+  .banner .bannerSwiper-1200,
+  .banner .bannerSwiper-790 {
+    display: none;
+  }
+
+  /* 스와이퍼1 */
+  /* .swiper-slide.bannerSlide1-450 {
+    display: block !important;
+  }
+
+  .swiper-slide.bannerSlide1-1920,
+  .swiper-slide.bannerSlide1-1200,
+  .swiper-slide.bannerSlide1-790 {
+    display: none !important;
+  } */
+
+  /* 스와이퍼3 */
+  /* .swiper-slide.bannerSlide3-450 {
+    display: block !important;
+  }
+
+  .swiper-slide.bannerSlide3-1200,
+  .swiper-slide.bannerSlide3-790,
+  .swiper-slide.bannerSlide3-1920 {
+    display: none !important;
+  } */
+
+  /* 스와이퍼4 */
+  /* .swiper-slide.bannerSlide4-450 {
+    display: block !important;
+  }
+
+  .swiper-slide.bannerSlide4-1200,
+  .swiper-slide.bannerSlide4-790,
+  .swiper-slide.bannerSlide4-1920 {
+    display: none !important;
+  } */
+
   /* 중간 배너 */
   .banner-m img:nth-child(1) {
     display: none;
