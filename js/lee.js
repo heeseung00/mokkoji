@@ -483,7 +483,7 @@ window.addEventListener("load", function () {
     famousContent.style.display = "none";
     bestTitle.style.display = "block";
     famousTitle.style.display = "none";
-    bestBtn.style.backgroundColor = "#fe6b38";
+    bestBtn.style.backgroundColor = "#ff9364";
     bestBtn.style.color = "#fff";
     bestBtn.style.border = "none";
     famousBtn.style.border = "1px solid #bababa";
@@ -499,7 +499,7 @@ window.addEventListener("load", function () {
     famousContent.style.display = "block";
     bestTitle.style.display = "none";
     famousTitle.style.display = "block";
-    famousBtn.style.backgroundColor = "#fe6b38";
+    famousBtn.style.backgroundColor = "#ff9364";
     famousBtn.style.color = "#fff";
     famousBtn.style.border = "none";
     bestBtn.style.border = "1px solid #bababa";
@@ -533,7 +533,7 @@ window.addEventListener("load", function () {
     oldTitle.style.display = "block";
     uniqueTitle.style.display = "none";
     nightTitle.style.display = "none";
-    oldBtn.style.backgroundColor = "#fe6b38";
+    oldBtn.style.backgroundColor = "#ff9364";
     oldBtn.style.color = "#fff";
     oldBtn.style.border = "none";
     uniqueBtn.style.border = "1px solid #bababa";
@@ -553,7 +553,7 @@ window.addEventListener("load", function () {
     oldTitle.style.display = "none";
     uniqueTitle.style.display = "block";
     nightTitle.style.display = "none";
-    uniqueBtn.style.backgroundColor = "#fe6b38";
+    uniqueBtn.style.backgroundColor = "#ff9364";
     uniqueBtn.style.color = "#fff";
     uniqueBtn.style.border = "none";
     oldBtn.style.border = "1px solid #bababa";
@@ -573,7 +573,7 @@ window.addEventListener("load", function () {
     oldTitle.style.display = "none";
     uniqueTitle.style.display = "none";
     nightTitle.style.display = "block";
-    nightBtn.style.backgroundColor = "#fe6b38";
+    nightBtn.style.backgroundColor = "#ff9364";
     nightBtn.style.color = "#fff";
     nightBtn.style.border = "none";
     uniqueBtn.style.border = "1px solid #bababa";
