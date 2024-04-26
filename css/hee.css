@@ -39,39 +39,6 @@
   display: none;
 }
 
-/* 배너 슬라이드 1 이미지 */
-/* .swiper-slide.bannerSlide1-1920 {
-  display: block !important;
-}
-
-.swiper-slide.bannerSlide1-1200,
-.swiper-slide.bannerSlide1-790,
-.swiper-slide.bannerSlide1-450 {
-  display: none !important;
-} */
-
-/* 배너 슬라이드 3 이미지 */
-/* .swiper-slide.bannerSlide3-1920 {
-  display: block !important;
-}
-
-.swiper-slide.bannerSlide3-1200,
-.swiper-slide.bannerSlide3-790,
-.swiper-slide.bannerSlide3-450 {
-  display: none !important;
-} */
-
-/* 배너 슬라이드 4 이미지 */
-/* .swiper-slide.bannerSlide4-1920 {
-  display: block !important;
-}
-
-.swiper-slide.bannerSlide4-1200,
-.swiper-slide.bannerSlide4-790,
-.swiper-slide.bannerSlide4-450 {
-  display: none !important;
-} */
-
 .banner .swiper-slide a {
   width: 100%;
   height: 100%;
@@ -1192,38 +1159,6 @@
     display: none;
   }
 
-  /* .swiper-slide.bannerSlide1-1200 {
-    display: block !important;
-  }
-
-  .swiper-slide.bannerSlide1-1920,
-  .swiper-slide.bannerSlide1-790,
-  .swiper-slide.bannerSlide1-450 {
-    display: none !important;
-  } */
-
-  /* 배너 슬라이드 3 이미지 */
-  /* .swiper-slide.bannerSlide3-1200 {
-    display: block !important;
-  }
-
-  .swiper-slide.bannerSlide3-1920,
-  .swiper-slide.bannerSlide3-790,
-  .swiper-slide.bannerSlide3-450 {
-    display: none !important;
-  } */
-
-  /* 배너 슬라이드 4 이미지 */
-  /* .swiper-slide.bannerSlide4-1200 {
-    display: block !important;
-  }
-
-  .swiper-slide.bannerSlide4-1920,
-  .swiper-slide.bannerSlide4-790,
-  .swiper-slide.bannerSlide4-450 {
-    display: none !important;
-  } */
-
   /* 랭킹 */
   .ranking-banner .ranking-banner-img {
     width: 40.5%;
@@ -1258,6 +1193,7 @@
 }
 
 @media screen and (max-width: 790px) {
+  /* 메인 배너 */
   .banner {
     max-height: 700px;
     width: 100%;
@@ -1265,7 +1201,7 @@
   }
 
   .banner .bannerSwiper-790 {
-    display: flex;
+    display: block;
   }
 
   .banner .bannerSwiper,
@@ -1569,39 +1505,6 @@
   .banner .bannerSwiper-790 {
     display: none;
   }
-
-  /* 스와이퍼1 */
-  /* .swiper-slide.bannerSlide1-450 {
-    display: block !important;
-  }
-
-  .swiper-slide.bannerSlide1-1920,
-  .swiper-slide.bannerSlide1-1200,
-  .swiper-slide.bannerSlide1-790 {
-    display: none !important;
-  } */
-
-  /* 스와이퍼3 */
-  /* .swiper-slide.bannerSlide3-450 {
-    display: block !important;
-  }
-
-  .swiper-slide.bannerSlide3-1200,
-  .swiper-slide.bannerSlide3-790,
-  .swiper-slide.bannerSlide3-1920 {
-    display: none !important;
-  } */
-
-  /* 스와이퍼4 */
-  /* .swiper-slide.bannerSlide4-450 {
-    display: block !important;
-  }
-
-  .swiper-slide.bannerSlide4-1200,
-  .swiper-slide.bannerSlide4-790,
-  .swiper-slide.bannerSlide4-1920 {
-    display: none !important;
-  } */
 
   /* 중간 배너 */
   .banner-m img:nth-child(1) {
