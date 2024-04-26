@@ -13,6 +13,7 @@ window.addEventListener("load", function () {
     slidesPerView: 1, // 한 번에 표시할 슬라이드 수
     // slidesPerGroup: 1,
   });
+
   var bannerSwiper2 = new Swiper(".bannerSwiper-1200", {
     loop: true,
     navigation: {
@@ -26,6 +27,7 @@ window.addEventListener("load", function () {
     slidesPerView: 1, // 한 번에 표시할 슬라이드 수
     // slidesPerGroup: 1,
   });
+
   var bannerSwiper3 = new Swiper(".bannerSwiper-790", {
     loop: true,
     navigation: {
@@ -39,6 +41,7 @@ window.addEventListener("load", function () {
     slidesPerView: 1, // 한 번에 표시할 슬라이드 수
     // slidesPerGroup: 1,
   });
+
   var bannerSwiper4 = new Swiper(".bannerSwiper-450", {
     loop: true,
     navigation: {
