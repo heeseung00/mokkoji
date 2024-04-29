@@ -2,9 +2,13 @@ window.addEventListener("load", function () {
   // 메인 배너 스와이퍼
   var bannerSwiper = new Swiper(".bannerSwiper", {
     loop: true,
-    navigation: {
-      nextEl: ".banner-button-next",
-      prevEl: ".banner-button-prev",
+    // navigation: {
+    //   nextEl: ".banner-button-next",
+    //   prevEl: ".banner-button-prev",
+    // },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
     autoplay: {
       delay: 2500, // 자동 재생 간격 설정 (5초)
@@ -16,9 +20,13 @@ window.addEventListener("load", function () {
 
   var bannerSwiper2 = new Swiper(".bannerSwiper-1200", {
     loop: true,
-    navigation: {
-      nextEl: ".banner-button-next",
-      prevEl: ".banner-button-prev",
+    // navigation: {
+    //   nextEl: ".banner-button-next",
+    //   prevEl: ".banner-button-prev",
+    // },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
     autoplay: {
       delay: 2500, // 자동 재생 간격 설정 (5초)
@@ -30,9 +38,13 @@ window.addEventListener("load", function () {
 
   var bannerSwiper3 = new Swiper(".bannerSwiper-790", {
     loop: true,
-    navigation: {
-      nextEl: ".banner-button-next",
-      prevEl: ".banner-button-prev",
+    // navigation: {
+    //   nextEl: ".banner-button-next",
+    //   prevEl: ".banner-button-prev",
+    // },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
     autoplay: {
       delay: 2500, // 자동 재생 간격 설정 (5초)
@@ -44,9 +56,13 @@ window.addEventListener("load", function () {
 
   var bannerSwiper4 = new Swiper(".bannerSwiper-450", {
     loop: true,
-    navigation: {
-      nextEl: ".banner-button-next",
-      prevEl: ".banner-button-prev",
+    // navigation: {
+    //   nextEl: ".banner-button-next",
+    //   prevEl: ".banner-button-prev",
+    // },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
     autoplay: {
       delay: 2500, // 자동 재생 간격 설정 (5초)
