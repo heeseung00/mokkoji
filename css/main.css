@@ -231,6 +231,7 @@ body {
   border-width: 0 0 2px;
   outline: none;
   font-size: 2rem;
+  padding-bottom: 12px;
 }
 input::placeholder {
   color: #5e5e5e;
@@ -470,6 +471,7 @@ input::placeholder {
   border-width: 0 0 2px;
   outline: none;
   font-size: 2rem;
+  padding-bottom: 13px;
 }
 .mb-header .search .search-contents .search-content-top input::placeholder {
   color: #5e5e5e;
@@ -1214,7 +1216,7 @@ input::placeholder {
   padding: 5px 8px;
   font-size: 1.3rem;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: #fdebc8;
   color: #5e5e5e;
   cursor: pointer;
 }
@@ -1379,12 +1381,12 @@ input::placeholder {
   gap: 10px;
 }
 .sw-unique .swiper-wrapper .swiper-slide .unique-content .unique-tag-list .unique-tag {
-  border-radius: 30px;
+  border-radius: 5px;
   padding: 5px;
   font-size: 1.3rem;
   width: 80px;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: #fdebc8;
   color: #5e5e5e;
   cursor: pointer;
 }
