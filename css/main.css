@@ -285,29 +285,21 @@ input::placeholder {
   font-size: 1.6rem;
   line-height: 1.9;
 }
-.header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-left
-  li
-  a
-  span {
+.header .search .search-content-bot .search-hot .search-hot-list-left li span {
   margin-right: 20px;
+}
+.header .search .search-content-bot .search-hot .search-hot-list-left li {
+  cursor: pointer;
 }
 .header .search .search-content-bot .search-hot .search-hot-list-right {
   font-size: 1.6rem;
   line-height: 1.9;
 }
-.header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-right
-  li
-  a
-  span {
+.header .search .search-content-bot .search-hot .search-hot-list-right li span {
   margin-right: 20px;
+}
+.header .search .search-content-bot .search-hot .search-hot-list-right li {
+  cursor: pointer;
 }
 .header
   .search
@@ -315,7 +307,6 @@ input::placeholder {
   .search-hot
   .search-hot-list-right
   li:nth-child(5)
-  a
   span {
   margin-right: 11px;
 }
@@ -359,8 +350,8 @@ input::placeholder {
   display: block;
 }
 .mb-header > .inner > .container > .logo > a > img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 }
 .mb-header > .inner > .container > .mb-search > button {
   border: none;
@@ -544,9 +535,11 @@ input::placeholder {
   .search-hot
   .search-hot-list-left
   li
-  a
   span {
   margin-right: 20px;
+}
+.mb-header .search .search-content-bot .search-hot .search-hot-list-left li {
+  cursor: pointer;
 }
 .mb-header .search .search-content-bot .search-hot .search-hot-list-right {
   font-size: 1.6rem;
@@ -558,9 +551,11 @@ input::placeholder {
   .search-hot
   .search-hot-list-right
   li
-  a
   span {
   margin-right: 20px;
+}
+.mb-header .search .search-content-bot .search-hot .search-hot-list-right li {
+  cursor: pointer;
 }
 .mb-header
   .search
@@ -568,7 +563,6 @@ input::placeholder {
   .search-hot
   .search-hot-list-right
   li:nth-child(5)
-  a
   span {
   margin-right: 11px;
 }
@@ -799,14 +793,17 @@ input::placeholder {
 .local-cont > .local-bt-name {
   width: 60px;
   border-radius: 5px;
-  background-color: #ff9364;
-  color: #fff;
+  /* background-colo; r: #fe6b38;
+  color: #fff*/
   display: block;
-  border: none;
+  /* border: none; */
   cursor: pointer;
   font-size: 1.8rem;
   padding: 5px 0;
   text-align: center;
+  border: 1px solid #bababa;
+  background-color: #fff;
+  color: #bababa;
 }
 .sw-local-container {
   display: block;
@@ -828,7 +825,7 @@ input::placeholder {
   margin: 0 auto;
   border: none;
   border-radius: 5px;
-  background-color: #ff9364;
+  background-color: #fe6b38;
 }
 /* 오른쪽 */
 .market-info-right {
@@ -843,15 +840,12 @@ input::placeholder {
   border-radius: 5px;
   background-color: #fff;
   padding: 30px 20px;
-}
-.market-info-right .market-contents .market-content1 a,
-.market-info-right .market-contents .market-content2 a {
   display: flex;
   gap: 20px;
 }
 .market-content-right,
 .market-content-left {
-  margin: auto;
+  /* margin: auto; */
   width: 50%;
 }
 .market-content-left img {
@@ -871,7 +865,7 @@ input::placeholder {
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
   color: #191919;
-  background-color: #fcf6f2;
+  background-color: #fdebc8;
 }
 .market-adr {
   display: block;
@@ -893,17 +887,17 @@ input::placeholder {
 }
 /* 더보기 버튼 */
 .market-contents button {
+  width: 100px;
+  height: 35px;
   display: block;
   margin: 0 auto;
   border: none;
   border-radius: 5px;
-  background-color: #ff9364;
-}
-.market-contents button a {
+  background-color: #fe6b38;
   display: block;
   font-size: 1.6rem;
-  padding: 5px 10px;
   color: #fff;
+  cursor: pointer;
 }
 .market-info > .market-info-contents > .market-contents {
   display: none;
@@ -914,22 +908,19 @@ input::placeholder {
   width: 100%;
   margin: auto;
 }
-.market-contents2 {
+.market-contents2 .swiper {
   position: relative;
   display: block;
-  width: 60%;
+  width: 80%;
   margin: auto;
   border-radius: 5px;
-  padding: 20px 0;
-  border: 0.5px solid #a6a6a6;
+  /* padding: 20px 0; */
+  /* border: 0.5px solid #a6a6a6; */
   text-align: center;
   box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.market-contents2 > a {
-  display: inline-block;
-  margin: auto;
-  width: 90%;
+.market-contents2 .swiper-slide {
+  padding: 20px;
 }
 .market-contents2 .market-content-left {
   display: block;
@@ -959,15 +950,15 @@ input::placeholder {
   margin: 20px 0;
 }
 /* 더보기 버튼 */
-.market-info-contents2 .market-contents2 button a {
-  color: #fff;
-}
 .market-info-contents2 .market-contents2 button {
+  width: 100px;
+  height: 35px;
   display: block;
   font-size: 1.6rem;
-  padding: 5px 8px;
+  /* padding: 5px 8px; */
   color: #fff;
-  margin-top: 15px;
+  margin-top: 25px;
+  cursor: pointer;
 }
 .prev-local-name:after,
 .next-local-name:after {
@@ -1017,27 +1008,41 @@ input::placeholder {
   cursor: pointer;
 }
 .sectionTopbt > li:nth-child(1) > button {
-  background-color: #ff9364;
+  background-color: #fe6b38;
   color: #fff;
   border: none;
 }
 .moreBt {
-  background-color: #ffb477;
+  background-color: #fe6b38;
   display: inline-block;
   position: absolute;
   right: 0;
   bottom: 0px;
   width: 100px;
-  height: 45px;
+  height: 35px;
   font-size: 1.6rem;
   /* line-height: 45px; */
   /* font-weight: 700; */
-  color: #333;
+  color: #fff;
   border: none;
   border-radius: 5px;
   z-index: 5;
   text-align: center;
   cursor: pointer;
+}
+.moreBts {
+  background-color: #fff;
+  font-size: 2.5rem;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  height: 45px;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  text-align: center;
+  display: none;
 }
 /* 베스트 스와이퍼 */
 .prev-best,
@@ -1133,19 +1138,20 @@ input::placeholder {
   height: 100%;
   -left: 20px;
 }
-.sw-best > .swiper-wrapper > .swiper-slide > .best-content > a > .name1 {
+.sw-best > .swiper-wrapper > .swiper-slide > .best-content > .name1 {
   padding: 30px 0 15px 0;
   font-size: 1.6rem;
   font-weight: bold;
 }
-.sw-best > .swiper-wrapper > .swiper-slide > .best-content > a > .name2 {
+.sw-best > .swiper-wrapper > .swiper-slide > .best-content > .name2 {
   font-size: 1.5rem;
 }
-.sw-best > .swiper-wrapper > .swiper-slide > .best-content > a > .coment {
+.sw-best > .swiper-wrapper > .swiper-slide > .best-content > .coment {
   position: absolute;
   bottom: 30px;
   right: 0;
   font-size: 1.3rem;
+  cursor: pointer;
 }
 /* 맛집 2 */
 .sw-famous {
@@ -1165,7 +1171,7 @@ input::placeholder {
   width: 100%;
   height: 100%;
 }
-.sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .names {
+.sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > .names {
   display: flex;
   justify-content: space-between;
   padding: 30px 0 20px 0;
@@ -1174,7 +1180,6 @@ input::placeholder {
   > .swiper-wrapper
   > .swiper-slide
   > .famous-content
-  > a
   > .names
   > .name1 {
   font-size: 1.6rem;
@@ -1184,7 +1189,6 @@ input::placeholder {
   > .swiper-wrapper
   > .swiper-slide
   > .famous-content
-  > a
   > .names
   > .name2 {
   font-size: 1.5rem;
@@ -1193,7 +1197,6 @@ input::placeholder {
   > .swiper-wrapper
   > .swiper-slide
   > .famous-content
-  > a
   > .famous-tag-list {
   display: flex;
   gap: 10px;
@@ -1202,7 +1205,6 @@ input::placeholder {
   > .swiper-wrapper
   > .swiper-slide
   > .famous-content
-  > a
   > .famous-tag-list
   > .famous-tag {
   border-radius: 5px;
@@ -1211,6 +1213,7 @@ input::placeholder {
   text-align: center;
   background-color: #eeeeee;
   color: #5e5e5e;
+  cursor: pointer;
 }
 /* 노포 시장 */
 .market-old {
@@ -1332,12 +1335,12 @@ input::placeholder {
   width: 100%;
   height: 100%;
 }
-.sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .name1 {
+.sw-old > .swiper-wrapper > .swiper-slide > .old-content > .name1 {
   padding: 30px 0 15px 0;
   font-size: 1.6rem;
   font-weight: bold;
 }
-.sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .name2 {
+.sw-old > .swiper-wrapper > .swiper-slide > .old-content > .name2 {
   font-size: 1.5rem;
 }
 /* 특색 있는 */
@@ -1357,12 +1360,12 @@ input::placeholder {
   width: 100%;
   height: 100%;
 }
-.sw-unique > .swiper-wrapper > .swiper-slide > .unique-content > a > .name1 {
+.sw-unique > .swiper-wrapper > .swiper-slide > .unique-content > .name1 {
   padding: 30px 0 15px 0;
   font-size: 1.6rem;
   font-weight: bold;
 }
-.sw-unique > .swiper-wrapper > .swiper-slide > .unique-content > a > .name2 {
+.sw-unique > .swiper-wrapper > .swiper-slide > .unique-content > .name2 {
   font-size: 1.5rem;
   padding-bottom: 15px;
 }
@@ -1370,7 +1373,6 @@ input::placeholder {
   > .swiper-wrapper
   > .swiper-slide
   > .unique-content
-  > a
   > .unique-tag-list {
   display: flex;
   gap: 10px;
@@ -1379,7 +1381,6 @@ input::placeholder {
   > .swiper-wrapper
   > .swiper-slide
   > .unique-content
-  > a
   > .unique-tag-list
   > .unique-tag {
   border-radius: 30px;
@@ -1389,6 +1390,7 @@ input::placeholder {
   text-align: center;
   background-color: #eeeeee;
   color: #5e5e5e;
+  cursor: pointer;
 }
 /* 야시장 */
 .marketNightBottom {
@@ -1407,11 +1409,11 @@ input::placeholder {
   width: 100%;
   height: 100%;
 }
-.sw-night > .swiper-wrapper > .swiper-slide > .night-content > a > .name1 {
+.sw-night > .swiper-wrapper > .swiper-slide > .night-content > .name1 {
   padding: 30px 0 15px 0;
   font-size: 1.6rem;
   font-weight: bold;
 }
-.sw-night > .swiper-wrapper > .swiper-slide > .night-content > a > .name2 {
+.sw-night > .swiper-wrapper > .swiper-slide > .night-content > .name2 {
   font-size: 1.5rem;
 }

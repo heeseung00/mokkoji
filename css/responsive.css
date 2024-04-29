@@ -27,7 +27,12 @@
   }
 }
 @media screen and (max-width: 1150px) {
-  .sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .famous-tag-list > .famous-tag {
+  .sw-famous
+    > .swiper-wrapper
+    > .swiper-slide
+    > .famous-content
+    > .famous-tag-list
+    > .famous-tag {
     font-size: 1.2rem;
   }
 }
@@ -44,7 +49,12 @@
   .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
     left: 60px;
   }
-  .sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .famous-tag-list > .famous-tag {
+  .sw-famous
+    > .swiper-wrapper
+    > .swiper-slide
+    > .famous-content
+    > .famous-tag-list
+    > .famous-tag {
     font-size: 1.3rem;
   }
 }
@@ -153,11 +163,6 @@
     left: 50px;
   }
 }
-@media screen and (max-width: 920px) {
-  .market-contents2 {
-    width: 70%;
-  }
-}
 @media screen and (max-width: 880px) {
   /* 로고 */
   .hd-logo {
@@ -202,28 +207,48 @@
   }
 }
 @media screen and (max-width: 862px) {
-  .sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > a > .famous-tag-list > .famous-tag {
+  .sw-famous
+    > .swiper-wrapper
+    > .swiper-slide
+    > .famous-content
+    > .famous-tag-list
+    > .famous-tag {
     font-size: 1.2rem;
   }
-  .sw-famous .swiper-slide:nth-child(3) .famous-tag-list .famous-tag:last-child {
+  .sw-famous
+    .swiper-slide:nth-child(3)
+    .famous-tag-list
+    .famous-tag:last-child {
     display: none;
   }
-  .sw-famous .swiper-slide:nth-child(4) .famous-tag-list .famous-tag:last-child {
+  .sw-famous
+    .swiper-slide:nth-child(4)
+    .famous-tag-list
+    .famous-tag:last-child {
     display: none;
   }
   /* 옛날 감성 시장 */
-  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .name1 {
+  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > .name1 {
     font-size: 1.5rem;
   }
-  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .name2 {
+  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > .name2 {
     font-size: 1.3rem;
   }
   /*  특색 시장 */
-  .sw-unique > .swiper-wrapper > .swiper-slide > .unique-content > a > .unique-tag-list {
+  .sw-unique
+    > .swiper-wrapper
+    > .swiper-slide
+    > .unique-content
+    > .unique-tag-list {
     display: flex;
     gap: 5px;
   }
-  .sw-unique > .swiper-wrapper > .swiper-slide > .unique-content > a > .unique-tag-list > .unique-tag {
+  .sw-unique
+    > .swiper-wrapper
+    > .swiper-slide
+    > .unique-content
+    > .unique-tag-list
+    > .unique-tag {
     width: 75px;
     font-size: 1.2rem;
   }
@@ -240,9 +265,6 @@
 @media screen and (max-width: 830px) {
   .market-info-contents2 .market-contents2 {
     margin-top: 30px;
-  }
-  .market-contents2 {
-    width: 80%;
   }
 }
 @media screen and (max-width: 790px) {
@@ -277,21 +299,27 @@
   .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
     left: 60px;
   }
-  .sw-famous .swiper-slide:nth-child(3) .famous-tag-list .famous-tag:last-child {
+  .sw-famous
+    .swiper-slide:nth-child(3)
+    .famous-tag-list
+    .famous-tag:last-child {
     display: block;
   }
-  .sw-famous .swiper-slide:nth-child(4) .famous-tag-list .famous-tag:last-child {
+  .sw-famous
+    .swiper-slide:nth-child(4)
+    .famous-tag-list
+    .famous-tag:last-child {
     display: block;
   }
   /* 옛날 감성 시장 */
-  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .name1 {
+  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > .name1 {
     font-size: 1.6rem;
   }
-  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .name2 {
+  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > .name2 {
     font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 768px) {
   .bestresttopright {
     position: relative;
   }
@@ -301,12 +329,81 @@
   .sectionTopbt {
     padding-top: 0px;
     margin-bottom: 20px;
+    width: 100%;
+  }
+  .sectionTopbt li {
+    width: 50%;
+  }
+  .sectionTopbt li button {
+    width: 100%;
   }
   .marketoldright {
     position: relative;
   }
   .marketOldTop .title {
     margin-bottom: 20px;
+  }
+  /* 더보기 버튼 */
+  .moreBts {
+    display: block;
+  }
+  .moreBt {
+    display: none;
+  }
+  .next-best {
+    right: 50px;
+  }
+  .prev-best {
+    right: 100px;
+  }
+  .scrollbar-best {
+    right: 150px !important;
+    width: auto !important;
+  }
+  .next-famous {
+    right: 50px;
+  }
+  .prev-famous {
+    right: 100px;
+  }
+  .scrollbar-famous {
+    right: 150px !important;
+    width: auto !important;
+  }
+  .next-old {
+    right: 50px;
+  }
+  .prev-old {
+    right: 100px;
+  }
+  .scrollbar-old {
+    right: 150px !important;
+    width: auto !important;
+  }
+  .next-unique {
+    right: 50px;
+  }
+  .prev-unique {
+    right: 100px;
+  }
+  .scrollbar-unique {
+    right: 150px !important;
+    width: auto !important;
+  }
+  .next-night {
+    right: 50px;
+  }
+  .prev-night {
+    right: 100px;
+  }
+  .scrollbar-night {
+    right: 150px !important;
+    width: auto !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .market-contents2 .swiper {
+    width: 85%;
   }
 }
 @media screen and (max-width: 670px) {
@@ -324,9 +421,6 @@
   .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
     left: 50px;
   }
-  .market-contents2 {
-    width: 85%;
-  }
 }
 @media screen and (max-width: 600px) {
   .mb-header > .mb-menu-contents {
@@ -335,13 +429,16 @@
   .mb-header > .mb-menu-contents > .mb-menu-xBt {
     font-size: 3.6rem;
   }
+  .market-contents2 .swiper {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 590px) {
   /* 옛날 감성 시장 */
-  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .name1 {
+  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > .name1 {
     font-size: 1.5rem;
   }
-  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .name2 {
+  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > .name2 {
     font-size: 1.3rem;
   }
 }
@@ -386,10 +483,16 @@
   .sw-best > .swiper-wrapper > .swiper-slide > span {
     top: 5%;
   }
-  .sw-famous .swiper-slide:nth-child(3) .famous-tag-list .famous-tag:last-child {
+  .sw-famous
+    .swiper-slide:nth-child(3)
+    .famous-tag-list
+    .famous-tag:last-child {
     display: none;
   }
-  .sw-famous .swiper-slide:nth-child(4) .famous-tag-list .famous-tag:last-child {
+  .sw-famous
+    .swiper-slide:nth-child(4)
+    .famous-tag-list
+    .famous-tag:last-child {
     display: none;
   }
 }
@@ -414,50 +517,28 @@
   .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
     margin: 0 8%;
   }
-  .sw-famous .swiper-slide:nth-child(3) .famous-tag-list .famous-tag:last-child {
+  .sw-famous
+    .swiper-slide:nth-child(3)
+    .famous-tag-list
+    .famous-tag:last-child {
     display: block;
   }
-  .sw-famous .swiper-slide:nth-child(4) .famous-tag-list .famous-tag:last-child {
+  .sw-famous
+    .swiper-slide:nth-child(4)
+    .famous-tag-list
+    .famous-tag:last-child {
     display: block;
   }
   /* 옛날 감성 시장 */
-  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .name1 {
+  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > .name1 {
     font-size: 1.6rem;
   }
-  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > a > .name2 {
+  .sw-old > .swiper-wrapper > .swiper-slide > .old-content > .name2 {
     font-size: 1.5rem;
   }
   /* 특색 */
   .sw-unique .swiper-slide {
     width: 100%;
-  }
-  /* 더보기 버튼 */
-  .moreBt {
-    width: 80px;
-    height: 30px;
-    font-size: 1.4rem;
-    color: #333;
-    border: none;
-  }
-  .next-best {
-    right: 100px;
-  }
-  .prev-best {
-    right: 150px;
-  }
-  .scrollbar-best {
-    right: 200px !important;
-    width: auto !important;
-  }
-  .next-famous {
-    right: 100px;
-  }
-  .prev-famous {
-    right: 150px;
-  }
-  .scrollbar-famous {
-    right: 200px !important;
-    width: auto !important;
   }
   .unique-content {
     /* width: 80%; */
@@ -476,36 +557,6 @@
     width: 80%;
     text-align: center;
     margin: auto;
-  }
-  .next-old {
-    right: 100px;
-  }
-  .prev-old {
-    right: 150px;
-  }
-  .scrollbar-old {
-    right: 200px !important;
-    width: auto !important;
-  }
-  .next-unique {
-    right: 100px;
-  }
-  .prev-unique {
-    right: 150px;
-  }
-  .scrollbar-unique {
-    right: 200px !important;
-    width: auto !important;
-  }
-  .next-night {
-    right: 100px;
-  }
-  .prev-night {
-    right: 150px;
-  }
-  .scrollbar-night {
-    right: 200px !important;
-    width: auto !important;
   }
 }
 @media screen and (max-width: 520px) {
@@ -542,6 +593,9 @@
   }
   .sw-night {
     height: 480px;
+  }
+  .market-contents2 .swiper {
+    width: 95%;
   }
 }
 @media screen and (max-width: 460px) {
@@ -598,6 +652,11 @@
     font-size: 3.2rem;
   }
 }
+@media screen and (max-width: 400px) {
+  .market-contents2 .swiper {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 390px) {
   .market-content-right .market-content-right-top {
     gap: 5px;
@@ -605,9 +664,6 @@
   .market-content-right .market-content-right-top span {
     font-size: 1rem;
     padding: 5px 7px 5px 7px;
-  }
-  .market-contents2 {
-    width: 90%;
   }
   .market-contents2 .market-content-right-top {
     margin: 10px 0;
@@ -703,10 +759,16 @@
     width: 80px;
     font-size: 1.3rem;
   }
-  .sw-famous .swiper-slide:nth-child(3) .famous-tag-list .famous-tag:last-child {
+  .sw-famous
+    .swiper-slide:nth-child(3)
+    .famous-tag-list
+    .famous-tag:last-child {
     display: none;
   }
-  .sw-famous .swiper-slide:nth-child(4) .famous-tag-list .famous-tag:last-child {
+  .sw-famous
+    .swiper-slide:nth-child(4)
+    .famous-tag-list
+    .famous-tag:last-child {
     display: none;
   }
 }
@@ -730,7 +792,7 @@
     left: 50px;
   }
   .mb-header > .mb-menu-contents > .mb-menu-xBt {
-    font-size: 3.0rem;
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 350px) {
