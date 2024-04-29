@@ -72,6 +72,9 @@
   .market-info-contents {
     display: none;
   }
+  .market-info {
+    background-color: #fff;
+  }
   .market-info-1045 {
     display: block;
   }
