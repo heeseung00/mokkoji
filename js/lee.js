@@ -331,46 +331,46 @@ window.addEventListener("load", function () {
     },
   });
   // =====================================================================
-    // 서울 버튼 요소를 선택합니다.
-  const seoulButton = document.querySelector('.seoul2');
+  // 서울 버튼 요소를 선택합니다.
+  const seoulButton = document.querySelector(".seoul2");
   // 서울 버튼에 선택된 스타일을 적용합니다.
-  seoulButton.classList.add('selected');
-  const seoulButtonName = seoulButton.querySelector('.local-bt-name');
+  seoulButton.classList.add("selected");
+  const seoulButtonName = seoulButton.querySelector(".local-bt-name");
   // 서울 버튼의 배경색을 변경합니다.
-  seoulButtonName.style.backgroundColor = '#fe6b38'; // 원하는 배경색으로 변경
-  seoulButtonName.style.color = '#fff'; // 원하는 텍스트 색상으로 변경
-  seoulButtonName.style.border = 'none'; 
+  seoulButtonName.style.backgroundColor = "#fe6b38"; // 원하는 배경색으로 변경
+  seoulButtonName.style.color = "#fff"; // 원하는 텍스트 색상으로 변경
+  seoulButtonName.style.border = "none";
   // 필요에 따라 다른 스타일도 변경합니다.
-// 이전에 선택된 버튼의 스타일을 초기화하고 selected 클래스를 제거하는 함수
-function resetPreviousButton() {
-  const previousSelectedButton = document.querySelector('.local-cont.selected');
-  if (previousSelectedButton) {
-    previousSelectedButton.classList.remove('selected');
-    const previousButtonName = previousSelectedButton.querySelector('.local-bt-name');
-    // 이전에 선택된 버튼의 배경색을 원래 스타일로 변경
-    previousButtonName.style.backgroundColor = '#fff'; // 이전에 설정한 배경색으로 변경
-    previousButtonName.style.color = '#bababa'; // 이전에 설정한 텍스트 색상으로 변경
-    previousButtonName.style.border = '1px solid #bababa'; // 이전에 설정한 텍스트 색상으로 변경
-    // 필요에 따라 다른 스타일도 초기화합니다.
+  // 이전에 선택된 버튼의 스타일을 초기화하고 selected 클래스를 제거하는 함수
+  function resetPreviousButton() {
+    const previousSelectedButton = document.querySelector(".local-cont.selected");
+    if (previousSelectedButton) {
+      previousSelectedButton.classList.remove("selected");
+      const previousButtonName = previousSelectedButton.querySelector(".local-bt-name");
+      // 이전에 선택된 버튼의 배경색을 원래 스타일로 변경
+      previousButtonName.style.backgroundColor = "#fff"; // 이전에 설정한 배경색으로 변경
+      previousButtonName.style.color = "#bababa"; // 이전에 설정한 텍스트 색상으로 변경
+      previousButtonName.style.border = "1px solid #bababa"; // 이전에 설정한 텍스트 색상으로 변경
+      // 필요에 따라 다른 스타일도 초기화합니다.
+    }
   }
-}
-// 각 지역 버튼 요소를 가져옵니다.
-const localButtons = document.querySelectorAll('.local-cont');
-// 각 버튼에 클릭 이벤트 리스너를 추가합니다.
-localButtons.forEach(button => {
-  button.addEventListener('click', function() {
-    // 이전에 선택된 버튼의 selected 클래스를 제거하고 스타일을 초기화합니다.
-    resetPreviousButton();
-    // 현재 클릭된 버튼에 selected 클래스를 추가합니다.
-    this.classList.add('selected');
-    const currentButtonName = this.querySelector('.local-bt-name');
-    // 현재 클릭된 버튼의 배경색을 변경합니다.
-    currentButtonName.style.backgroundColor = '#fe6b38'; // 원하는 배경색으로 변경
-    currentButtonName.style.color = '#fff'; // 원하는 텍스트 색상으로 변경
-    currentButtonName.style.border = 'none';
-    // 필요에 따라 다른 스타일도 변경합니다.
+  // 각 지역 버튼 요소를 가져옵니다.
+  const localButtons = document.querySelectorAll(".local-cont");
+  // 각 버튼에 클릭 이벤트 리스너를 추가합니다.
+  localButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // 이전에 선택된 버튼의 selected 클래스를 제거하고 스타일을 초기화합니다.
+      resetPreviousButton();
+      // 현재 클릭된 버튼에 selected 클래스를 추가합니다.
+      this.classList.add("selected");
+      const currentButtonName = this.querySelector(".local-bt-name");
+      // 현재 클릭된 버튼의 배경색을 변경합니다.
+      currentButtonName.style.backgroundColor = "#fe6b38"; // 원하는 배경색으로 변경
+      currentButtonName.style.color = "#fff"; // 원하는 텍스트 색상으로 변경
+      currentButtonName.style.border = "none";
+      // 필요에 따라 다른 스타일도 변경합니다.
+    });
   });
-});
   // 서울
   const seoulBt = document.querySelector(".seoul2");
   const seoulCon = document.getElementById("seoul2");
@@ -511,87 +511,155 @@ localButtons.forEach(button => {
   var swdaegu = new Swiper(".sw-daegus", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 부산
   var swbusan = new Swiper(".sw-busans", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 충북
   var swchungbuk = new Swiper(".sw-chungbuks", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 충남
   var swchungnam = new Swiper(".sw-chungnams", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 대전
   var swdaejeon = new Swiper(".sw-daejeons", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 강원
   var swgangwon = new Swiper(".sw-gangwons", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 광주
   var swgwangju = new Swiper(".sw-gwangjus", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 경북
   var swgyeongbuk = new Swiper(".sw-gyeongbuks", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 경기
   var swgyeonggi = new Swiper(".sw-gyeonggis", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 경남
   var swgyeongnam = new Swiper(".sw-gyeongnams", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 인천
   var swincheon = new Swiper(".sw-incheons", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 제주
   var swjeju = new Swiper(".sw-jejus", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 전북
   var swjeonbuk = new Swiper(".sw-jeonbuks", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 전남
   var swjeonnam = new Swiper(".sw-jeonnams", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 세종
   var swsejong = new Swiper(".sw-sejongs", {
     slidesPerView: 1, // 슬라이드 개수 설정
     spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
   });
   // 서울
-    var swseoul = new Swiper(".sw-seouls", {
-      slidesPerView: 1, // 슬라이드 개수 설정
-      spaceBetween: 20,
-    });
+  var swseoul = new Swiper(".sw-seouls", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
+  });
   // 울산
-    var swulsan = new Swiper(".sw-ulsans", {
-      slidesPerView: 1, // 슬라이드 개수 설정
-      spaceBetween: 20,
-    });
+  var swulsan = new Swiper(".sw-ulsans", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination-marketInfo",
+      clickable: true,
+    },
+  });
   // =====================================================================
   // 맛집 클릭 이벤트
   const bestBtn = document.getElementById("bestBtn");
@@ -749,15 +817,35 @@ localButtons.forEach(button => {
       slideChange: function () {
         updateButtonPosition(this);
       },
-      reachEnd: function () {
-        // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+      // reachEnd: function () {
+      //   // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+      //   var nextBestButton = document.querySelector(".next-best");
+      //   nextBestButton.style.backgroundPosition = "0 -108px";
+      // },
+      // reachBeginning: function () {
+      //   // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
+      //   var nextBestButton = document.querySelector(".next-best");
+      //   nextBestButton.style.backgroundPosition = "0 -72px";
+      // },
+      slideChange: function () {
+        // 이전 버튼의 배경 위치 설정
+        var prevBestButton = document.querySelector(".prev-best");
+        if (this.isBeginning) {
+          // 스와이퍼가 처음에 도달한 경우
+          prevBestButton.style.backgroundPosition = "0 -36px";
+        } else {
+          // 스와이퍼가 처음에 도달하지 않은 경우
+          prevBestButton.style.backgroundPosition = "0 0px";
+        }
+        // 다음 버튼의 배경 위치 설정
         var nextBestButton = document.querySelector(".next-best");
-        nextBestButton.style.backgroundPosition = "0 -108px";
-      },
-      reachBeginning: function () {
-        // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
-        var nextBestButton = document.querySelector(".next-best");
-        nextBestButton.style.backgroundPosition = "0 -72px";
+        if (this.isEnd) {
+          // 스와이퍼가 끝에 도달한 경우
+          nextBestButton.style.backgroundPosition = "0 -108px";
+        } else {
+          // 스와이퍼가 끝에 도달하지 않은 경우
+          nextBestButton.style.backgroundPosition = "0 -72px";
+        }
       },
     },
   });
@@ -795,15 +883,35 @@ localButtons.forEach(button => {
       slideChange: function () {
         updateButtonPosition(this);
       },
-      reachEnd: function () {
-        // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+      // reachEnd: function () {
+      //   // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+      //   var nextFamousButton = document.querySelector(".next-famous");
+      //   nextFamousButton.style.backgroundPosition = "0 -108px";
+      // },
+      // reachBeginning: function () {
+      //   // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
+      //   var nextFamousButton = document.querySelector(".next-famous");
+      //   nextFamousButton.style.backgroundPosition = "0 -72px";
+      // },
+      slideChange: function () {
+        // 이전 버튼의 배경 위치 설정
+        var prevFamousButton = document.querySelector(".prev-famous");
+        if (this.isBeginning) {
+          // 스와이퍼가 처음에 도달한 경우
+          prevFamousButton.style.backgroundPosition = "0 -36px";
+        } else {
+          // 스와이퍼가 처음에 도달하지 않은 경우
+          prevFamousButton.style.backgroundPosition = "0 0px";
+        }
+        // 다음 버튼의 배경 위치 설정
         var nextFamousButton = document.querySelector(".next-famous");
-        nextFamousButton.style.backgroundPosition = "0 -108px";
-      },
-      reachBeginning: function () {
-        // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
-        var nextFamousButton = document.querySelector(".next-famous");
-        nextFamousButton.style.backgroundPosition = "0 -72px";
+        if (this.isEnd) {
+          // 스와이퍼가 끝에 도달한 경우
+          nextFamousButton.style.backgroundPosition = "0 -108px";
+        } else {
+          // 스와이퍼가 끝에 도달하지 않은 경우
+          nextFamousButton.style.backgroundPosition = "0 -72px";
+        }
       },
     },
   });
@@ -841,15 +949,35 @@ localButtons.forEach(button => {
       slideChange: function () {
         updateButtonPosition(this);
       },
-      reachEnd: function () {
-        // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+      // reachEnd: function () {
+      //   // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+      //   var nextOldButton = document.querySelector(".next-old");
+      //   nextOldButton.style.backgroundPosition = "0 -108px";
+      // },
+      // reachBeginning: function () {
+      //   // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
+      //   var nextOldButton = document.querySelector(".next-old");
+      //   nextOldButton.style.backgroundPosition = "0 -72px";
+      // },
+      slideChange: function () {
+        // 이전 버튼의 배경 위치 설정
+        var prevOldButton = document.querySelector(".prev-old");
+        if (this.isBeginning) {
+          // 스와이퍼가 처음에 도달한 경우
+          prevOldButton.style.backgroundPosition = "0 -36px";
+        } else {
+          // 스와이퍼가 처음에 도달하지 않은 경우
+          prevOldButton.style.backgroundPosition = "0 0px";
+        }
+        // 다음 버튼의 배경 위치 설정
         var nextOldButton = document.querySelector(".next-old");
-        nextOldButton.style.backgroundPosition = "0 -108px";
-      },
-      reachBeginning: function () {
-        // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
-        var nextOldButton = document.querySelector(".next-old");
-        nextOldButton.style.backgroundPosition = "0 -72px";
+        if (this.isEnd) {
+          // 스와이퍼가 끝에 도달한 경우
+          nextOldButton.style.backgroundPosition = "0 -108px";
+        } else {
+          // 스와이퍼가 끝에 도달하지 않은 경우
+          nextOldButton.style.backgroundPosition = "0 -72px";
+        }
       },
     },
   });
@@ -887,15 +1015,35 @@ localButtons.forEach(button => {
       slideChange: function () {
         updateButtonPosition(this);
       },
-      reachEnd: function () {
-        // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
-        var nexUniqueButton = document.querySelector(".next-unique");
-        nexUniqueButton.style.backgroundPosition = "0 -108px";
-      },
-      reachBeginning: function () {
-        // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
-        var nexUniqueButton = document.querySelector(".next-unique");
-        nexUniqueButton.style.backgroundPosition = "0 -72px";
+      // reachEnd: function () {
+      //   // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+      //   var nexUniqueButton = document.querySelector(".next-unique");
+      //   nexUniqueButton.style.backgroundPosition = "0 -108px";
+      // },
+      // reachBeginning: function () {
+      //   // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
+      //   var nexUniqueButton = document.querySelector(".next-unique");
+      //   nexUniqueButton.style.backgroundPosition = "0 -72px";
+      // },
+      slideChange: function () {
+        // 이전 버튼의 배경 위치 설정
+        var prevUniqueButton = document.querySelector(".prev-unique");
+        if (this.isBeginning) {
+          // 스와이퍼가 처음에 도달한 경우
+          prevUniqueButton.style.backgroundPosition = "0 -36px";
+        } else {
+          // 스와이퍼가 처음에 도달하지 않은 경우
+          prevUniqueButton.style.backgroundPosition = "0 0px";
+        }
+        // 다음 버튼의 배경 위치 설정
+        var nextUniqueButton = document.querySelector(".next-unique");
+        if (this.isEnd) {
+          // 스와이퍼가 끝에 도달한 경우
+          nextUniqueButton.style.backgroundPosition = "0 -108px";
+        } else {
+          // 스와이퍼가 끝에 도달하지 않은 경우
+          nextUniqueButton.style.backgroundPosition = "0 -72px";
+        }
       },
     },
   });
@@ -933,15 +1081,35 @@ localButtons.forEach(button => {
       slideChange: function () {
         updateButtonPosition(this);
       },
-      reachEnd: function () {
-        // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+      // reachEnd: function () {
+      //   // 스와이퍼가 끝에 도달하면 다음 버튼의 배경 위치 변경
+      //   var nextNightButton = document.querySelector(".next-night");
+      //   nextNightButton.style.backgroundPosition = "0 -108px";
+      // },
+      // reachBeginning: function () {
+      //   // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
+      //   var nextNightButton = document.querySelector(".next-night");
+      //   nextNightButton.style.backgroundPosition = "0 -72px";
+      // },
+      slideChange: function () {
+        // 이전 버튼의 배경 위치 설정
+        var prevNightButton = document.querySelector(".prev-night");
+        if (this.isBeginning) {
+          // 스와이퍼가 처음에 도달한 경우
+          prevNightButton.style.backgroundPosition = "0 -36px";
+        } else {
+          // 스와이퍼가 처음에 도달하지 않은 경우
+          prevNightButton.style.backgroundPosition = "0 0px";
+        }
+        // 다음 버튼의 배경 위치 설정
         var nextNightButton = document.querySelector(".next-night");
-        nextNightButton.style.backgroundPosition = "0 -108px";
-      },
-      reachBeginning: function () {
-        // 스와이퍼가 처음에 도달하면 다음 버튼의 배경 위치 원래대로 변경
-        var nextNightButton = document.querySelector(".next-night");
-        nextNightButton.style.backgroundPosition = "0 -72px";
+        if (this.isEnd) {
+          // 스와이퍼가 끝에 도달한 경우
+          nextNightButton.style.backgroundPosition = "0 -108px";
+        } else {
+          // 스와이퍼가 끝에 도달하지 않은 경우
+          nextNightButton.style.backgroundPosition = "0 -72px";
+        }
       },
     },
   });
