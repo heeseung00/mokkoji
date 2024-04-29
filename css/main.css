@@ -301,13 +301,7 @@ input::placeholder {
 .header .search .search-content-bot .search-hot .search-hot-list-right li {
   cursor: pointer;
 }
-.header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-right
-  li:nth-child(5)
-  span {
+.header .search .search-content-bot .search-hot .search-hot-list-right li:nth-child(5) span {
   margin-right: 11px;
 }
 /* 모바일 헤더 */
@@ -529,13 +523,7 @@ input::placeholder {
   font-size: 1.6rem;
   line-height: 1.9;
 }
-.mb-header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-left
-  li
-  span {
+.mb-header .search .search-content-bot .search-hot .search-hot-list-left li span {
   margin-right: 20px;
 }
 .mb-header .search .search-content-bot .search-hot .search-hot-list-left li {
@@ -545,25 +533,13 @@ input::placeholder {
   font-size: 1.6rem;
   line-height: 1.9;
 }
-.mb-header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-right
-  li
-  span {
+.mb-header .search .search-content-bot .search-hot .search-hot-list-right li span {
   margin-right: 20px;
 }
 .mb-header .search .search-content-bot .search-hot .search-hot-list-right li {
   cursor: pointer;
 }
-.mb-header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-right
-  li:nth-child(5)
-  span {
+.mb-header .search .search-content-bot .search-hot .search-hot-list-right li:nth-child(5) span {
   margin-right: 11px;
 }
 /* 메인 배너 */
@@ -820,13 +796,6 @@ input::placeholder {
 .market-info-1045 .market-content-right-top {
   margin: 10px 0;
 }
-.market-contents2 button {
-  display: block;
-  margin: 0 auto;
-  border: none;
-  border-radius: 5px;
-  background-color: #fe6b38;
-}
 /* 오른쪽 */
 .market-info-right {
   width: 60%;
@@ -850,6 +819,7 @@ input::placeholder {
 }
 .market-content-left img {
   width: 100%;
+  cursor: pointer;
 }
 .market-content-right .market-content-right-top {
   display: flex;
@@ -877,6 +847,7 @@ input::placeholder {
   font-size: 1.3rem;
   line-height: 1.5;
   word-break: break-all;
+  color: #a6a6a6;
 }
 .market-info-right .market-contents .market-content2 {
   margin-top: 30px;
@@ -887,17 +858,26 @@ input::placeholder {
 }
 /* 더보기 버튼 */
 .market-contents button {
+  /* border: 1px solid #fe6b38; */
+  background-color: #eeeeee;
+  margin: 0 auto;
+  margin-top: 25px;
+  display: block;
   width: 100px;
   height: 35px;
-  display: block;
-  margin: 0 auto;
-  border: none;
-  border-radius: 5px;
-  background-color: #fe6b38;
-  display: block;
   font-size: 1.6rem;
-  color: #fff;
+  /* line-height: 45px; */
+  /* font-weight: 700; */
+  border: none;
+  color: #333;
+  border-radius: 5px;
+  z-index: 5;
+  text-align: center;
   cursor: pointer;
+}
+.market-contents button:hover {
+  background-color: #ff9364;
+  color: #fff;
 }
 .market-info > .market-info-contents > .market-contents {
   display: none;
@@ -945,20 +925,31 @@ input::placeholder {
 }
 .market-contents2 .market-adr {
   font-size: 1.5rem;
-}
-.market-contents2 .market-adr {
   margin: 20px 0;
+  color: #5e5e5e;
 }
 /* 더보기 버튼 */
-.market-info-contents2 .market-contents2 button {
+.market-contents2 button {
+  /* border: 1px solid #fe6b38; */
+  background-color: #eeeeee;
+  margin: 0 auto;
+  margin-top: 25px;
+  display: block;
   width: 100px;
   height: 35px;
-  display: block;
   font-size: 1.6rem;
-  /* padding: 5px 8px; */
-  color: #fff;
-  margin-top: 25px;
+  /* line-height: 45px; */
+  /* font-weight: 700; */
+  border: none;
+  color: #333;
+  border-radius: 5px;
+  z-index: 5;
+  text-align: center;
   cursor: pointer;
+}
+.market-contents2 button:hover {
+  background-color: #ff9364;
+  color: #fff;
 }
 .prev-local-name:after,
 .next-local-name:after {
@@ -1013,7 +1004,8 @@ input::placeholder {
   border: none;
 }
 .moreBt {
-  background-color: #fe6b38;
+  /* border: 1px solid #fe6b38; */
+  background-color: #eeeeee;
   display: inline-block;
   position: absolute;
   right: 0;
@@ -1023,12 +1015,16 @@ input::placeholder {
   font-size: 1.6rem;
   /* line-height: 45px; */
   /* font-weight: 700; */
-  color: #fff;
   border: none;
+  color: #333;
   border-radius: 5px;
   z-index: 5;
   text-align: center;
   cursor: pointer;
+}
+.moreBt:hover {
+  background-color: #ff9364;
+  color: #fff;
 }
 .moreBts {
   background-color: #fff;
@@ -1124,8 +1120,7 @@ input::placeholder {
   top: 10%;
   /* transform: translateY(-50%); */
   color: #fff;
-  text-shadow: -1px 0px #a6a6a6, 0px 1px #a6a6a6, 1px 0px #a6a6a6,
-    0px -1px #a6a6a6;
+  text-shadow: -1px 0px #a6a6a6, 0px 1px #a6a6a6, 1px 0px #a6a6a6, 0px -1px #a6a6a6;
 }
 .sw-best > .swiper-wrapper > .swiper-slide > .best-content {
   position: absolute;
@@ -1176,37 +1171,18 @@ input::placeholder {
   justify-content: space-between;
   padding: 30px 0 20px 0;
 }
-.sw-famous
-  > .swiper-wrapper
-  > .swiper-slide
-  > .famous-content
-  > .names
-  > .name1 {
+.sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > .names > .name1 {
   font-size: 1.6rem;
   font-weight: bold;
 }
-.sw-famous
-  > .swiper-wrapper
-  > .swiper-slide
-  > .famous-content
-  > .names
-  > .name2 {
+.sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > .names > .name2 {
   font-size: 1.5rem;
 }
-.sw-famous
-  > .swiper-wrapper
-  > .swiper-slide
-  > .famous-content
-  > .famous-tag-list {
+.sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > .famous-tag-list {
   display: flex;
   gap: 10px;
 }
-.sw-famous
-  > .swiper-wrapper
-  > .swiper-slide
-  > .famous-content
-  > .famous-tag-list
-  > .famous-tag {
+.sw-famous > .swiper-wrapper > .swiper-slide > .famous-content > .famous-tag-list > .famous-tag {
   border-radius: 5px;
   padding: 5px 8px;
   font-size: 1.3rem;
@@ -1369,20 +1345,11 @@ input::placeholder {
   font-size: 1.5rem;
   padding-bottom: 15px;
 }
-.sw-unique
-  > .swiper-wrapper
-  > .swiper-slide
-  > .unique-content
-  > .unique-tag-list {
+.sw-unique > .swiper-wrapper > .swiper-slide > .unique-content > .unique-tag-list {
   display: flex;
   gap: 10px;
 }
-.sw-unique
-  > .swiper-wrapper
-  > .swiper-slide
-  > .unique-content
-  > .unique-tag-list
-  > .unique-tag {
+.sw-unique > .swiper-wrapper > .swiper-slide > .unique-content > .unique-tag-list > .unique-tag {
   border-radius: 30px;
   padding: 5px;
   font-size: 1.3rem;
