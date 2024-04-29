@@ -75,6 +75,9 @@
   .market-info-1045 {
     display: block;
   }
+  .market-contents2 .swiper-slide {
+    padding: 20px 20px 40px 20px;
+  }
   .market-info-right {
     width: 65%;
     background-color: #e0e7fb;
@@ -620,7 +623,7 @@
     margin: 10px 0;
   }
   .market-contents2 .market-content-info {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 380px) {
