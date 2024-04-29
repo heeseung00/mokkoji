@@ -20,76 +20,77 @@ window.addEventListener("load", function () {
     search.style.display = "none";
     searchInput.value = ""; // input 내용 리셋
   });
+  // ========================================= 메뉴 섹션으로 가기
   // nav 클릭 시 해당 section으로 가기
-  // var menuItems = document.querySelectorAll(".menu-list a");
-  // menuItems.forEach(function (item) {
-  //   item.addEventListener("click", function (event) {
-  //     // href 속성 값 가져오기
-  //     var href = this.getAttribute("href");
-  //     // 만약 href 속성 값이 "#"로 시작하면, 스크롤 효과 적용
-  //     if (href.startsWith("#")) {
-  //       event.preventDefault(); // 기본 동작 방지
-  //       // 대상 섹션의 id 가져오기
-  //       var targetSectionId = href.substring(1);
-  //       // 대상 섹션 요소 가져오기
-  //       var targetSection = document.getElementById(targetSectionId);
-  //       // 대상 섹션의 페이지 맨 위에서의 거리 계산
-  //       var offsetTop = targetSection.offsetTop;
-  //       // 부드러운 스크롤링 효과 적용
-  //       window.scrollTo({
-  //         top: offsetTop,
-  //         behavior: "smooth",
-  //       });
-  //     }
-  //   });
-  // });
-  // =================================================================
-  var menuItems = document.querySelectorAll(".menu-list li a");
+  var menuItems = document.querySelectorAll(".menu-list a");
   menuItems.forEach(function (item) {
     item.addEventListener("click", function (event) {
-      event.preventDefault(); // 기본 동작 방지
-      // 클릭된 메뉴 아이템에만 'active' 클래스를 추가합니다.
-      menuItems.forEach(function (menuItem) {
-        menuItem.parentElement.classList.remove("active");
-      });
-      this.parentElement.classList.add("active");
-      // 해당 섹션으로 스크롤합니다.
-      var targetId = this.getAttribute("href").substring(1);
-      var targetSection = document.getElementById(targetId);
-      var offsetTop = targetSection.offsetTop;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-    });
-  });
-  // 스크롤 이벤트를 사용하여 현재 보이는 섹션을 감지하고 해당 섹션의 메뉴에 클래스를 추가하여 CSS를 적용합니다.
-  window.addEventListener("scroll", function () {
-    var sections = document.querySelectorAll("section");
-    sections.forEach(function (section) {
-      var bounding = section.getBoundingClientRect();
-      if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
-        var sectionId = section.getAttribute("id");
-        var correspondingMenuItem = document.querySelector('.menu-list li a[href="#' + sectionId + '"]');
-        // 해당 섹션에 대한 메뉴 아이템에 클래스를 추가합니다.
-        menuItems.forEach(function (menuItem) {
-          menuItem.parentElement.classList.remove("active");
+      // href 속성 값 가져오기
+      var href = this.getAttribute("href");
+      // 만약 href 속성 값이 "#"로 시작하면, 스크롤 효과 적용
+      if (href.startsWith("#")) {
+        event.preventDefault(); // 기본 동작 방지
+        // 대상 섹션의 id 가져오기
+        var targetSectionId = href.substring(1);
+        // 대상 섹션 요소 가져오기
+        var targetSection = document.getElementById(targetSectionId);
+        // 대상 섹션의 페이지 맨 위에서의 거리 계산
+        var offsetTop = targetSection.offsetTop;
+        // 부드러운 스크롤링 효과 적용
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
         });
-        correspondingMenuItem.parentElement.classList.add("active");
       }
     });
-    // 방문후기 섹션에 대한 예외 처리 추가
-    var visitReviewsSection = document.getElementById("visit-reviews");
-    var visitReviewsMenuItem = document.querySelector('.menu-list li a[href="#visit-reviews"]');
-    var visitReviewsBounding = visitReviewsSection.getBoundingClientRect();
-    if (visitReviewsBounding.top >= 0 && visitReviewsBounding.bottom <= window.innerHeight) {
-      // 방문후기 섹션에 해당하는 메뉴 아이템에 클래스를 추가합니다.
-      menuItems.forEach(function (menuItem) {
-        menuItem.parentElement.classList.remove("active");
-      });
-      visitReviewsMenuItem.parentElement.classList.add("active");
-    }
   });
+  // =================================================================
+  // var menuItems = document.querySelectorAll(".menu-list li a");
+  // menuItems.forEach(function (item) {
+  //   item.addEventListener("click", function (event) {
+  //     event.preventDefault(); // 기본 동작 방지
+  //     // 클릭된 메뉴 아이템에만 'active' 클래스를 추가합니다.
+  //     menuItems.forEach(function (menuItem) {
+  //       menuItem.parentElement.classList.remove("active");
+  //     });
+  //     this.parentElement.classList.add("active");
+  //     // 해당 섹션으로 스크롤합니다.
+  //     var targetId = this.getAttribute("href").substring(1);
+  //     var targetSection = document.getElementById(targetId);
+  //     var offsetTop = targetSection.offsetTop;
+  //     window.scrollTo({
+  //       top: offsetTop,
+  //       behavior: "smooth",
+  //     });
+  //   });
+  // });
+  // 스크롤 이벤트를 사용하여 현재 보이는 섹션을 감지하고 해당 섹션의 메뉴에 클래스를 추가하여 CSS를 적용합니다.
+  // window.addEventListener("scroll", function () {
+  //   var sections = document.querySelectorAll("section");
+  //   sections.forEach(function (section) {
+  //     var bounding = section.getBoundingClientRect();
+  //     if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+  //       var sectionId = section.getAttribute("id");
+  //       var correspondingMenuItem = document.querySelector('.menu-list li a[href="#' + sectionId + '"]');
+  //       // 해당 섹션에 대한 메뉴 아이템에 클래스를 추가합니다.
+  //       menuItems.forEach(function (menuItem) {
+  //         menuItem.parentElement.classList.remove("active");
+  //       });
+  //       correspondingMenuItem.parentElement.classList.add("active");
+  //     }
+  //   });
+  //   // 방문후기 섹션에 대한 예외 처리 추가
+  //   var visitReviewsSection = document.getElementById("visit-reviews");
+  //   var visitReviewsMenuItem = document.querySelector('.menu-list li a[href="#visit-reviews"]');
+  //   var visitReviewsBounding = visitReviewsSection.getBoundingClientRect();
+  //   if (visitReviewsBounding.top >= 0 && visitReviewsBounding.bottom <= window.innerHeight) {
+  //     // 방문후기 섹션에 해당하는 메뉴 아이템에 클래스를 추가합니다.
+  //     menuItems.forEach(function (menuItem) {
+  //       menuItem.parentElement.classList.remove("active");
+  //     });
+  //     visitReviewsMenuItem.parentElement.classList.add("active");
+  //   }
+  // });
   // =================================================================
   // 모바일 스크롤 다운 시 헤더 그림자 효과
   var mbheader = document.querySelector(".mb-header");
@@ -330,6 +331,46 @@ window.addEventListener("load", function () {
     },
   });
   // =====================================================================
+    // 서울 버튼 요소를 선택합니다.
+  const seoulButton = document.querySelector('.seoul2');
+  // 서울 버튼에 선택된 스타일을 적용합니다.
+  seoulButton.classList.add('selected');
+  const seoulButtonName = seoulButton.querySelector('.local-bt-name');
+  // 서울 버튼의 배경색을 변경합니다.
+  seoulButtonName.style.backgroundColor = '#fe6b38'; // 원하는 배경색으로 변경
+  seoulButtonName.style.color = '#fff'; // 원하는 텍스트 색상으로 변경
+  seoulButtonName.style.border = 'none'; 
+  // 필요에 따라 다른 스타일도 변경합니다.
+// 이전에 선택된 버튼의 스타일을 초기화하고 selected 클래스를 제거하는 함수
+function resetPreviousButton() {
+  const previousSelectedButton = document.querySelector('.local-cont.selected');
+  if (previousSelectedButton) {
+    previousSelectedButton.classList.remove('selected');
+    const previousButtonName = previousSelectedButton.querySelector('.local-bt-name');
+    // 이전에 선택된 버튼의 배경색을 원래 스타일로 변경
+    previousButtonName.style.backgroundColor = '#fff'; // 이전에 설정한 배경색으로 변경
+    previousButtonName.style.color = '#bababa'; // 이전에 설정한 텍스트 색상으로 변경
+    previousButtonName.style.border = '1px solid #bababa'; // 이전에 설정한 텍스트 색상으로 변경
+    // 필요에 따라 다른 스타일도 초기화합니다.
+  }
+}
+// 각 지역 버튼 요소를 가져옵니다.
+const localButtons = document.querySelectorAll('.local-cont');
+// 각 버튼에 클릭 이벤트 리스너를 추가합니다.
+localButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    // 이전에 선택된 버튼의 selected 클래스를 제거하고 스타일을 초기화합니다.
+    resetPreviousButton();
+    // 현재 클릭된 버튼에 selected 클래스를 추가합니다.
+    this.classList.add('selected');
+    const currentButtonName = this.querySelector('.local-bt-name');
+    // 현재 클릭된 버튼의 배경색을 변경합니다.
+    currentButtonName.style.backgroundColor = '#fe6b38'; // 원하는 배경색으로 변경
+    currentButtonName.style.color = '#fff'; // 원하는 텍스트 색상으로 변경
+    currentButtonName.style.border = 'none';
+    // 필요에 따라 다른 스타일도 변경합니다.
+  });
+});
   // 서울
   const seoulBt = document.querySelector(".seoul2");
   const seoulCon = document.getElementById("seoul2");
@@ -465,6 +506,93 @@ window.addEventListener("load", function () {
     content.style.display = "block";
   }
   // =====================================================================
+  // 시장 소개 스와이퍼
+  // 대구
+  var swdaegu = new Swiper(".sw-daegus", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 부산
+  var swbusan = new Swiper(".sw-busans", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 충북
+  var swchungbuk = new Swiper(".sw-chungbuks", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 충남
+  var swchungnam = new Swiper(".sw-chungnams", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 대전
+  var swdaejeon = new Swiper(".sw-daejeons", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 강원
+  var swgangwon = new Swiper(".sw-gangwons", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 광주
+  var swgwangju = new Swiper(".sw-gwangjus", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 경북
+  var swgyeongbuk = new Swiper(".sw-gyeongbuks", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 경기
+  var swgyeonggi = new Swiper(".sw-gyeonggis", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 경남
+  var swgyeongnam = new Swiper(".sw-gyeongnams", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 인천
+  var swincheon = new Swiper(".sw-incheons", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 제주
+  var swjeju = new Swiper(".sw-jejus", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 전북
+  var swjeonbuk = new Swiper(".sw-jeonbuks", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 전남
+  var swjeonnam = new Swiper(".sw-jeonnams", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 세종
+  var swsejong = new Swiper(".sw-sejongs", {
+    slidesPerView: 1, // 슬라이드 개수 설정
+    spaceBetween: 20,
+  });
+  // 서울
+    var swseoul = new Swiper(".sw-seouls", {
+      slidesPerView: 1, // 슬라이드 개수 설정
+      spaceBetween: 20,
+    });
+  // 울산
+    var swulsan = new Swiper(".sw-ulsans", {
+      slidesPerView: 1, // 슬라이드 개수 설정
+      spaceBetween: 20,
+    });
+  // =====================================================================
   // 맛집 클릭 이벤트
   const bestBtn = document.getElementById("bestBtn");
   const famousBtn = document.getElementById("famousBtn");
@@ -483,7 +611,7 @@ window.addEventListener("load", function () {
     famousContent.style.display = "none";
     bestTitle.style.display = "block";
     famousTitle.style.display = "none";
-    bestBtn.style.backgroundColor = "#ff9364";
+    bestBtn.style.backgroundColor = "#fe6b38";
     bestBtn.style.color = "#fff";
     bestBtn.style.border = "none";
     famousBtn.style.border = "1px solid #bababa";
@@ -499,7 +627,7 @@ window.addEventListener("load", function () {
     famousContent.style.display = "block";
     bestTitle.style.display = "none";
     famousTitle.style.display = "block";
-    famousBtn.style.backgroundColor = "#ff9364";
+    famousBtn.style.backgroundColor = "#fe6b38";
     famousBtn.style.color = "#fff";
     famousBtn.style.border = "none";
     bestBtn.style.border = "1px solid #bababa";
@@ -533,7 +661,7 @@ window.addEventListener("load", function () {
     oldTitle.style.display = "block";
     uniqueTitle.style.display = "none";
     nightTitle.style.display = "none";
-    oldBtn.style.backgroundColor = "#ff9364";
+    oldBtn.style.backgroundColor = "#fe6b38";
     oldBtn.style.color = "#fff";
     oldBtn.style.border = "none";
     uniqueBtn.style.border = "1px solid #bababa";
@@ -553,7 +681,7 @@ window.addEventListener("load", function () {
     oldTitle.style.display = "none";
     uniqueTitle.style.display = "block";
     nightTitle.style.display = "none";
-    uniqueBtn.style.backgroundColor = "#ff9364";
+    uniqueBtn.style.backgroundColor = "#fe6b38";
     uniqueBtn.style.color = "#fff";
     uniqueBtn.style.border = "none";
     oldBtn.style.border = "1px solid #bababa";
@@ -573,7 +701,7 @@ window.addEventListener("load", function () {
     oldTitle.style.display = "none";
     uniqueTitle.style.display = "none";
     nightTitle.style.display = "block";
-    nightBtn.style.backgroundColor = "#ff9364";
+    nightBtn.style.backgroundColor = "#fe6b38";
     nightBtn.style.color = "#fff";
     nightBtn.style.border = "none";
     uniqueBtn.style.border = "1px solid #bababa";
