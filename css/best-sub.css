@@ -50,6 +50,9 @@ body {
   position: relative;
   display: block;
 }
+.best-sub .inner {
+  max-width: 800px;
+}
 .gj-top {
   position: relative;
   display: block;
@@ -71,7 +74,7 @@ body {
 }
 .gj-top .p2 {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   box-shadow: inset 0px -0.3em 0 0 rgba(255, 230, 216, 1);
 }
 /* 후기 사진 */
@@ -81,7 +84,6 @@ body {
   width: 100%;
 }
 .reviewPhoto-list {
-  max-width: 800px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -118,27 +120,211 @@ body {
   position: relative;
   text-align: center;
 }
-.map span {
+.map-info {
   display: block;
   font-size: 1.8rem;
-  margin: 50px 0 20px 0;
+  padding: 50px 0 20px 0;
+  /* margin: 50px 0 20px 0; */
 }
 .map-cont {
   display: block;
   position: relative;
+}
+.map-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  gap: 20px;
+}
+.map-list li {
+  font-size: 1.4rem;
+  text-align: left;
+  /* padding: 5px 0; */
+}
+.map-list li:nth-child(1) {
+  margin-top: 30px;
+}
+.map-list li span {
+  font-size: 1.2rem;
+  margin-left: 20px;
 }
 /* 후기 */
 .review {
   display: block;
   position: relative;
   width: 100%;
+  margin: 50px 0;
 }
 /* 후기 위 */
 .review-top {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
-.review-top-left {
+.review-top-left,
+.review-top-right {
   display: flex;
+  gap: 20px;
+  font-size: 1.5rem;
+}
+.review-num {
+  color: #f88222;
+}
+.review-top-left > p:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+.review-top-right span {
+  cursor: pointer;
+}
+.review-top-right span:hover {
+  font-weight: bold;
+}
+.line {
+  display: block;
+  position: relative;
+}
+.line::after {
+  content: "";
+  width: 1.3px;
+  height: 15px;
+  position: absolute;
+  top: 60%;
+  left: 39%;
+  transform: translateY(-50%);
+  background-color: #333;
+}
+/* 후기 아래 */
+/* 왼쪽 */
+.review-conts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+.review-cont {
+  display: flex;
+  gap: 15px;
+  border: 0.5px solid #f0f0f0;
+  border-radius: 5px;
+  padding: 20px;
+}
+.review-cont-left {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.review-cont-left ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
   gap: 10px;
+}
+.star {
+  font-size: 1.2rem;
+}
+.review-cont-left img {
+  width: 100%;
+}
+.nickname {
+  display: block;
+  font-size: 1.1rem;
+}
+.fa-star {
+  font-size: 1.2rem;
+  color: #ffb500;
+}
+.fa-heart {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 180px;
+  font-size: 1.8rem;
+}
+/* 가운데 */
+.review-cont-mid {
+  display: block;
+  position: relative;
+  width: 200%;
+}
+.review-cont-mid p {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.review-cont-mid img {
+  width: 100%;
+}
+/* 오른쪽 */
+.review-cont-right {
+  display: block;
+  position: relative;
+}
+.review-cont-right p {
+  font-size: 1.4rem;
+  align-items: center;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+.review button {
+  display: block;
+  border: none;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 30px auto;
+}
+.fa-angle-right{
+  margin-left: 5px;
+}
+/* 추천 맛집 */
+.recom {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.recom h2 {
+  font-size: 1.8rem;
+  padding-bottom: 20px;
+}
+.recom-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 auto;
+}
+.recom-list li {
+  display: block;
+  position: relative;
+  width: calc(100% / 3 - 10px);
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  /* padding: 10px; */
+  /* margin-bottom: 20px; */
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.recom-list li img {
+  display: block;
+  width: 100%;
+}
+.recom-list li .recom-text {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  font-size: 1.6rem;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  padding: 20px;
+  border-radius: 5px;
 }

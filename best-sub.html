@@ -55,6 +55,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/hee.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/best-sub.css" />
     <!-- 제이쿼리 추가 -->
@@ -70,6 +71,7 @@
     <script src="js/script.js"></script>
     <script src="js/leesub.js"></script>
     <script src="js/lee.js"></script>
+    <script src="js/hee.js"></script>
     <script src="js/jquery.cookie.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPBSJSB4DE"></script>
@@ -285,7 +287,7 @@
             <!-- 상세정보 -->
             <!-- 지도 -->
             <div class="map">
-              <span>상세정보</span>
+              <span class="map-info">상세정보</span>
               <div class="map-cont">
                 <!-- * 카카오맵 - 지도퍼가기 -->
                 <!-- 1. 지도 노드 -->
@@ -297,15 +299,15 @@
                   new daum.roughmap.Lander({
                     timestamp: "1714381151460",
                     key: "2j7zw",
-                    mapWidth: "640",
-                    mapHeight: "360",
+                    mapWidth: "800",
+                    mapHeight: "450",
                   }).render();
                 </script>
               </div>
               <ul class="map-list">
-                <li>주소 : 세종 조치원읍 새내10길 27</li>
-                <li>영업 시간 : 09:00 ~ 19:00 *매주 월요일 휴무</li>
-                <li>문의 및 안내 : 044-865-3657</li>
+                <li>• 주소 : 세종 조치원읍 새내10길 27</li>
+                <li>• 영업 시간 : 09:00 ~ 19:00 <span>*매주 월요일 휴무</span></li>
+                <li>• 문의 및 안내 : 044-865-3657</li>
               </ul>
             </div>
             <!-- 후기 -->
@@ -317,7 +319,7 @@
                   <span class="review-num">426</span>
                   <p>리뷰 쓰기✏️</p>
                 </div>
-                <div class="review-top-left">
+                <div class="review-top-right">
                   <span>인기순</span>
                   <div class="line"></div>
                   <span>최신순</span>
@@ -328,11 +330,11 @@
                 <div class="review-cont">
                   <!-- 왼쪽 -->
                   <div class="review-cont-left">
-                    <ul>
+                    <ul class="review-cont-left-list">
                       <li><img src="images/lee sub region/pro1.png" alt="프로필1" /></li>
-                      <li><span>케로케로케로피</span></li>
+                      <li><span class="nickname">케로케로케로피</span></li>
                       <li>
-                        <span><i class="fa-solid fa-star"></i> 4점</span>
+                        <span class="star"><i class="fa-solid fa-star"></i> 4점</span>
                       </li>
                       <li><i class="fa-regular fa-heart"></i></li>
                     </ul>
@@ -351,11 +353,113 @@
                     </p>
                   </div>
                 </div>
+                <div class="review-cont">
+                  <!-- 왼쪽 -->
+                  <div class="review-cont-left">
+                    <ul class="review-cont-left-list">
+                      <li><img src="images/lee sub region/pro2.png" alt="프로필2" /></li>
+                      <li><span class="nickname">코비</span></li>
+                      <li>
+                        <span class="star"><i class="fa-solid fa-star"></i> 5점</span>
+                      </li>
+                      <li><i class="fa-regular fa-heart"></i></li>
+                    </ul>
+                  </div>
+                  <!-- 가운데 -->
+                  <div class="review-cont-mid">
+                    <p>2024.04.26</p>
+                    <img src="images/lee sub region/review2.png" alt="리뷰2" />
+                  </div>
+                  <!-- 오른쪽 -->
+                  <div class="review-cont-right">
+                    <p>짜장면은 집에서 해먹는 맛으로 기름지지않아 좋고 탕수육은 꼭 먹어야 함! 달콤한 소스가 입에 착 달라붙음.</p>
+                  </div>
+                </div>
+                <div class="review-cont">
+                  <!-- 왼쪽 -->
+                  <div class="review-cont-left">
+                    <ul class="review-cont-left-list">
+                      <li><img src="images/lee sub region/pro3.png" alt="프로필3" /></li>
+                      <li><span class="nickname">따하하하하하</span></li>
+                      <li>
+                        <span class="star"><i class="fa-solid fa-star"></i> 4점</span>
+                      </li>
+                      <li><i class="fa-solid fa-heart"></i></li>
+                    </ul>
+                  </div>
+                  <!-- 가운데 -->
+                  <div class="review-cont-mid">
+                    <p>2024.04.26</p>
+                    <img src="images/lee sub region/review3.png" alt="리뷰3" />
+                  </div>
+                  <!-- 오른쪽 -->
+                  <div class="review-cont-right">
+                    <p>
+                      시장 들어가자 배고픔에 먹으러 가니 줄이​ 10명정도 대기. 그나마 좀빨리 간건데 11시30분쯤 들어가니 그때부터 더 많이 오더라고요. 대기줄이 많아서 짬뽕하고 다른건 안되구요 짜장하고 탕수육만 된데요. 짜장면 보이시져 이게 3,000원. 보통인데 양이 제법되요. 가성비만 좋은거 아니고 짜장면
+                      자체도 맛있음 짜지도않고 이걸 누가 3,000에 할정도야 할만큼요. 탕수육 바삭하고 새콤달콤 안시키면 후회할뻔 ㅎ 다들 짜장에 탕수육은 기본으로 식탁에 있드라고요. 세종 가면 또 먹고 싶은곳입니다. 물가도 그리 비싸지 않아 시장도 봤네요.
+                    </p>
+                  </div>
+                </div>
               </div>
+              <button>후기 더 보기<i class="fa-solid fa-angle-right"></i></button>
+            </div>
+            <!-- 추천 -->
+            <div class="recom">
+              <h2>'광진 손짜장'과 유사한 맛집 추천👍</h2>
+              <ul class="recom-list">
+                <li>
+                  <div class="recom-con">
+                    <img src="images/lee sub region/rec1.png" alt="추천1" />
+                    <div class="recom-text">명품짜장</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="recom-con">
+                    <img src="images/lee sub region/rec2.png" alt="추천2" />
+                    <div class="recom-text">산동만두</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="recom-con">
+                    <img src="images/lee sub region/rec3.png" alt="추천3" />
+                    <div class="recom-text">명물짜장</div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+      <!-- 푸터 -->
+      <footer class="footer">
+        <div class="container">
+          <div class="inner">
+            <ul class="ft-top">
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">이용안내</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">제휴 문의</a></li>
+            </ul>
+            <div class="ft-bt">
+              <div class="ft-bt-left">
+                <div class="ft-logo"><img src="images/10footer/footer-logo.png" alt="하단 흑백 로고" /></div>
+                <p>(주) 모꼬지</p>
+                <p>주소 : 대구 중구 중앙대로 394, 제일빌딩 5층</p>
+                <p>사업자등록번호 : 123-456-78977 | 통신판매업신고 : 2024-대구중구-1234호</p>
+                <p>대표 : 김그린</p>
+                <p>Copyright 2024. <b>MOKKOJI Co., Ltd</b>. all <b>rights</b> reserved.</p>
+              </div>
+              <div class="ft-middle-line"></div>
+              <div class="ft-bt-right">
+                <h2>고객센터</h2>
+                <p>전화번호 : 1234-1234</p>
+                <p>평일 9:00 ~ 18:00 토,일요일 및 공휴일 휴무</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
