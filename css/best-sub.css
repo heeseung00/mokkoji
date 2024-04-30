@@ -138,7 +138,7 @@ body {
   gap: 20px;
 }
 .map-list li {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   text-align: left;
   /* padding: 5px 0; */
 }
@@ -146,8 +146,12 @@ body {
   margin-top: 30px;
 }
 .map-list li span {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-left: 20px;
+  color: #f88222;
+}
+.map-list a{
+  text-decoration: underline;
 }
 /* 후기 */
 .review {
@@ -171,6 +175,9 @@ body {
 .review-num {
   color: #f88222;
 }
+.review-num-b{
+  color: #191919;
+}
 .review-top-left > p:hover {
   font-weight: bold;
   cursor: pointer;
@@ -179,6 +186,9 @@ body {
   cursor: pointer;
 }
 .review-top-right span:hover {
+  font-weight: bold;
+}
+.popular {
   font-weight: bold;
 }
 .line {
@@ -279,7 +289,7 @@ body {
   cursor: pointer;
   margin: 30px auto;
 }
-.fa-angle-right{
+.fa-angle-right {
   margin-left: 5px;
 }
 /* 추천 맛집 */
