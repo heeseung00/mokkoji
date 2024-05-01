@@ -1,0 +1,481 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: #191919;
+  text-decoration: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #191919;
+  word-break: keep-all;
+  font-size: 10px;
+  position: relative;
+}
+/* 공통요소 */
+.wrap {
+  width: 100%;
+  position: relative;
+  margin-top: 100px;
+}
+.inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.sub-title {
+  font-size: 3rem;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+/* 내용 */
+.contents {
+  display: block;
+  position: relative;
+}
+.contents .inner {
+  max-width: 1000px;
+}
+/* 상단 */
+.contents-top {
+  display: flex;
+  position: relative;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+/* 상단 왼쪽 */
+.contents-top-left {
+  position: relative;
+  display: block;
+  width: 35rem;
+  /* background-color: chocolate; */
+}
+.contents-top-left h2 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+}
+/* 상단 오른쪽 */
+.contents-top-right {
+  position: relative;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  padding: 20px;
+  gap: 20px;
+}
+/* 상단 오른쪽 왼쪽 */
+.contents-top-right-left {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+}
+.contents-top-right-left-sesarch-top {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.contents-top-right-left-sesarch-top input {
+  width: 100%;
+  height: 35px;
+  border: 0.5px solid #d9d9d9;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+  padding: 0px 25px 0px 16px;
+  font-size: 1.5rem;
+  color: #222222;
+}
+.contents-top-right-left-sesarch-top input::placeholder {
+  font-size: 1.5rem;
+  color: #acacac;
+}
+.contents-top-right-left-sesarch-top i {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* 상단 오른쪽 지역 선택 */
+.contents-top-right-left-sesarch-bottom {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.select_cus {
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+  z-index: 99;
+}
+.select_cus .trigger {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 35px;
+  padding: 0 36px 0 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.select_cus .trigger:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  background: url("../images/lee\ sub\ region/select_arr.png") center center no-repeat;
+  background-size: contain;
+  transform: scaleY(-1);
+}
+.select_cus.active .trigger:after {
+  transform: scaleY(1);
+}
+.select_cus .trigger_txt {
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.21px;
+  color: #acacac;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.select_cus.select .trigger_txt {
+  color: #222222;
+}
+.select_cus .option {
+  display: none;
+  position: absolute;
+  top: calc(100% - 1px);
+  width: 100%;
+  max-height: 203px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  z-index: 1;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+.select_cus .option > li {
+  padding: 11px 16px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #2c2c2c;
+  cursor: pointer;
+}
+.select_cus .option > li:hover {
+  background: #f2f2f2;
+}
+.contents-top-right-right button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  /* position: absolute;
+  right: 0; */
+  margin-top: 10px;
+  background-color: #8da4d0;
+  /* color: #222222; */
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+/* 상단 해시태그 */
+.contents-top-right-right {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.contents-top-right-right p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 20px 0 10px 0;
+}
+.hashtag {
+  display: block;
+  position: relative;
+}
+.hashtag button {
+  /* border: 1px solid #8da4d0; */
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #222222;
+}
+.hashtag button:hover {
+  font-weight: bold;
+}
+/* 지역 행사 스와이퍼 커스텀 */
+.sw-sub-festival {
+  position: relative;
+  margin-bottom: 30px;
+}
+/*.recommend-festival {
+  position: relative;
+  margin: 30px 10px;
+  .swiper {
+    &-pagination {
+      position: relative;
+      width: 100px;
+      bottom: auto;
+      &-progressbar-fill {
+        background: #7c8789;
+      }
+    }
+    &-pagination2 {
+      position: relative;
+      width: calc(100% - 150px);
+      height: 10px;
+      bottom: auto;
+    }
+  }
+  .pagination_container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+} */
+.pagination_container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 20px;
+}
+/* 지역 버튼 스와이퍼 */
+.location-sw {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.location-sw .swiper-slide {
+  display: block;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.location-sw .swiper-slide img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.location-sw .swiper-slide span {
+  font-size: 1.6rem;
+}
+/* 스와이퍼 버튼 */
+.sw-name-next {
+  width: 0;
+  height: 0;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  position: absolute;
+  top: 15%;
+  right: -30px;
+  font-size: 2rem;
+  color: #8da4d0;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  position: absolute;
+  top: 15%;
+  left: -30px;
+  font-size: 2rem;
+  color: #8da4d0;
+}
+.location-markek-contents {
+  position: relative;
+  display: block;
+}
+.location-markeks {
+  position: relative;
+  display: block;
+}
+.location-markek-name {
+  position: relative;
+  display: block;
+}
+.location-markek-name h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.location-markek-list {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.location-markek-list li {
+  width: 100%;
+  /* border: 1px solid #acacac; */
+  border-radius: 5px;
+  padding: 20px 10px 15px 10px;
+  background-color: #f7f7f7;
+}
+.location-markek-list li span {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.location-markek-list li p {
+  font-size: 1.3rem;
+  padding: 15px 0;
+}
+.location-markek-list li button {
+  display: block;
+  border: none;
+  background-color: #f7f7f7;
+  /* background-color: #fff; */
+  border-radius: 5px;
+  /* color: #222222; */
+  padding: 3px 5px;
+  margin: auto;
+  cursor: pointer;
+}
+.location-markek-list li button a {
+  /* color: #fff; */
+  color: #00539c;
+  font-size: 1.2rem;
+}
+.location-markek-list li button:hover a {
+  font-weight: bold;
+}
+/* 지역내용 중간 */
+.location-markeks-mid {
+  display: block;
+  position: relative;
+}
+/* 추천 맛집 */
+.recommend-rest {
+  display: block;
+  position: relative;
+  margin-top: 50px;
+}
+.recommend-rest-list {
+  display: flex;
+  position: relative;
+  width: 100%;
+  gap: 30px;
+}
+.recommend-rest-content {
+  width: 100%;
+  text-align: center;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.recommend-rest-content img {
+  width: 100%;
+  cursor: pointer;
+}
+.recommend-rest-content span {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+.recommend-rest-content p {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+/* 추천 여행지 */
+.recommend-travel {
+  display: block;
+  position: relative;
+  margin-top: 50px;
+}
+.recommend-travel-list {
+  display: flex;
+  position: relative;
+  width: 100%;
+  gap: 30px;
+}
+.recommend-travel-content {
+  width: 100%;
+  text-align: center;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.recommend-travel-content img {
+  width: 100%;
+  cursor: pointer;
+}
+.recommend-travel-content span {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+.recommend-travel-content p {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.recommend-rest .sub-title i,
+.recommend-travel .sub-title i,
+.recommend-festival .sub-title i {
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+.recommend-rest .sub-title,
+.recommend-travel .sub-title,
+.recommend-festival .sub-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 지역내용 중간 버튼 클릭 2줄 */
+.location-markeks-mid-two {
+  display: none;
+}
+.recommend-festival {
+  display: block;
+  position: relative;
+  margin-top: 50px;
+}
+/* 지역 행사 스와이퍼 */
+.sw-sub-festival {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.sw-sub-festival .swiper-slide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.sw-sub-festival .swiper-slide img {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+.sw-sub-festival .swiper-slide span {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.sw-sub-festival .swiper-slide p {
+  font-size: 1.3rem;
+}
