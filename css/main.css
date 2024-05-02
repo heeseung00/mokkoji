@@ -318,42 +318,42 @@ input::placeholder {
   transition: box-shadow 0.3s ease; /* 부드러운 변화를 위한 transition 설정 */
   display: none;
 }
-.mb-header > .inner {
+.mb-header > .container > .inner {
   position: relative;
   display: block;
 }
-.mb-header > .inner > .container {
+.mb-header > .container > .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
   background-color: #fff;
 }
-.mb-header > .inner > .container > .search {
+.mb-header > .container > .inner > .search {
   display: none;
 }
-.mb-header > .inner > .container > .mb-menu > button {
+.mb-header > .container > .inner > .mb-menu > button {
   border: none;
   background: none;
   cursor: pointer;
 }
-.mb-header > .inner > .container > .mb-menu > button > i {
+.mb-header > .container > .inner .mb-menu > button > i {
   font-size: 2.8rem;
 }
-.mb-header > .inner > .container > .logo {
+.mb-header > .container > .inner .logo {
   position: relative;
   display: block;
 }
-.mb-header > .inner > .container > .logo > a > img {
+.mb-header > .container > .inner > .logo > a > img {
   width: 60px;
   height: 60px;
 }
-.mb-header > .inner > .container > .mb-search > button {
+.mb-header > .container > .inner > .mb-search > button {
   border: none;
   background: none;
   cursor: pointer;
 }
-.mb-header > .inner > .container > .mb-search > button > i {
+.mb-header > .container > .inner > .mb-search > button > i {
   font-size: 2.5rem;
 }
 /* 모바일 햄버거바 메뉴 */
