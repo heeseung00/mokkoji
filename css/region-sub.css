@@ -58,6 +58,7 @@ body {
   display: flex;
   position: relative;
   padding-top: 50px;
+  gap: 20px;
 }
 /* 상단 왼쪽 */
 .contents-top-left {
@@ -153,7 +154,7 @@ body {
 }
 .select_cus .trigger_txt {
   overflow: hidden;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: -0.21px;
   color: #acacac;
@@ -263,7 +264,7 @@ body {
 .location-sw {
   display: block;
   position: relative;
-  width: 95%;
+  width: 92%;
   margin: 50px auto;
 }
 .location-sw .swiper-slide {
@@ -272,9 +273,14 @@ body {
   text-align: center;
   cursor: pointer;
 }
+.location-sw .swiper-slide img:hover {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
 .location-sw .swiper-slide img {
+  display: block;
   width: 100%;
   margin-bottom: 10px;
+  border-radius: 50%;
 }
 .location-sw .swiper-slide span {
   font-size: 1.6rem;
@@ -288,7 +294,7 @@ body {
 .swiper-rtl .swiper-button-prev:after {
   position: absolute;
   top: 0;
-  right: -35px;
+  right: -32px;
   font-size: 2rem;
   color: #8da4d0;
 }
@@ -296,7 +302,7 @@ body {
 .swiper-rtl .swiper-button-next:after {
   position: absolute;
   top: 0;
-  left: -35px;
+  left: -32px;
   font-size: 2rem;
   color: #8da4d0;
 }
@@ -313,7 +319,7 @@ body {
   display: block;
 }
 .location-markek-name h2 {
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -329,13 +335,19 @@ body {
   padding: 20px 10px 15px 10px;
   background-color: #f7f7f7;
 }
+.location-markek-list li:hover {
+  box-shadow: 0 0 0 2px #191919 inset;
+  transition: all 0.2s;
+}
 .location-markek-list li span {
   font-size: 1.6rem;
   font-weight: bold;
+  cursor: pointer;
 }
 .location-markek-list li p {
   font-size: 1.3rem;
   padding: 15px 0;
+  color: #5e5e5e;
 }
 .location-markek-list li button {
   display: block;
@@ -355,6 +367,11 @@ body {
 }
 .location-markek-list li button:hover a {
   font-weight: bold;
+}
+.traditional-market {
+  display: block;
+  position: relative;
+  margin-top: 30px;
 }
 /* 지역내용 중간 */
 .location-markeks-mid {
@@ -378,6 +395,7 @@ body {
   text-align: center;
   box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  margin: auto;
 }
 .recommend-rest-content img {
   width: 100%;
@@ -387,12 +405,15 @@ body {
   display: block;
   font-size: 1.6rem;
   font-weight: bold;
-  margin: 20px 0 10px 0;
+  margin: 10px 0 10px 0;
 }
 .recommend-rest-content p {
   display: block;
   font-size: 1.3rem;
   margin-bottom: 20px;
+}
+.texts {
+  padding: 10px;
 }
 /* 추천 여행지 */
 .recommend-travel {
@@ -411,6 +432,7 @@ body {
   text-align: center;
   box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  margin: auto;
 }
 .recommend-travel-content img {
   width: 100%;
@@ -420,7 +442,7 @@ body {
   display: block;
   font-size: 1.6rem;
   font-weight: bold;
-  margin: 20px 0 10px 0;
+  margin: 10px 0 10px 0;
 }
 .recommend-travel-content p {
   display: block;
@@ -429,28 +451,81 @@ body {
 }
 .recommend-rest .sub-title i,
 .recommend-travel .sub-title i,
-.recommend-festival .sub-title i {
+.recommend-festival .sub-title i,
+.traditional-market .sub-title i {
   font-size: 2.3rem;
+  cursor: pointer;
+}
+.location-markek-name .sub-title i {
+  font-size: 2rem;
   cursor: pointer;
 }
 .recommend-rest .sub-title,
 .recommend-travel .sub-title,
-.recommend-festival .sub-title {
+.recommend-festival .sub-title,
+.traditional-market .sub-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-/* 지역내용 중간 버튼 클릭 2줄 */
-.location-markeks-mid-two {
+.location-markek-name .sub-title {
+  display: flex;
+  justify-content: space-between;
+}
+/* 지역내용 804 */
+.location-markeks-mid-840 {
   display: none;
 }
+.title-840 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 70px;
+  transition: all 0.3s;
+}
+.title-840 .food,
+.title-840 .trav {
+  width: 50%;
+  text-align: center;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #8da4d0;
+  color: #2c2c2c;
+}
+.title-840 .food {
+  background-color: #8da4d0;
+  color: #fff;
+  border-radius: 5px 0 0 5px;
+}
+.title-840 .trav {
+  border-radius: 0 5px 5px 0px;
+}
+.title-840 .trav:hover {
+  /* background-color: #ff9364; */
+  background-color: #8da4d0;
+  color: #fff;
+}
+.mid-plusBt {
+  display: none;
+  position: relative;
+  text-align: center;
+}
+.location-markeks-mid i {
+  display: inline-block;
+  font-size: 2.3rem;
+  cursor: pointer;
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+/* 지역 행사 스와이퍼 */
 .recommend-festival {
   display: block;
   position: relative;
   margin-top: 50px;
   margin-bottom: 100px;
 }
-/* 지역 행사 스와이퍼 */
 .sw-sub-festival {
   display: block;
   position: relative;
@@ -479,4 +554,129 @@ body {
 .sw-sub-festival .swiper-slide p {
   font-size: 1.3rem;
   padding-bottom: 20px;
+}
+/* ============================================= 반응형 */
+@media screen and (max-width: 1050px) {
+  .location-markek-list {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 1015px) {
+  .location-markek-list li p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .location-markek-list {
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-content: space-around;
+    gap: 20px;
+  }
+  .location-markek-list li {
+    width: calc(50% - 10px);
+  }
+}
+@media screen and (max-width: 840px) {
+  .recommend-travel {
+    display: none;
+  }
+  .location-markeks-mid-840 {
+    display: block;
+  }
+  .recommend-rest-list {
+    flex-wrap: wrap;
+  }
+  .recommend-rest-list li {
+    width: calc(50% - 30px / 2);
+  }
+  .recommend-rest .sub-title,
+  .recommend-travel .sub-title {
+    display: none;
+  }
+  .recommend-travel {
+    margin-top: 30px;
+  }
+  .recommend-travel-list {
+    flex-wrap: wrap;
+  }
+  .recommend-travel li {
+    width: calc(50% - 30px / 2);
+  }
+  .recommend-rest .sub-title,
+  .recommend-travel .sub-title {
+    display: none;
+  }
+  .recommend-rest {
+    margin-top: 30px;
+  }
+  .mid-plusBt {
+    display: block;
+  }
+  .recommend-rest-content p,
+  .recommend-travel-content p {
+    margin-bottom: 10px;
+  }
+  .recommend-rest-list,
+  .recommend-travel-list {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 810px) {
+  .contents-top-left h2 {
+    font-size: 2.6rem;
+  }
+  .contents-top-left {
+    width: 40rem;
+  }
+}
+@media screen and (max-width: 790px) {
+  .contents-top {
+    padding-top: 30px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .contents-top-right-left {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 750px) {
+  .contents-top-right-left-sesarch-top input::placeholder {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contents-top {
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 530px) {
+  .location-markek-list li {
+    width: 100%;
+    padding: 10px;
+  }
+  .location-markek-list li p {
+    padding: 15px 0;
+    font-size: 1.3rem;
+  }
+  .location-markek-list {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .recommend-rest-list,
+  .recommend-travel-list {
+    gap: 20px 0px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .recommend-travel-content span,
+  .recommend-rest-content span {
+    font-size: 1.4rem;
+  }
+  .recommend-rest-content p,
+  .recommend-travel-content p {
+    font-size: 1.2rem;
+  }
 }

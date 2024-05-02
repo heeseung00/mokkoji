@@ -35,11 +35,11 @@ window.addEventListener("load", function () {
       },
       460: {
         slidesPerView: 5,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
       370: {
         slidesPerView: 4,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
       280: {
         slidesPerView: 3,
@@ -60,11 +60,11 @@ window.addEventListener("load", function () {
         slidesPerView: 4,
         spaceBetween: 20,
       },
-      690: {
+      705: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
-      460: {
+      480: {
         slidesPerView: 2,
         spaceBetween: 20,
       },
@@ -88,8 +88,53 @@ window.addEventListener("load", function () {
   //   });
   //   mainSwiper.controller.control = pagingSwiper;
   // =============================================
+  // 추천 맛집 , 추천 여행지
+  const foodBt = document.getElementById("foodBt");
+  const travBt = document.getElementById("travBt");
+  const recommendRest = document.querySelector(".recommend-rest");
+  const recommendTravel = document.querySelector(".recommend-travel");
+  foodBt.addEventListener("click", function () {
+    recommendRest.style.display = "block";
+    recommendTravel.style.display = "none";
+    foodBt.style.backgroundColor = "#8da4d0";
+    foodBt.style.color = "#fff";
+    travBt.style.border = "1px solid #8da4d0";
+    travBt.style.backgroundColor = "#fff";
+    travBt.style.color = "#2c2c2c";
+    foodBt.classList.add("active");
+    travBt.classList.remove("active");
+  });
+  travBt.addEventListener("click", function () {
+    recommendRest.style.display = "none";
+    recommendTravel.style.display = "block";
+    travBt.style.backgroundColor = "#8da4d0";
+    travBt.style.color = "#fff";
+    foodBt.style.border = "1px solid #8da4d0";
+    foodBt.style.backgroundColor = "#fff";
+    foodBt.style.color = "#2c2c2c";
+    travBt.classList.add("active");
+    foodBt.classList.remove("active");
+  });
+  // 창의 너비가 840 이하일 때에만 추천 여행지를 보여줍니다.
+  function handleWindowSizeChange() {
+    if (window.innerWidth <= 840) {
+      if (travBt.classList.contains("active")) {
+        recommendTravel.style.display = "block";
+        recommendRest.style.display = "none";
+      } else {
+        recommendRest.style.display = "block";
+        recommendTravel.style.display = "none";
+      }
+    } else {
+      recommendRest.style.display = "block"; // 원래 상태로 복구
+      recommendTravel.style.display = "block";
+    }
+  }
+  handleWindowSizeChange(); // 페이지가 로드될 때 한 번 호출하여 초기 설정을 적용합니다.
+  window.addEventListener("resize", handleWindowSizeChange); // 창 크기가 변경될 때마다 호출하여 레이아웃을 조정합니다.
+  // ===================================================
 });
-// ============================ 제이쿼리
+// ============================ 제이쿼리 (지역별 탑 검색)
 $(window).on("load", function () {
   selectCus();
 });

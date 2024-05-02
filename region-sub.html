@@ -57,6 +57,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/hee.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/region-sub.css" />
     <!-- 제이쿼리 추가 -->
@@ -71,6 +72,7 @@
     <script src="js/repond.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/leesub.js"></script>
+    <script src="js/hee.js"></script>
     <script src="js/lee.js"></script>
     <script src="js/jquery.cookie.js"></script>
     <!-- Google tag (gtag.js) -->
@@ -100,7 +102,7 @@
             <!-- 네비게이션 -->
             <nav class="nav">
               <ul class="menu-list">
-                <li><a href="submenu-region.html">지역별</a></li>
+                <li><a href="region-sub.html">지역별</a></li>
                 <li><a href="#nav1">맛집</a></li>
                 <li><a href="#nav2">시장</a></li>
                 <li><a href="#nav3">장날</a></li>
@@ -206,7 +208,7 @@
             </a>
           </div>
           <ul class="mb-menu-list">
-            <li><a href="submenu-region.html">지역별</a></li>
+            <li><a href="region-sub.html">지역별</a></li>
             <li><a href="#nav1">맛집</a></li>
             <li><a href="#nav2">시장</a></li>
             <li><a href="#nav3">장날</a></li>
@@ -355,7 +357,17 @@
               <!-- 지역 내용 상단 -->
               <div class="location-markeks">
                 <div class="location-markek-name">
-                  <h2>대구</h2>
+                  <div class="sub-title">
+                    <h2>대구</h2>
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
+                </div>
+                <!-- 전통 시장 -->
+                <div class="traditional-market">
+                  <div class="sub-title">
+                    <h2>전통 시장</h2>
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
                   <ul class="location-markek-list">
                     <li>
                       <span>서문시장</span>
@@ -381,6 +393,12 @@
                 </div>
                 <!-- 지역내용 중간 -->
                 <div class="location-markeks-mid">
+                  <div class="location-markeks-mid-840">
+                    <div class="title-840">
+                      <span class="food" id="foodBt">추천 맛집</span>
+                      <span class="trav" id="travBt">추천 여행지</span>
+                    </div>
+                  </div>
                   <!-- 추천 맛집 -->
                   <div class="recommend-rest">
                     <div class="sub-title">
@@ -390,23 +408,31 @@
                     <ul class="recommend-rest-list">
                       <li class="recommend-rest-content">
                         <img src="images/lee sub region/food1.png" alt="미림돈까스" />
-                        <span>미림 돈까스</span>
-                        <p>서문시장</p>
+                        <div class="texts">
+                          <span>미림 돈까스</span>
+                          <p>서문시장</p>
+                        </div>
                       </li>
                       <li class="recommend-rest-content">
                         <img src="images/lee sub region/food2.png" alt="신서문김밥" />
-                        <span>신서문김밥</span>
-                        <p>교동시장</p>
+                        <div class="texts">
+                          <span>신서문김밥</span>
+                          <p>교동시장</p>
+                        </div>
                       </li>
                       <li class="recommend-rest-content">
                         <img src="images/lee sub region/food3.png" alt="신매 왕족발" />
-                        <span>신매 왕족발</span>
-                        <p>신매시장</p>
+                        <div class="texts">
+                          <span>신매 왕족발</span>
+                          <p>신매시장</p>
+                        </div>
                       </li>
                       <li class="recommend-rest-content">
                         <img src="images/lee sub region/food4.png" alt="평화 떡공방" />
-                        <span>평화 떡공방</span>
-                        <p>봉덕 신시장</p>
+                        <div class="texts">
+                          <span>평화 떡공방</span>
+                          <p>봉덕 신시장</p>
+                        </div>
                       </li>
                     </ul>
                   </div>
@@ -419,60 +445,37 @@
                     <ul class="recommend-travel-list">
                       <li class="recommend-travel-content">
                         <img src="images/lee sub region/travel1.png" alt="계산성당" />
-                        <span>계산성당</span>
-                        <p class="travel-adr">대구 중구 서성로 10</p>
+                        <div class="texts">
+                          <span>계산성당</span>
+                          <p class="travel-adr">대구 중구 서성로 10</p>
+                        </div>
                       </li>
                       <li class="recommend-travel-content">
                         <img src="images/lee sub region/travel2.png" alt="수성못" />
-                        <span>수성못</span>
-                        <p>대구 수성구 두산동 512</p>
+                        <div class="texts">
+                          <span>수성못</span>
+                          <p>대구 수성구 두산동 512</p>
+                        </div>
                       </li>
                       <li class="recommend-travel-content">
                         <img src="images/lee sub region/travel3.png" alt="83타워" />
-                        <span>83타워</span>
-                        <p>대구 달서구 두류공원로 200</p>
+                        <div class="texts">
+                          <span>83타워</span>
+                          <p>대구 달서구 두류공원로 200</p>
+                        </div>
                       </li>
                       <li class="recommend-travel-content">
                         <img src="images/lee sub region/travel4.png" alt="수창청춘맨숀" />
-                        <span>수창청춘맨숀</span>
-                        <p>대구 중구 달성로22길 27</p>
+                        <div class="texts">
+                          <span>수창청춘맨숀</span>
+                          <p>대구 중구 달성로22길 27</p>
+                        </div>
                       </li>
                     </ul>
                   </div>
-                </div>
-                <!-- 지역내용 중간 버튼 클릭 2줄-->
-                <div class="location-markeks-mid-two">
-                  <!-- 추천 맛집 -->
-                  <div class="recommend-rest">
-                    <div class="sub-title">
-                      <h2>추천 맛집</h2>
-                    </div>
-                    <ul class="recommend-rest-list">
-                      <div class="recommend-rest-content-top">
-                        <li class="recommend-rest-content">
-                          <img src="images/lee sub region/food1.png" alt="미림돈까스" />
-                          <span>미림 돈까스</span>
-                          <p>서문시장</p>
-                        </li>
-                        <li class="recommend-rest-content">
-                          <img src="images/lee sub region/food2.png" alt="신서문김밥" />
-                          <span>신서문김밥</span>
-                          <p>교동시장</p>
-                        </li>
-                      </div>
-                      <div class="recommend-rest-content-bottom">
-                        <li class="recommend-rest-content">
-                          <img src="images/lee sub region/food3.png" alt="신매 왕족발" />
-                          <span>신매 왕족발</span>
-                          <p>신매시장</p>
-                        </li>
-                        <li class="recommend-rest-content">
-                          <img src="images/lee sub region/food4.png" alt="평화 떡공방" />
-                          <span>평화 떡공방</span>
-                          <p>봉덕 신시장</p>
-                        </li>
-                      </div>
-                    </ul>
+                  <!-- 더보기 버튼 -->
+                  <div class="mid-plusBt">
+                    <i class="fa-solid fa-plus"></i>
                   </div>
                 </div>
                 <!-- 지역 행사 스와이퍼 -->
@@ -521,6 +524,36 @@
           </div>
         </div>
       </div>
+      <!-- 푸터 -->
+      <footer class="footer">
+        <div class="container">
+          <div class="inner">
+            <ul class="ft-top">
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">이용안내</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">제휴 문의</a></li>
+            </ul>
+            <div class="ft-bt">
+              <div class="ft-bt-left">
+                <div class="ft-logo"><img src="images/10footer/footer-logo.png" alt="하단 흑백 로고" /></div>
+                <p>(주) 모꼬지</p>
+                <p>주소 : 대구 중구 중앙대로 394, 제일빌딩 5층</p>
+                <p>사업자등록번호 : 123-456-78977 | 통신판매업신고 : 2024-대구중구-1234호</p>
+                <p>대표 : 최희승, 이소망</p>
+                <p>© 모꼬지. All rights reserved. Designed by 희승 & 소망</p>
+              </div>
+              <div class="ft-middle-line"></div>
+              <div class="ft-bt-right">
+                <h2>고객센터</h2>
+                <p>전화번호 : 1234-1234</p>
+                <p>평일 9:00 ~ 18:00 토,일요일 및 공휴일 휴무</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
