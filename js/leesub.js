@@ -51,20 +51,51 @@ window.addEventListener("load", function () {
       prevEl: ".sw-name-prev",
     },
   });
+  // 추천 스와이퍼
+  var recommendConts = new Swiper(".sw-recommend-conts", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      960: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+      910: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      830: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      620: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+      510: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      500: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+  });
   //   축제 스와이퍼
   var mainSwiper = new Swiper(".sw-sub-festival", {
     slidesPerView: 1,
     spaceBetween: 20,
     breakpoints: {
-      930: {
+      945: {
         slidesPerView: 4,
         spaceBetween: 20,
       },
-      705: {
+      725: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
-      480: {
+      500: {
         slidesPerView: 2,
         spaceBetween: 20,
       },
