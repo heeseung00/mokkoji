@@ -58,7 +58,6 @@ body {
   display: flex;
   position: relative;
   padding-top: 50px;
-  margin-bottom: 50px;
 }
 /* 상단 왼쪽 */
 .contents-top-left {
@@ -229,10 +228,6 @@ body {
   font-weight: bold;
 }
 /* 지역 행사 스와이퍼 커스텀 */
-.sw-sub-festival {
-  position: relative;
-  margin-bottom: 30px;
-}
 /*.recommend-festival {
   position: relative;
   margin: 30px 10px;
@@ -259,17 +254,17 @@ body {
   }
 } */
 .pagination_container {
-  display: flex;
+  display: block;
   align-items: center;
   position: relative;
-  top: 20px;
+  /* top: 20px; */
 }
 /* 지역 버튼 스와이퍼 */
 .location-sw {
   display: block;
   position: relative;
-  width: 100%;
-  margin-bottom: 50px;
+  width: 95%;
+  margin: 50px auto;
 }
 .location-sw .swiper-slide {
   display: block;
@@ -292,16 +287,16 @@ body {
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
   position: absolute;
-  top: 15%;
-  right: -30px;
+  top: 0;
+  right: -35px;
   font-size: 2rem;
   color: #8da4d0;
 }
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
   position: absolute;
-  top: 15%;
-  left: -30px;
+  top: 0;
+  left: -35px;
   font-size: 2rem;
   color: #8da4d0;
 }
@@ -453,12 +448,15 @@ body {
   display: block;
   position: relative;
   margin-top: 50px;
+  margin-bottom: 100px;
 }
 /* 지역 행사 스와이퍼 */
 .sw-sub-festival {
   display: block;
   position: relative;
   width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
 }
 .sw-sub-festival .swiper-slide {
   width: 100%;
@@ -466,6 +464,7 @@ body {
   flex-direction: column;
   box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  text-align: center;
 }
 .sw-sub-festival .swiper-slide img {
   display: block;
@@ -475,7 +474,9 @@ body {
 .sw-sub-festival .swiper-slide span {
   font-size: 1.6rem;
   font-weight: bold;
+  padding: 20px 10px 10px 10px;
 }
 .sw-sub-festival .swiper-slide p {
   font-size: 1.3rem;
+  padding-bottom: 20px;
 }

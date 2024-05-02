@@ -3,39 +3,37 @@ window.addEventListener("load", function () {
   var swName = new Swiper(".sw-name", {
     slidesPerView: 2,
     spaceBetween: 20,
-    // responsive 옵션을 사용하여 너비에 따라 슬라이드 수 조정
     breakpoints: {
-      // 1000px 이하일 때
-      940: {
+      1060: {
         slidesPerView: 12,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
-      870: {
+      970: {
         slidesPerView: 11,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
       // 530px 이하일 때
-      810: {
+      888: {
         slidesPerView: 10,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
-      745: {
+      805: {
         slidesPerView: 9,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
-      670: {
+      640: {
         slidesPerView: 8,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
-      590: {
+      562: {
         slidesPerView: 7,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
-      520: {
+      490: {
         slidesPerView: 6,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
-      450: {
+      460: {
         slidesPerView: 5,
         spaceBetween: 20,
       },
@@ -43,7 +41,7 @@ window.addEventListener("load", function () {
         slidesPerView: 4,
         spaceBetween: 20,
       },
-      300: {
+      280: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
@@ -55,12 +53,26 @@ window.addEventListener("load", function () {
   });
   //   축제 스와이퍼
   var mainSwiper = new Swiper(".sw-sub-festival", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 20,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
+    breakpoints: {
+      930: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      690: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      460: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
     },
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   type: "fraction",
+    // },
     scrollbar: {
       el: ".swiper-scrollbar",
       draggable: true,
