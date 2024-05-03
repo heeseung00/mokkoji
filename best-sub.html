@@ -1,483 +1,696 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "GTM-PFLDMPXB");
-  </script>
-  <!-- End Google Tag Manager -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="theme-color" content="#ffffff" />
-  <title>모꼬지</title>
-  <!-- seo적용 -->
-  <meta name="robots" content="ALL" />
-  <meta name="robots" content="index, follow" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta property="title" content="모꼬지 ┃ 전통시장의 새로운 트렌드를 만들다." />
-  <meta name="description" content="모꼬지는 전국 전통시장과 죽기 전에 꼭 가봐야 할 여행지를 소개하는 국내 유일한 시장 및 여행 정보 전문 포털 사이트입니다." />
-  <meta name="keywords" content="모꼬지, 대한민국, 전통시장" />
-  <meta property="keyword" content="모꼬지, 대한민국, 전통시장" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="모꼬지 ┃ 전통시장의 새로운 트렌드를 만들다." />
-  <meta property="og:description" content="모꼬지는 전국 전통시장과 죽기 전에 꼭 가봐야 할 여행지를 소개하는 국내 유일한 시장 및 여행 정보 전문 포털 사이트입니다" />
-  <meta property="og:image" content="/images/link-img/thumbnail-01.png" />
-  <meta property="og:url" content="https://mokkoji-a.vercel.app/" />
-  <!-- flaticon -->
-  <link rel="stylesheet"
-    href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
-  <link rel="stylesheet"
-    href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-straight/css/uicons-regular-straight.css" />
-  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-rounded/css/uicons-thin-rounded.css" />
-  <link rel="stylesheet"
-    href="https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-straight/css/uicons-thin-straight.css" />
-  <!-- font aswesom -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- link Swiper's CSS -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
-  <!-- aos css -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <!-- css -->
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/hee.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="stylesheet" href="css/best-sub.css" />
-  <!-- 제이쿼리 추가 -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- aos js -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Swiper js -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js"></script>
-  <!-- js -->
-  <script src="js/html5shiv.js"></script>
-  <!-- <script src="js/prefixfree.min.js"></script> -->
-  <script src="js/repond.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/leesub-best.js"></script>
-  <script src="js/lee.js"></script>
-  <script src="js/hee.js"></script>
-  <script src="js/jquery.cookie.js"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPBSJSB4DE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-SPBSJSB4DE");
-  </script>
-</head>
-
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFLDMPXB" height="0" width="0"
-      style="display: none; visibility: hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <div class="wrap">
-    <!-- 헤더 -->
-    <header class="header">
-      <div class="container">
-        <div class="inner">
-          <!-- 로고 -->
-          <div class="hd-logo">
-            <a href="index.html"><img src="images/1header/hd-logo-main-2.png" alt="로고2" /></a>
-          </div>
-          <!-- 네비게이션 -->
-          <nav class="nav">
-            <ul class="menu-list">
-              <li><a href="region-sub.html">지역별</a></li>
-              <li><a href="#nav1">맛집</a></li>
-              <li><a href="#nav2">시장</a></li>
-              <li><a href="#nav3">장날</a></li>
-              <li><a href="#nav4">방문후기</a></li>
-              <li><a href="notice-board.html">게시판</a></li>
-            </ul>
-          </nav>
-          <!-- 마이페이지 -->
-          <div class="hd-right">
-            <ul class="my-list">
-              <li>
-                <button id="search-open"><i class="fi fi-rr-search"></i></button>
-              </li>
-              <li><a href="login.html">로그인</a></li>
-              <li><a href="join.html">회원가입</a></li>
-              <li>
-                <a href="#"><i class="fa-regular fa-circle-user"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!--검색 -->
-      <div class="search" id="search">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PFLDMPXB");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>모꼬지</title>
+    <!-- seo적용 -->
+    <meta name="robots" content="ALL" />
+    <meta name="robots" content="index, follow" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta property="title" content="모꼬지 ┃ 전통시장의 새로운 트렌드를 만들다." />
+    <meta name="description" content="모꼬지는 전국 전통시장과 죽기 전에 꼭 가봐야 할 여행지를 소개하는 국내 유일한 시장 및 여행 정보 전문 포털 사이트입니다." />
+    <meta name="keywords" content="모꼬지, 대한민국, 전통시장" />
+    <meta property="keyword" content="모꼬지, 대한민국, 전통시장" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="모꼬지 ┃ 전통시장의 새로운 트렌드를 만들다." />
+    <meta property="og:description" content="모꼬지는 전국 전통시장과 죽기 전에 꼭 가봐야 할 여행지를 소개하는 국내 유일한 시장 및 여행 정보 전문 포털 사이트입니다" />
+    <meta property="og:image" content="/images/link-img/thumbnail-01.png" />
+    <meta property="og:url" content="https://mokkoji-a.vercel.app/" />
+    <!-- flaticon -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-rounded/css/uicons-thin-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-straight/css/uicons-thin-straight.css" />
+    <!-- font aswesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link Swiper's CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/hee.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/best-sub.css" />
+    <!-- 제이쿼리 추가 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper js -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js"></script>
+    <!-- js -->
+    <script src="js/html5shiv.js"></script>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <script src="js/repond.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/leesub-best.js"></script>
+    <script src="js/lee.js"></script>
+    <script src="js/hee.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPBSJSB4DE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-SPBSJSB4DE");
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFLDMPXB" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="wrap">
+      <!-- 헤더 -->
+      <header class="header">
         <div class="container">
           <div class="inner">
             <!-- 로고 -->
             <div class="hd-logo">
-              <a href="index.html"><img src="images/1header/hd-logo-main.png" alt="로고" /></a>
+              <a href="index.html"><img src="images/1header/hd-logo-main-2.png" alt="로고2" /></a>
             </div>
-            <div class="search-close-bt" id="closeBt">
-              <i class="fa-solid fa-xmark" id="mb-menu-xBt"></i>
+            <!-- 네비게이션 -->
+            <nav class="nav">
+              <ul class="menu-list">
+                <li><a href="region-sub.html">지역별</a></li>
+                <li><a href="#nav1">맛집</a></li>
+                <li><a href="#nav2">시장</a></li>
+                <li><a href="#nav3">장날</a></li>
+                <li><a href="#nav4">방문후기</a></li>
+                <li><a href="notice-board.html">게시판</a></li>
+              </ul>
+            </nav>
+            <!-- 마이페이지 -->
+            <div class="hd-right">
+              <ul class="my-list">
+                <li>
+                  <button id="search-open"><i class="fi fi-rr-search"></i></button>
+                </li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="join.html">회원가입</a></li>
+                <li>
+                  <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+                </li>
+              </ul>
             </div>
-            <div class="search-contents">
-              <div class="search-content-top">
-                <input id="searchInput" type="text" placeholder="검색어를 입력해 주세요." maxlength="50" />
-                <i class="fi fi-rs-search"></i>
+          </div>
+        </div>
+        <!--검색 -->
+        <div class="search" id="search">
+          <div class="container">
+            <div class="inner">
+              <!-- 로고 -->
+              <div class="hd-logo">
+                <a href="index.html"><img src="images/1header/hd-logo-main.png" alt="로고" /></a>
               </div>
-              <div class="search-content-mid">
-                <p>최근 검색어</p>
-                <p class="search-s">최근 검색어 내역이 없습니다.</p>
+              <div class="search-close-bt" id="closeBt">
+                <i class="fa-solid fa-xmark" id="mb-menu-xBt"></i>
               </div>
-              <div class="search-content-bot">
-                <div class="search-content-bot-top">
-                  <p>최근 인기 검색어</p>
-                  <p class="search-s"><i class="fi fi-rs-info"></i>조회일 직전 7일간의 인기 검색어</p>
+              <div class="search-contents">
+                <div class="search-content-top">
+                  <input id="searchInput" type="text" placeholder="검색어를 입력해 주세요." maxlength="50" />
+                  <i class="fi fi-rs-search"></i>
                 </div>
-                <div class="search-hot">
-                  <ul class="search-hot-list-left">
-                    <li><span>1</span>광진손짜장</li>
-                    <li><span>2</span>제주도</li>
-                    <li><span>3</span>놀라운 토요일</li>
-                    <li><span>4</span>짜장면</li>
-                    <li><span>5</span>강원도 맛집</li>
-                  </ul>
-                  <ul class="search-hot-list-right">
-                    <li><span>6</span>돈까스</li>
-                    <li><span>7</span>경동시장</li>
-                    <li><span>8</span>참돔</li>
-                    <li><span>9</span>백종원</li>
-                    <li><span>10</span>이벤트</li>
-                  </ul>
+                <div class="search-content-mid">
+                  <p>최근 검색어</p>
+                  <p class="search-s">최근 검색어 내역이 없습니다.</p>
+                </div>
+                <div class="search-content-bot">
+                  <div class="search-content-bot-top">
+                    <p>최근 인기 검색어</p>
+                    <p class="search-s"><i class="fi fi-rs-info"></i>조회일 직전 7일간의 인기 검색어</p>
+                  </div>
+                  <div class="search-hot">
+                    <ul class="search-hot-list-left">
+                      <li><span>1</span>광진손짜장</li>
+                      <li><span>2</span>제주도</li>
+                      <li><span>3</span>놀라운 토요일</li>
+                      <li><span>4</span>짜장면</li>
+                      <li><span>5</span>강원도 맛집</li>
+                    </ul>
+                    <ul class="search-hot-list-right">
+                      <li><span>6</span>돈까스</li>
+                      <li><span>7</span>경동시장</li>
+                      <li><span>8</span>참돔</li>
+                      <li><span>9</span>백종원</li>
+                      <li><span>10</span>이벤트</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-    <!-- 모바일 헤더 -->
-    <div class="mb-header">
-      <div class="container">
-        <div class="inner">
-          <!-- 햄버거바 -->
-          <div class="mb-menu">
-            <button id="mb-menuBt"><i class="fa-solid fa-bars"></i></button>
-          </div>
-          <!-- 로고 -->
-          <div class="logo">
-            <a href="index.html"><img src="images/1header/mb-hd-logo.png" alt="로고" /></a>
-          </div>
-          <!-- 검색 -->
-          <div class="mb-search">
-            <button id="mb-search-open"><i class="fi fi-rr-search"></i></button>
-          </div>
-        </div>
-      </div>
-      <!-- 햄버거 메뉴 내용 -->
-      <div class="mb-menu-contents" id="mbMenuContents">
-        <div class="mb-menu-xBt">
-          <i class="fa-solid fa-xmark"></i>
-        </div>
-        <div class="mb-my-list">
-          <img src="images/1header/mypage-icon.png" alt="모바일마이페이지" />
-          <a href="login.html"><span>로그인하세요</span>
-            <i class="fa-solid fa-angle-right"></i>
-          </a>
-        </div>
-        <div class="go-join">
-          <a href="join.html">
-            <span>회원가입</span>
-          </a>
-        </div>
-        <ul class="mb-menu-list">
-          <li><a href="region-sub.html">지역별</a></li>
-          <li><a href="#nav1">맛집</a></li>
-          <li><a href="#nav2">시장</a></li>
-          <li><a href="#nav3">장날</a></li>
-          <li><a href="#nav4">방문후기</a></li>
-          <li><a href="notice-board.html">게시판</a></li>
-        </ul>
-      </div>
-      <!-- 검색 내용 -->
-      <div class="search" id="mb-search">
+      </header>
+      <!-- 모바일 헤더 -->
+      <div class="mb-header">
         <div class="container">
           <div class="inner">
+            <!-- 햄버거바 -->
+            <div class="mb-menu">
+              <button id="mb-menuBt"><i class="fa-solid fa-bars"></i></button>
+            </div>
             <!-- 로고 -->
-            <div class="hd-logo">
+            <div class="logo">
               <a href="index.html"><img src="images/1header/mb-hd-logo.png" alt="로고" /></a>
             </div>
-            <div class="search-close-bt" id="mb-closeBt">
-              <i class="fa-solid fa-xmark" id="mb-menu-xBt"></i>
-            </div>
-            <div class="search-contents">
-              <div class="search-content-top">
-                <input id="mbSearchInput" type="text" placeholder="검색어를 입력해 주세요." maxlength="50" />
-                <i class="fi fi-rs-search"></i>
-              </div>
-              <div class="search-content-mid">
-                <p>최근 검색어</p>
-                <p class="search-s">최근 검색어 내역이 없습니다.</p>
-              </div>
-              <div class="search-content-bot">
-                <div class="search-content-bot-top">
-                  <p>최근 인기 검색어</p>
-                  <p class="search-s"><i class="fi fi-rs-info"></i>조회일 직전 7일간의 인기 검색어</p>
-                </div>
-                <div class="search-hot">
-                  <ul class="search-hot-list-left">
-                    <li><span>1</span>광진손짜장</li>
-                    <li><span>2</span>제주도</li>
-                    <li><span>3</span>놀라운 토요일</li>
-                    <li><span>4</span>짜장면</li>
-                    <li><span>5</span>강원도 맛집</li>
-                  </ul>
-                  <ul class="search-hot-list-right">
-                    <li><span>6</span>돈까스</li>
-                    <li><span>7</span>경동시장</li>
-                    <li><span>8</span>참돔</li>
-                    <li><span>9</span>백종원</li>
-                    <li><span>10</span>이벤트</li>
-                  </ul>
-                </div>
-              </div>
+            <!-- 검색 -->
+            <div class="mb-search">
+              <button id="mb-search-open"><i class="fi fi-rr-search"></i></button>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- 베스트 후기 top -->
-    <div class="best-sub">
-      <div class="container">
-        <div class="inner">
-          <!-- 광진 위 -->
-          <div class="gj-top">
-            <span class="top1">이번주 베스트 후기 1위</span>
-            <h2 class="sub-title">광진 손짜장</h2>
-            <p class="p1">세종 전통시장</p>
-            <p class="p2">가성비 끝판왕 3천원 짜장면</p>
+        <!-- 햄버거 메뉴 내용 -->
+        <div class="mb-menu-contents" id="mbMenuContents">
+          <div class="mb-menu-xBt">
+            <i class="fa-solid fa-xmark"></i>
           </div>
-          <!-- 광진 후기 사진 -->
-          <div class="reviewPhoto">
-            <ul class="reviewPhoto-list">
-              <li><img src="images/lee sub best/region1.png" alt="후기1" /></li>
-              <li><img src="images/lee sub best/region2.png" alt="후기2" /></li>
-              <li><img src="images/lee sub best/region3.png" alt="후기3" /></li>
-              <li><img src="images/lee sub best/region4.png" alt="후기4" /></li>
-              <li><img src="images/lee sub best/region5.png" alt="후기5" /></li>
-              <li><img src="images/lee sub best/region6.png" alt="후기6" /></li>
-            </ul>
-            <button>방문자 사진•영상 더보기<i class="fa-solid fa-angle-right"></i></button>
+          <div class="mb-my-list">
+            <img src="images/1header/mypage-icon.png" alt="모바일마이페이지" />
+            <a href="login.html"
+              ><span>로그인하세요</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
           </div>
-          <!-- 상세정보 -->
-          <!-- 지도 -->
-          <div class="map">
-            <span class="map-info">상세정보</span>
-            <div class="map-cont" id="map-kakao">
-              <!-- * 카카오맵 - 지도퍼가기 -->
-              <!-- 1. 지도 노드 -->
-              <div id="daumRoughmapContainer1714381151460" class="root_daum_roughmap root_daum_roughmap_landing"
-                style="width:100%" ></div>
-              <!--	2. 설치 스크립트 * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다. -->
-              <script charset="UTF-8" class="daum_roughmap_loader_script"
-                src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-              <!-- 3. 실행 스크립트 -->
-              <script charset="UTF-8">
-                new daum.roughmap.Lander({
-                  timestamp: "1714381151460",
-                  key: "2j7zw",
-                  // mapWidth: "800",
-                  mapHeight: "450",
-                }).render();
-              </script>
-            </div>
-            <ul class="map-list">
-              <li>• 주소 : 세종 조치원읍 새내10길 27</li>
-              <li>• 영업 시간 : 09:00 ~ 19:00 <span>*매주 월요일 휴무</span></li>
-              <li>• 문의 및 안내 : <a href="tel:044-865-3657">044-865-3657</a></li>
-            </ul>
+          <div class="go-join">
+            <a href="join.html">
+              <span>회원가입</span>
+            </a>
           </div>
-          <!-- 후기 -->
-          <div class="sub-review">
-            <!-- 후기 위 -->
-            <div class="review-top">
-              <div class="review-top-left">
-                <span class="review-bold">후기</span>
-                <span class="review-num">426 <span class="review-num-b">개</span></span>
-                <p>리뷰 쓰기✏️</p>
-              </div>
-              <div class="review-top-right">
-                <span class="popular">인기순</span>
-                <div class="line"></div>
-                <span>최신순</span>
-              </div>
-            </div>
-            <!-- 후기 아래 -->
-            <div class="review-conts">
-              <div class="review-cont">
-                <!-- 왼쪽 -->
-                <div class="review-cont-left">
-                  <ul class="review-cont-left-list">
-                    <li><img src="images/lee sub best//pro1.png" alt="프로필1" /></li>
-                    <li><span class="nickname">케로케로피</span></li>
-                    <li>
-                      <span class="star"><i class="fa-solid fa-star"></i> 4점</span>
-                    </li>
-                    <li><i class="fa-regular fa-heart"></i></li>
-                  </ul>
-                </div>
-                <!-- 가운데 -->
-                <div class="review-cont-mid">
-                  <p>2024.04.26</p>
-                  <img src="images/lee sub best/review1.png" alt="리뷰1" />
-                </div>
-                <!-- 오른쪽 -->
-                <div class="review-cont-right">
-                  <p>
-                    세종시장에서 유명한 짜장면집이에요. 평일오후쯤 방문했는데도 현지인들로 바글바글합니다. 지인과 겨우 자리를 잡고 짜장면,짬뽕,탕수육 주문했는데요. 가격이 진짜 착해도 너무착합니다.
-                    사람이 많아서 짜장면이 제일먼저나오구요 그다음에 짬뽕, 마지막으로 제일늦게 탕수육이 나왔어요.
-                    오래기다린듯합니다. 그래도 가격이 착하니까 용서가 되네요. 짜장면은 MSG맛 가득할줄 알았는데 오히려 담백해서 깔끔하고 좋았어요. 생각보다 맛있게 후딱먹고 나왔습니다. 다음에 가면
-                    무조건 재방문의사가 있어요. 가격부터 맛까지 아주만족스러워요. 다만 바빠서 그런지 친절하진 않으세요.뭐
-                    그냥 그려러니 합니다.
-                  </p>
-                </div>
-              </div>
-              <div class="review-cont">
-                <!-- 왼쪽 -->
-                <div class="review-cont-left">
-                  <ul class="review-cont-left-list">
-                    <li><img src="images/lee sub best/pro2.png" alt="프로필2" /></li>
-                    <li><span class="nickname">코비</span></li>
-                    <li>
-                      <span class="star"><i class="fa-solid fa-star"></i> 5점</span>
-                    </li>
-                    <li><i class="fa-regular fa-heart"></i></li>
-                  </ul>
-                </div>
-                <!-- 가운데 -->
-                <div class="review-cont-mid">
-                  <p>2024.03.09</p>
-                  <img src="images/lee sub best/review2.png" alt="리뷰2" />
-                </div>
-                <!-- 오른쪽 -->
-                <div class="review-cont-right">
-                  <p>짜장면은 집에서 해먹는 맛으로 기름지지않아 좋고 탕수육은 꼭 먹어야 함! 달콤한 소스가 입에 착 달라붙음.</p>
-                </div>
-              </div>
-              <div class="review-cont">
-                <!-- 왼쪽 -->
-                <div class="review-cont-left">
-                  <ul class="review-cont-left-list">
-                    <li><img src="images/lee sub best/pro3.png" alt="프로필3" /></li>
-                    <li><span class="nickname">따하하하</span></li>
-                    <li>
-                      <span class="star"><i class="fa-solid fa-star"></i> 4점</span>
-                    </li>
-                    <li><i class="fa-solid fa-heart"></i></li>
-                  </ul>
-                </div>
-                <!-- 가운데 -->
-                <div class="review-cont-mid">
-                  <p>2024.02.23</p>
-                  <img src="images/lee sub best/review3.png" alt="리뷰3" />
-                </div>
-                <!-- 오른쪽 -->
-                <div class="review-cont-right">
-                  <p>
-                    시장 들어가자 배고픔에 먹으러 가니 줄이​ 10명정도 대기. 그나마 좀빨리 간건데 11시30분쯤 들어가니 그때부터 더 많이 오더라고요. 대기줄이 많아서 짬뽕하고 다른건 안되구요
-                    짜장하고 탕수육만 된데요. 짜장면 보이시져 이게 3,000원. 보통인데 양이 제법되요. 가성비만 좋은거 아니고 짜장면
-                    자체도 맛있음 짜지도않고 이걸 누가 3,000에 할정도야 할만큼요. 탕수육 바삭하고 새콤달콤 안시키면 후회할뻔 ㅎ 다들 짜장에 탕수육은 기본으로 식탁에 있드라고요. 세종 가면 또
-                    먹고 싶은곳입니다. 물가도 그리 비싸지 않아 시장도 봤네요.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <button>후기 더 보기<i class="fa-solid fa-angle-right"></i></button>
-          </div>
-          <!-- 추천 -->
-          <div class="recom">
-            <h2>'광진 손짜장'과 유사한 맛집 추천👍</h2>
-            <ul class="recom-list">
-              <li>
-                <div class="recom-con">
-                  <img src="images/lee sub best/rec1.png" alt="추천1" />
-                  <div class="recom-text">명품짜장</div>
-                </div>
-              </li>
-              <li>
-                <div class="recom-con">
-                  <img src="images/lee sub best/rec2.png" alt="추천2" />
-                  <div class="recom-text">산동만두</div>
-                </div>
-              </li>
-              <li>
-                <div class="recom-con">
-                  <img src="images/lee sub best/rec3.png" alt="추천3" />
-                  <div class="recom-text">명물짜장</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 푸터 -->
-    <footer class="footer">
-      <div class="container">
-        <div class="inner">
-          <ul class="ft-top">
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">이용안내</a></li>
-            <li><a href="#">고객센터</a></li>
-            <li><a href="#">제휴 문의</a></li>
+          <ul class="mb-menu-list">
+            <li><a href="region-sub.html">지역별</a></li>
+            <li><a href="#nav1">맛집</a></li>
+            <li><a href="#nav2">시장</a></li>
+            <li><a href="#nav3">장날</a></li>
+            <li><a href="#nav4">방문후기</a></li>
+            <li><a href="notice-board.html">게시판</a></li>
           </ul>
-          <div class="ft-bt">
-            <div class="ft-bt-left">
-              <div class="ft-logo"><img src="images/10footer/footer-logo.png" alt="하단 흑백 로고" /></div>
-              <p>(주) 모꼬지</p>
-              <p>주소 : 대구 중구 중앙대로 394, 제일빌딩 5층</p>
-              <p>사업자등록번호 : 123-456-78977 | 통신판매업신고 : 2024-대구중구-1234호</p>
-              <p>대표 : 최희승, 이소망</p>
-              <p>© 모꼬지. All rights reserved. Designed by 희승 & 소망</p>
-            </div>
-            <div class="ft-middle-line"></div>
-            <div class="ft-bt-right">
-              <h2>고객센터</h2>
-              <p>전화번호 : 1234-1234</p>
-              <p>평일 9:00 ~ 18:00 토,일요일 및 공휴일 휴무</p>
+        </div>
+        <!-- 검색 내용 -->
+        <div class="search" id="mb-search">
+          <div class="container">
+            <div class="inner">
+              <!-- 로고 -->
+              <div class="hd-logo">
+                <a href="index.html"><img src="images/1header/mb-hd-logo.png" alt="로고" /></a>
+              </div>
+              <div class="search-close-bt" id="mb-closeBt">
+                <i class="fa-solid fa-xmark" id="mb-menu-xBt"></i>
+              </div>
+              <div class="search-contents">
+                <div class="search-content-top">
+                  <input id="mbSearchInput" type="text" placeholder="검색어를 입력해 주세요." maxlength="50" />
+                  <i class="fi fi-rs-search"></i>
+                </div>
+                <div class="search-content-mid">
+                  <p>최근 검색어</p>
+                  <p class="search-s">최근 검색어 내역이 없습니다.</p>
+                </div>
+                <div class="search-content-bot">
+                  <div class="search-content-bot-top">
+                    <p>최근 인기 검색어</p>
+                    <p class="search-s"><i class="fi fi-rs-info"></i>조회일 직전 7일간의 인기 검색어</p>
+                  </div>
+                  <div class="search-hot">
+                    <ul class="search-hot-list-left">
+                      <li><span>1</span>광진손짜장</li>
+                      <li><span>2</span>제주도</li>
+                      <li><span>3</span>놀라운 토요일</li>
+                      <li><span>4</span>짜장면</li>
+                      <li><span>5</span>강원도 맛집</li>
+                    </ul>
+                    <ul class="search-hot-list-right">
+                      <li><span>6</span>돈까스</li>
+                      <li><span>7</span>경동시장</li>
+                      <li><span>8</span>참돔</li>
+                      <li><span>9</span>백종원</li>
+                      <li><span>10</span>이벤트</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  </div>
-</body>
-
+      <!-- 베스트 후기 top -->
+      <div class="best-sub">
+        <div class="container">
+          <div class="inner">
+            <!-- 광진 위 -->
+            <div class="gj-top">
+              <span class="top1">이번주 베스트 후기 1위</span>
+              <h2 class="sub-title">광진 손짜장</h2>
+              <p class="p1">세종 전통시장</p>
+              <p class="p2">가성비 끝판왕 3천원 짜장면</p>
+            </div>
+            <!-- 광진 후기 사진 -->
+            <div class="reviewPhoto">
+              <ul class="reviewPhoto-list">
+                <li><img src="images/lee sub best/region1.png" alt="후기1" /></li>
+                <li><img src="images/lee sub best/region2.png" alt="후기2" /></li>
+                <li><img src="images/lee sub best/region3.png" alt="후기3" /></li>
+                <li><img src="images/lee sub best/region4.png" alt="후기4" /></li>
+                <li><img src="images/lee sub best/region5.png" alt="후기5" /></li>
+                <li><img src="images/lee sub best/region6.png" alt="후기6" /></li>
+              </ul>
+              <button>방문자 사진•영상 더보기<i class="fa-solid fa-angle-right"></i></button>
+            </div>
+            <!-- 상세정보 -->
+            <!-- 지도 -->
+            <div class="map">
+              <span class="map-info">상세정보</span>
+              <div class="map-cont" id="map-kakao">
+                <!-- * 카카오맵 - 지도퍼가기 -->
+                <!-- 1. 지도 노드 -->
+                <div id="daumRoughmapContainer1714381151460" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 100%"></div>
+                <!--	2. 설치 스크립트 * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다. -->
+                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                <!-- 3. 실행 스크립트 -->
+                <script charset="UTF-8">
+                  new daum.roughmap.Lander({
+                    timestamp: "1714381151460",
+                    key: "2j7zw",
+                    // mapWidth: "800",
+                    mapHeight: "450",
+                  }).render();
+                </script>
+              </div>
+              <ul class="map-list">
+                <li>• 주소 : 세종 조치원읍 새내10길 27</li>
+                <li>• 영업 시간 : 09:00 ~ 19:00 <span>*매주 월요일 휴무</span></li>
+                <li>• 문의 및 안내 : <a href="tel:044-865-3657">044-865-3657</a></li>
+              </ul>
+            </div>
+            <!-- 후기 -->
+            <div class="sub-review">
+              <!-- 후기 위 -->
+              <div class="review-top">
+                <div class="review-top-left">
+                  <span class="review-bold">후기</span>
+                  <span class="review-num">426 <span class="review-num-b">개</span></span>
+                  <p id="reviewModal">리뷰 쓰기✏️</p>
+                </div>
+                <div class="review-top-right">
+                  <span class="popular">인기순</span>
+                  <div class="line"></div>
+                  <span>최신순</span>
+                </div>
+              </div>
+              <!-- 후기 아래 -->
+              <div class="review-conts">
+                <div class="review-cont">
+                  <!-- 왼쪽 -->
+                  <div class="review-cont-left">
+                    <ul class="review-cont-left-list">
+                      <li><img src="images/lee sub best//pro1.png" alt="프로필1" /></li>
+                      <li><span class="nickname">케로케로피</span></li>
+                      <li>
+                        <span class="star"><i class="fa-solid fa-star"></i> 4점</span>
+                      </li>
+                      <li><i class="fa-regular fa-heart"></i></li>
+                    </ul>
+                  </div>
+                  <!-- 가운데 -->
+                  <div class="review-cont-mid">
+                    <p>2024.04.26</p>
+                    <img src="images/lee sub best/review1.png" alt="리뷰1" />
+                  </div>
+                  <!-- 오른쪽 -->
+                  <div class="review-cont-right">
+                    <p>
+                      세종시장에서 유명한 짜장면집이에요. 평일오후쯤 방문했는데도 현지인들로 바글바글합니다. 지인과 겨우 자리를 잡고 짜장면,짬뽕,탕수육 주문했는데요. 가격이 진짜 착해도 너무착합니다. 사람이 많아서 짜장면이 제일먼저나오구요 그다음에 짬뽕, 마지막으로 제일늦게 탕수육이 나왔어요.
+                      오래기다린듯합니다. 그래도 가격이 착하니까 용서가 되네요. 짜장면은 MSG맛 가득할줄 알았는데 오히려 담백해서 깔끔하고 좋았어요. 생각보다 맛있게 후딱먹고 나왔습니다. 다음에 가면 무조건 재방문의사가 있어요. 가격부터 맛까지 아주만족스러워요. 다만 바빠서 그런지 친절하진 않으세요.뭐
+                      그냥 그려러니 합니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="review-cont">
+                  <!-- 왼쪽 -->
+                  <div class="review-cont-left">
+                    <ul class="review-cont-left-list">
+                      <li><img src="images/lee sub best/pro2.png" alt="프로필2" /></li>
+                      <li><span class="nickname">코비</span></li>
+                      <li>
+                        <span class="star"><i class="fa-solid fa-star"></i> 5점</span>
+                      </li>
+                      <li><i class="fa-regular fa-heart"></i></li>
+                    </ul>
+                  </div>
+                  <!-- 가운데 -->
+                  <div class="review-cont-mid">
+                    <p>2024.03.09</p>
+                    <img src="images/lee sub best/review2.png" alt="리뷰2" />
+                  </div>
+                  <!-- 오른쪽 -->
+                  <div class="review-cont-right">
+                    <p>짜장면은 집에서 해먹는 맛으로 기름지지않아 좋고 탕수육은 꼭 먹어야 함! 달콤한 소스가 입에 착 달라붙음.</p>
+                  </div>
+                </div>
+                <div class="review-cont">
+                  <!-- 왼쪽 -->
+                  <div class="review-cont-left">
+                    <ul class="review-cont-left-list">
+                      <li><img src="images/lee sub best/pro3.png" alt="프로필3" /></li>
+                      <li><span class="nickname">따하하하</span></li>
+                      <li>
+                        <span class="star"><i class="fa-solid fa-star"></i> 4점</span>
+                      </li>
+                      <li><i class="fa-solid fa-heart"></i></li>
+                    </ul>
+                  </div>
+                  <!-- 가운데 -->
+                  <div class="review-cont-mid">
+                    <p>2024.02.23</p>
+                    <img src="images/lee sub best/review3.png" alt="리뷰3" />
+                  </div>
+                  <!-- 오른쪽 -->
+                  <div class="review-cont-right">
+                    <p>
+                      시장 들어가자 배고픔에 먹으러 가니 줄이​ 10명정도 대기. 그나마 좀빨리 간건데 11시30분쯤 들어가니 그때부터 더 많이 오더라고요. 대기줄이 많아서 짬뽕하고 다른건 안되구요 짜장하고 탕수육만 된데요. 짜장면 보이시져 이게 3,000원. 보통인데 양이 제법되요. 가성비만 좋은거 아니고 짜장면
+                      자체도 맛있음 짜지도않고 이걸 누가 3,000에 할정도야 할만큼요. 탕수육 바삭하고 새콤달콤 안시키면 후회할뻔 ㅎ 다들 짜장에 탕수육은 기본으로 식탁에 있드라고요. 세종 가면 또 먹고 싶은곳입니다. 물가도 그리 비싸지 않아 시장도 봤네요.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button>후기 더 보기<i class="fa-solid fa-angle-right"></i></button>
+            </div>
+            <!-- 추천 -->
+            <div class="recom">
+              <h2>'광진 손짜장'과 유사한 맛집 추천👍</h2>
+              <div class="recom-list">
+                <div class="swiper sw-recom-conts">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide recom-con">
+                      <img src="images/lee sub best/rec1.png" alt="추천1" />
+                      <div class="recom-text">명품짜장</div>
+                    </div>
+                    <div class="swiper-slide recom-con">
+                      <img src="images/lee sub best/rec2.png" alt="추천2" />
+                      <div class="recom-text">산동만두</div>
+                    </div>
+                    <div class="swiper-slide recom-con">
+                      <img src="images/lee sub best/rec3.png" alt="추천3" />
+                      <div class="recom-text">명물짜장</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+              </div>
+              <!-- <ul class="recom-list">
+                <li>
+                  <div class="recom-con">
+                    <img src="images/lee sub best/rec1.png" alt="추천1" />
+                    <div class="recom-text">명품짜장</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="recom-con">
+                    <img src="images/lee sub best/rec2.png" alt="추천2" />
+                    <div class="recom-text">산동만두</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="recom-con">
+                    <img src="images/lee sub best/rec3.png" alt="추천3" />
+                    <div class="recom-text">명물짜장</div>
+                  </div>
+                </li>
+              </ul> -->
+            </div>
+            <!-- 리뷰 작성 모달창 -->
+            <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="md-top-close">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="md-top-title">
+                  <p>어디에 방문 하였나요?</p>
+                </div>
+                <div class="md-top-choose">
+                  <div class="choose-bts">
+                    <button id="chooseBtRest">맛집</button>
+                    <button id="chooseBtMarket">시장</button>
+                  </div>
+                  <div class="choose-location">
+                    <div class="select_cus">
+                      <input type="hidden" class="opt_val" value="" />
+                      <div class="trigger">
+                        <span class="trigger_txt">지역을 선택해주세요.</span>
+                      </div>
+                      <ul class="option">
+                        <!-- <li data-value="">지역을 선택해주세요.</li> -->
+                        <li data-value="option1">서울</li>
+                        <li data-value="option2">인천</li>
+                        <li data-value="option3">대전</li>
+                        <li data-value="option4">대구</li>
+                        <li data-value="option5">경기</li>
+                        <li data-value="option6">부산</li>
+                        <li data-value="option7">울산</li>
+                        <li data-value="option8">광주</li>
+                        <li data-value="option9">강원</li>
+                        <li data-value="option10">충북</li>
+                        <li data-value="option11">충남</li>
+                        <li data-value="option12">경북</li>
+                        <li data-value="option13">경남</li>
+                        <li data-value="option14">전북</li>
+                        <li data-value="option15">전남</li>
+                        <li data-value="option16">제주</li>
+                        <li data-value="option17">세종</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="visit-name">
+                    <input type="text" placeholder="방문한 곳" />
+                    <i class="fi fi-rr-search"></i>
+                  </div>
+                </div>
+                <!-- 맛집 체크박스 -->
+                <div class="check-box-rest">
+                  <ul class="check-box-cont">
+                    <li>
+                      <h2>맛</h2>
+                      <div class="checkbox-group">
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="tasteno" name="taste" onclick="checkTaste(this)" />
+                          <label for="tasteno">별로에요</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="tasteso" name="taste" onclick="checkTaste(this)" />
+                          <label for="tasteso">보통이에요</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="tastegd" name="taste" onclick="checkTaste(this)" />
+                          <label for="tastegd">맛있어요</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <h2>가격</h2>
+                      <div class="checkbox-group">
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="priceno" name="price" onclick="checkPrice(this)" />
+                          <label for="priceno">비싸요</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="priceso" name="price" onclick="checkPrice(this)" />
+                          <label for="priceso">보통이에요</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="pricegd" name="price" onclick="checkPrice(this)" />
+                          <label for="pricegd">저렴해요</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <h2>응대</h2>
+                      <div class="checkbox-group">
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="rest_serviceno" name="rest_service" onclick="checkRestService(this)" />
+                          <label for="rest_serviceno">불친절해요</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="rest_serviceso" name="rest_service" onclick="checkRestService(this)" />
+                          <label for="rest_serviceso">보통이에요</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="rest_servicegd" name="rest_service" onclick="checkRestService(this)" />
+                          <label for="rest_servicegd">친절해요</label>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 시장 체크박스 -->
+                <div class="check-box-market">
+                  <ul class="check-box-cont">
+                    <li>
+                      <h2>접근성</h2>
+                      <div class="checkbox-group">
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="accessibilityno" name="accessibility" onclick="checkAccessibility(this)" />
+                          <label for="accessibilityno">안좋아요</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="accessibilityso" name="accessibility" onclick="checkAccessibility(this)" />
+                          <label for="accessibilityso">보통이에요</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="accessibilitygd" name="accessibility" onclick="checkAccessibility(this)" />
+                          <label for="accessibilitygd">좋아요</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <h2>볼거리</h2>
+                      <div class="checkbox-group">
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="entertainmentno" name="entertainment" onclick="checkEntertainment(this)" />
+                          <label for="entertainmentno">많아요</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="entertainmentso" name="entertainment" onclick="checkEntertainment(this)" />
+                          <label for="entertainmentso">보통이에요</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="entertainmentgd" name="entertainment" onclick="checkEntertainment(this)" />
+                          <label for="entertainmentgd">적어요</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <h2>응대</h2>
+                      <div class="checkbox-group">
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="market_serviceno" name="market_service" onclick="checkMarketService(this)" />
+                          <label for="market_serviceno">불친절해요</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="market_serviceso" name="market_service" onclick="checkMarketService(this)" />
+                          <label for="market_serviceso">보통이에요</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="market_servicegd" name="market_service" onclick="checkMarketService(this)" />
+                          <label for="market_servicegd">친절해요</label>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 평가 별점 -->
+                <div class="review-star-cont">
+                  <span>평가</span>
+                  <div class="review-stars">
+                    <span class="star" data-value="1"> </span>
+                    <span class="star" data-value="2"> </span>
+                    <span class="star" data-value="3"> </span>
+                    <span class="star" data-value="4"> </span>
+                    <span class="star" data-value="5"> </span>
+                  </div>
+                </div>
+                <!-- 이용 후기 작성 -->
+                <div class="review-write-cont">
+                  <div class="review-write-title">
+                    <span>이용후기</span>
+                    <span class="write-s">*10자 이상 필수</span>
+                    <div class="review-write-title-right">
+                      <div class="form-group col-12">
+                        <div class="textLengthWrap">
+                          <p class="textCount">0자</p>
+                          <p class="textTotal">/5000자</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 리뷰 내용 작성 -->
+                    <div class="review-write-cont-list">
+                      <input type="text" placeholder="제목을 입력해 주세요." />
+                      <textarea style="height: 300px; resize: none" maxlength="5000" placeholder="후기를 작성해주세요."> </textarea>
+                    </div>
+                    <!-- 사진 업로드 -->
+                    <div class="review-photo">
+                      <div class="review-photo-title">
+                        <span>사진 업로드</span>
+                        <span class="write-s">*맛집 영수증 첨부 필수</span>
+                      </div>
+                      <div class="review-photo-cont">
+                        <ul class="review-photo-cont-list">
+                          <li></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button>등록하기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 푸터 -->
+      <footer class="footer">
+        <div class="container">
+          <div class="inner">
+            <ul class="ft-top">
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">이용안내</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">제휴 문의</a></li>
+            </ul>
+            <div class="ft-bt">
+              <div class="ft-bt-left">
+                <div class="ft-logo"><img src="images/10footer/footer-logo.png" alt="하단 흑백 로고" /></div>
+                <p>(주) 모꼬지</p>
+                <p>주소 : 대구 중구 중앙대로 394, 제일빌딩 5층</p>
+                <p>사업자등록번호 : 123-456-78977 | 통신판매업신고 : 2024-대구중구-1234호</p>
+                <p>대표 : 최희승, 이소망</p>
+                <p>© 모꼬지. All rights reserved. Designed by 희승 & 소망</p>
+              </div>
+              <div class="ft-middle-line"></div>
+              <div class="ft-bt-right">
+                <h2>고객센터</h2>
+                <p>전화번호 : 1234-1234</p>
+                <p>평일 9:00 ~ 18:00 토,일요일 및 공휴일 휴무</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
