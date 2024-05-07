@@ -140,6 +140,28 @@ window.addEventListener("load", function () {
     },
   });
 
+  // ==============================================================
+  // 로그인 로그인 로그인
+  document.getElementById("loginCloseIcon").addEventListener("click", function () {
+    window.location.href = "index.html";
+  });
+
+  var idInput = document.querySelector(".input-box input[type='text']");
+  var passwordInput = document.querySelector(".input-box.login_password input[type='password']");
+  var loginButton = document.querySelector("#loginBtnWrap input[type='submit']");
+
+  loginButton.addEventListener("click", function (event) {
+    // 아이디와 비밀번호가 모두 입력되었는지 확인
+    if (idInput.value.trim() !== "" && passwordInput.value.trim() !== "") {
+      // 모두 입력되었으면 index.html로 이동
+      window.location.href = "index.html";
+    } else {
+      // 아이디 또는 비밀번호가 입력되지 않았을 경우
+      event.preventDefault(); // 기본 동작(폼 제출) 막기
+      alert("아이디와 비밀번호를 모두 입력해주세요.");
+    }
+  });
+
   // // 텍스트 다르게
   // const items = document.querySelectorAll(".market-day-content li a");
   // const texts = ["포항", "정선", "보성", "동해"]; // 각 이미지에 대한 텍스트 데이터
@@ -270,5 +292,56 @@ $(function () {
   $(".reveiw-btn-color:nth-child(2)").click(function () {
     $(".reviewSwiper").hide();
     $(".reviewSwiper2").show();
+  });
+
+  // ===========================================================
+  // 게시판
+  $("#pagination2, #pagination3").hide();
+  // $("#reviewSelect").show();
+  // 시장 방문 후기: 버튼 클릭 색깔
+
+  $(".marketReveiw-btn-color").click(function () {
+    // 페이지네이션
+    $("#pagination").show();
+    $("#pagination2, #pagination3").hide();
+    //  리스트 보이기
+    $(this).addClass("boardOn").siblings().removeClass("boardOn");
+    $("#catList").show();
+    $("#boardListInfo, #boardListTalk").hide(); // 수정된 부분
+
+    $("p.board-search-txt1").show();
+    $("p.board-search-txt2, .board-search-txt3").hide();
+    $("#reviewSelect").show();
+  });
+
+  // 오늘의 소식: 버튼 클릭 색깔
+  $(".today-btn-color").click(function () {
+    // 페이지네이션
+    $("#pagination2").show();
+    $("#pagination, #pagination3").hide();
+
+    // 리스트 보이기
+    $(this).addClass("boardOn").siblings().removeClass("boardOn");
+    $("#boardListInfo").show();
+    $("#catList, #boardListTalk").hide(); // 수정된 부분
+
+    $("p.board-search-txt2").show();
+    $(".board-search-txt1, .board-search-txt3").hide();
+    $("#reviewSelect").hide();
+  });
+
+  // 소통 공간: 버튼 클릭 색깔
+  $(".talk-btn-color").click(function () {
+    // 페이지네이션
+    $("#pagination3").show();
+    $("#pagination, #pagination2").hide();
+    // 리스트 보이기
+    $(this).addClass("boardOn").siblings().removeClass("boardOn");
+    $("#boardListTalk").show();
+    $("#catList, #boardListInfo").hide(); // 수정된 부분
+
+    $("p.board-search-txt3").show();
+    $(".board-search-txt1, .board-search-txt2").hide();
+    $("#reviewSelect").hide();
   });
 });
