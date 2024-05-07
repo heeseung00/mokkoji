@@ -1418,6 +1418,10 @@
     padding-left: 20px;
   }
 
+  .ft-bt-left {
+    width: 100%;
+  }
+
   .ft-bt-left > * {
     margin-bottom: 5px;
     line-height: 20px;
@@ -1433,7 +1437,7 @@
   }
 
   .ft-bt-right {
-    width: 40%;
+    width: 100%;
     height: 100%;
     margin: 46px 0;
   }
