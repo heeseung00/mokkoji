@@ -110,7 +110,7 @@ body {
 .hd-right {
   display: block;
   position: relative;
-  width: 220px;
+  width: 170px !important;
   height: 100%;
 }
 .hd-right > .my-list {
@@ -131,7 +131,7 @@ body {
 .hd-right > .my-list > li > button > i {
   position: absolute;
   top: 41%;
-  left: -10px;
+  left: -20px !important;
   font-size: 2rem;
 }
 .hd-right > .my-list > li a {
@@ -149,15 +149,30 @@ body {
 .hd-right > .my-list > li > a > i {
   font-size: 2.5rem;
 }
+.myPageG {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+.myPageG span {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.3rem;
+  color: #f88222;
+  opacity: 0;
+}
+.myPageG a:hover + span {
+  opacity: 1;
+}
+.myPageG a img {
+  width: 40px;
+  /* border-radius: 50%; */
+  text-align: center;
+  /* border: 1px solid #bababa; */
+}
 .hd-right > .my-list > li:nth-child(1)::after {
-  content: "";
-  width: 1.3px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  left: 39%;
-  transform: translateY(-50%);
-  background-color: #333;
+  display: none !important;
 }
 .menu-list li a {
   position: relative;
@@ -310,29 +325,29 @@ input::placeholder {
   position: fixed;
   top: 0;
   left: 0;
-  display: block;
+  display: block !important;
   width: 100%;
   background-color: #fff;
   transition: top 0.3s ease; /* 부드러운 이동 효과를 위한 transition 설정 */
   z-index: 9999;
   transition: box-shadow 0.3s ease; /* 부드러운 변화를 위한 transition 설정 */
-  display: none;
+  display: none !important;
 }
-.mb-header > .container > .inner {
+.mb-header .container .inner {
   position: relative;
   display: block;
 }
-.mb-header > .container > .inner {
+.mb-header .container .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
   background-color: #fff;
 }
-.mb-header > .container > .inner > .search {
+.mb-header .container .inner > .search {
   display: none;
 }
-.mb-header > .container > .inner > .mb-menu > button {
+.mb-header .container .inner .mb-menu button {
   border: none;
   background: none;
   cursor: pointer;
@@ -380,10 +395,18 @@ input::placeholder {
   display: flex;
   align-items: center;
   margin-top: 80px;
+  gap: 15px;
 }
-.mb-header > .mb-menu-contents > .mb-my-list > a > span {
-  margin: 0 15px 0 20px;
+.mb-header .mb-menu-contents .mb-my-list a span {
+  margin: 0 !important;
   font-size: 2rem;
+}
+.mb-header .mb-menu-contents .mb-my-list a p {
+  font-size: 1.4rem;
+}
+.mb-my-list img {
+  display: block;
+  width: 60px;
 }
 .mb-header > .mb-menu-contents > .mb-my-list > a i {
   font-size: 1.8rem;
@@ -401,18 +424,21 @@ input::placeholder {
 .mb-header > .mb-menu-contents > .mb-menu-list > li:hover a {
   color: #f88222;
 }
-.go-join {
+.go-out {
   position: relative;
   display: block;
 }
-.go-join a span {
-  font-size: 1.4rem;
+.go-out a span {
+  display: block;
+  font-size: 1.3rem;
   color: #5e5e5e;
-  position: absolute;
-  left: 65px;
-  top: 5px;
+  margin-top: 20px;
+  margin-left: 6px;
+  /* position: absolute;
+  left: 2%;
+  top: 5px; */
 }
-.go-join a span:hover {
+.go-out a span:hover {
   font-weight: bold;
 }
 /* 모바일 검색 */
@@ -1415,4 +1441,19 @@ input::placeholder {
 }
 .sw-night .swiper-wrapper .swiper-slide .night-content .name2 {
   font-size: 1.5rem;
+}
+/* 헤더 반응형 */
+@media screen and (max-width: 880px) {
+  .hd-right > .my-list > li a img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .hd-right {
+    width: 140px !important;
+  }
+}
+@media screen and (max-width: 790px) {
+  .mb-header {
+    display: block !important;
+  }
 }
