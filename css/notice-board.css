@@ -336,6 +336,7 @@ a {
   font-size: 1.6rem;
   font-weight: 600;
   margin: 10px 0 15px !important;
+  height: 17px;
   /* 말줄임 */
   overflow: hidden;
   white-space: normal;
@@ -658,21 +659,41 @@ table {
   #catList {
     padding: 20px;
   }
+
+  .cat-card {
+    width: calc(25% - 20px); /* 한 줄에 4개씩 표시되도록 수정 */
+    margin: 15px 0;
+  }
 }
 
 @media screen and (max-width: 1005px) {
   .cat-card {
-    width: calc(31% - 0px);
+    width: calc(50% - 15px);
+    margin: 15px 0;
+  }
+
+  .board-text-wrap h2 {
+    height: 18px;
+  }
+
+  .board-text-wrap p.description {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 1005px) {
+  .cat-card {
+    width: calc(50% - 15px);
     margin: 15px 0;
   }
 }
 
-@media screen and (max-width: 930px) {
+/* @media screen and (max-width: 930px) {
   .cat-card {
     width: calc(31% - 0px);
     margin: 15px 0;
   }
-}
+} */
 
 @media screen and (max-width: 790px) {
   .wrap {
@@ -749,7 +770,7 @@ table {
 
 @media screen and (max-width: 725px) {
   .cat-card {
-    width: calc(33% - 5px);
+    width: calc(50% - 5px);
     margin: 5px 0;
   }
 }
@@ -757,7 +778,7 @@ table {
 @media screen and (max-width: 705px) {
   .cat-card {
     width: calc(50% - 5px);
-    margin: 10px 0;
+    margin: 5px 0;
   }
 }
 

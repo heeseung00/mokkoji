@@ -702,17 +702,17 @@
             itemsPerPage = 9;
             updateCardStyles(); // 크기에 따른 카드 스타일 업데이트
 
-            // 페이지가 2번일 때만 스타일 적용
-            if (currentPage === 2) {
-              applyStyleForPage2();
-            } else {
-              // 다른 페이지일 경우 기본 스타일로 변경
-              resetStyleForNonPage2();
-            }
-          } else {
-            // 그 외의 경우
-            itemsPerPage = 8;
-            resetStyleForNonPage2(); // 기본 스타일로 변경
+            //     // 페이지가 2번일 때만 스타일 적용
+            //     if (currentPage === 2) {
+            //       applyStyleForPage2();
+            //     } else {
+            //       // 다른 페이지일 경우 기본 스타일로 변경
+            //       resetStyleForNonPage2();
+            //     }
+            //   } else {
+            //     // 그 외의 경우
+            //     itemsPerPage = 8;
+            //     resetStyleForNonPage2(); // 기본 스타일로 변경
           }
         }
 
@@ -797,21 +797,21 @@
         displayCatInfo(currentPage);
       });
 
-      function updateItemsPerPage() {
-        const screenWidth = window.innerWidth;
-        if (screenWidth >= 706 && screenWidth <= 1005) {
-          itemsPerPage = 9;
-        } else {
-          itemsPerPage = 8;
-        }
-        displayCatInfo(currentPage); // 항목 수 변경 후 고양이 정보를 다시 가져와서 출력
-      }
+      // function updateItemsPerPage() {
+      //   const screenWidth = window.innerWidth;
+      //   if (screenWidth >= 706 && screenWidth <= 1005) {
+      //     itemsPerPage = 9;
+      //   } else {
+      //     itemsPerPage = 8;
+      //   }
+      //   displayCatInfo(currentPage); // 항목 수 변경 후 고양이 정보를 다시 가져와서 출력
+      // }
 
-      // 초기화 시 실행
-      updateItemsPerPage();
+      // // 초기화 시 실행
+      // updateItemsPerPage();
 
-      // 브라우저 크기가 변경될 때마다 실행
-      window.addEventListener("resize", updateItemsPerPage);
+      // // 브라우저 크기가 변경될 때마다 실행
+      // window.addEventListener("resize", updateItemsPerPage);
 
       //   =========================================
     </script>
