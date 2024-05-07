@@ -136,16 +136,26 @@ a {
 
 /* 게시판 제목 및 버튼*/
 .board-title {
+  display: block;
   width: 100%;
   position: relative;
   height: 100%;
   margin-top: 100px;
 }
-
+.board-title .container {
+  display: block;
+  position: relative;
+}
+.board-title .container .inner {
+  display: block;
+  position: relative;
+}
 .board-title h2 {
+  display: inline-block;
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 25px;
+  margin-top: 50px;
 }
 
 .board-title h2:nth-child(2) {
